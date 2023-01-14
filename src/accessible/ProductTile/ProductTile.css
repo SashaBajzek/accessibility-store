@@ -1,0 +1,17 @@
+.product-tile .name {
+  color: var(--text-accent);
+  font-family: "Chong Modern", serif;
+  font-size: 20px;
+}
+
+.product-tile .price {
+  color: var(--text-primary);
+  font-family: "Madera", sans-serif;
+  font-size: 18px;
+}
+
+.product-tile .image {
+  block-size: 280px;
+  inline-size: 280px;
+  object-fit: cover;
+}

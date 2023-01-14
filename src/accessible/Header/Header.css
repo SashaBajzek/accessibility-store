@@ -1,0 +1,35 @@
+.header {
+  align-items: center;
+  block-size: 60px;
+  display: flex;
+  inline-size: 100%;
+  justify-content: space-between;
+}
+
+.header .brand {
+  color: var(--text-accent);
+  font-family: "Chong Modern", serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header .cart-button {
+  align-items: center;
+  background-color: transparent;
+  block-size: 60px;
+  border-width: 0;
+  display: flex;
+  inline-size: 60px;
+  justify-content: center;
+  padding: 0;
+}
+
+.header .cart-button:hover {
+  cursor: pointer;
+}
+
+.header .cart-button svg path {
+  fill: var(--text-primary);
+  stroke: var(--text-primary);
+}
