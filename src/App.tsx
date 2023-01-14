@@ -46,10 +46,7 @@ function App() {
               element={<HomePage addToCart={addToCart} />}
             ></Route>
             <Route path="/checkout" element={<CheckoutPage />}></Route>
-            <Route
-              path="/productDetails/:id"
-              element={<ProductDetailsPage />}
-            />
+            <Route path="/items/:id" element={<ProductDetailsPage />} />
           </Routes>
         </main>
         <footer>Sasha</footer>

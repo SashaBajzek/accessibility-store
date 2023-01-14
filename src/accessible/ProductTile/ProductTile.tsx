@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CartItem } from "../../App";
 import { Bracelet } from "../../inventory";
 import "./ProductTile.css";
@@ -8,7 +9,7 @@ interface ProductTileProps {
 }
 
 const ProductTile = ({ addToCart, product }: ProductTileProps) => {
-  const { name, images, price } = product;
+  const { name, id, images, price } = product;
   const productImage = images && images[0];
   return (
     <article className="product-tile">
@@ -28,6 +29,7 @@ const ProductTile = ({ addToCart, product }: ProductTileProps) => {
       >
         Add to cart
       </button>
+      <Link to={"items/" + id}>To Product Page</Link>
     </article>
   );
 };

@@ -243,3 +243,6 @@ export const getMiscItems = () =>
   inventory
     .filter((item) => item.category === Category.Miscellaneous)
     .sort((a, b) => sortByName(a, b));
+
+export const getItemById = (id: string) =>
+  inventory.find((item) => item.id === id);
