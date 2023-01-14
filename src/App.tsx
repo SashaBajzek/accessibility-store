@@ -5,7 +5,8 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./accessible/HomePage/HomePage";
 import CheckoutPage from "./accessible/CheckoutPage/CheckoutPage";
-import { Bracelet } from "./sampleProducts";
+import { Bracelet } from "./inventory";
+import ProductDetailsPage from "./accessible/ProductDetailsPage/ProductDetailsPage";
 
 export interface CartItem {
   product: Bracelet;
@@ -45,6 +46,10 @@ function App() {
               element={<HomePage addToCart={addToCart} />}
             ></Route>
             <Route path="/checkout" element={<CheckoutPage />}></Route>
+            <Route
+              path="/productDetails/:id"
+              element={<ProductDetailsPage />}
+            />
           </Routes>
         </main>
         <footer>Sasha</footer>

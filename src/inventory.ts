@@ -19,7 +19,7 @@ export interface Bracelet {
   price: number;
 }
 
-export const products: Bracelet[] = [
+export const inventory: Bracelet[] = [
   {
     category: Category.Nature,
     description:
@@ -210,3 +210,36 @@ export const products: Bracelet[] = [
     price: 200,
   },
 ];
+
+const sortByName = (a: Bracelet, b: Bracelet) => {
+  let fa = a.name.toLowerCase(),
+    fb = b.name.toLowerCase();
+
+  if (fa < fb) {
+    return -1;
+  }
+  if (fa > fb) {
+    return 1;
+  }
+  return 0;
+};
+
+export const getArtItems = () =>
+  inventory
+    .filter((item) => item.category === Category.Art)
+    .sort((a, b) => sortByName(a, b));
+
+export const getFruitItems = () =>
+  inventory
+    .filter((item) => item.category === Category.Fruit)
+    .sort((a, b) => sortByName(a, b));
+
+export const getNatureItems = () =>
+  inventory
+    .filter((item) => item.category === Category.Nature)
+    .sort((a, b) => sortByName(a, b));
+
+export const getMiscItems = () =>
+  inventory
+    .filter((item) => item.category === Category.Miscellaneous)
+    .sort((a, b) => sortByName(a, b));

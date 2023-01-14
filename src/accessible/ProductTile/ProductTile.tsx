@@ -1,5 +1,5 @@
 import { CartItem } from "../../App";
-import { Bracelet } from "../../sampleProducts";
+import { Bracelet } from "../../inventory";
 import "./ProductTile.css";
 
 interface ProductTileProps {
