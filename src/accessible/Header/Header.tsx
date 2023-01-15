@@ -2,6 +2,8 @@ import "./Header.css";
 
 import { Link } from "react-router-dom";
 import { shopName } from "../../constants";
+import Cart from "../Cart/Cart";
+import { MouseEvent, useRef } from "react";
 
 function ShoppingBag() {
   return (
@@ -27,22 +29,49 @@ interface HeaderProps {
 }
 
 const Header = ({ cartQuantity }: HeaderProps) => {
+  const cartRef = useRef(null);
+  const openCart = () => {
+    if (cartRef.current === null) return;
+    (cartRef.current as any).showModal();
+  };
+  const closeCart = () => {
+    if (cartRef.current === null) return;
+    (cartRef.current as any).close();
+  };
+  const onClick = (event: MouseEvent) => {
+    if (event.target === cartRef.current) {
+      (cartRef.current as any).close();
+    }
+  };
+
   return (
-    <header className="header">
-      <div className="container">
-        <Link to="/" aria-label={`${shopName} Home`} className="brand">
-          {shopName}
-        </Link>
-        <button
-          aria-label="Cart"
-          aria-haspopup="dialog"
-          className="cart-button"
-        >
-          <ShoppingBag />
-          {cartQuantity > 0 && cartQuantity}
-        </button>
-      </div>
-    </header>
+    <>
+      <header className="header">
+        <div className="container">
+          <Link to="/" aria-label={`${shopName} Home`} className="brand">
+            {shopName}
+          </Link>
+          <button
+            aria-label="Cart"
+            aria-haspopup="dialog"
+            className="cart-button"
+            onClick={openCart}
+          >
+            <ShoppingBag />
+            {cartQuantity > 0 && cartQuantity}
+          </button>
+        </div>
+      </header>
+      <dialog className="Cart" onClick={onClick} ref={cartRef}>
+        <div className="no-dismiss">
+          <h2>Your cart</h2>
+          <button onClick={closeCart}>Close</button>
+          <form>
+            <button>Check out</button>
+          </form>
+        </div>
+      </dialog>
+    </>
   );
 };
 

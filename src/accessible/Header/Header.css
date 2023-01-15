@@ -39,3 +39,7 @@
   fill: var(--text-primary);
   stroke: var(--text-primary);
 }
+
+.Cart {
+  padding: 0;
+}
