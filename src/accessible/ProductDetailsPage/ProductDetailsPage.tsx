@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartItem } from "../../App";
 import { getItemById } from "../../inventory";
+import QuantityPicker from "../QuantityPicker/QuantityPicker";
 import "./ProductDetailsPage.css";
 interface ProductDetailsPageProps {
   addToCart: (cartItem: CartItem) => void;
@@ -17,24 +18,6 @@ const ProductDetailsPage = ({ addToCart }: ProductDetailsPageProps) => {
   const { description, images, name, price } = item;
   const productImage = images && images[0];
 
-  const decrement = () => {
-    setQuantity(Math.max(1, quantity - 1));
-  };
-
-  const increment = () => {
-    setQuantity(quantity + 1);
-  };
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(event.target.value, 10);
-
-    if (!isNaN(value) && value > 0) {
-      setQuantity(value);
-    } else {
-      setQuantity(1);
-    }
-  };
-
   return (
     <div className="productDetailsPage">
       {productImage ? (
@@ -49,21 +32,11 @@ const ProductDetailsPage = ({ addToCart }: ProductDetailsPageProps) => {
       <div className="info">
         <h1>{name}</h1>
         <div className="price">${price}</div>
-        <label className="quantity-label" htmlFor="quantity">
-          Quantity
-        </label>
-        <div className="quantity-picker">
-          <button onClick={decrement}>-</button>
-          <input
-            id="quantity"
-            min="1"
-            name="quantity"
-            onChange={handleChange}
-            type="number"
-            value={quantity}
-          />
-          <button onClick={increment}>+</button>
-        </div>
+        <QuantityPicker
+          minQuantity={1}
+          quantity={quantity}
+          setQuantity={setQuantity}
+        />
         <button
           className="submit"
           onClick={() => addToCart({ item, quantity })}
