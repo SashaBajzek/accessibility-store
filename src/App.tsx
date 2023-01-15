@@ -7,6 +7,7 @@ import HomePage from "./accessible/HomePage/HomePage";
 import CheckoutPage from "./accessible/CheckoutPage/CheckoutPage";
 import { Bracelet } from "./inventory";
 import ProductDetailsPage from "./accessible/ProductDetailsPage/ProductDetailsPage";
+import Footer from "./accessible/Footer/Footer";
 
 export interface CartItem {
   item: Bracelet;
@@ -53,7 +54,7 @@ function App() {
             />
           </Routes>
         </main>
-        <footer>Sasha</footer>
+        <Footer />
       </Router>
     </div>
   );

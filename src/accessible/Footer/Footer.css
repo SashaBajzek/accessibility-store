@@ -1,0 +1,15 @@
+.Footer {
+  background-color: var(--text-accent);
+  flex-shrink: 0;
+  padding: 4px 0;
+  width: 100%;
+}
+
+.Footer .copyright {
+  color: white;
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
