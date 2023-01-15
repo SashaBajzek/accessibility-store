@@ -10,8 +10,8 @@ const ProductList = ({ items }: ProductListProps) => {
   return (
     <ul className="productList">
       {items.map((item: Bracelet) => (
-        <li className="productList-item">
-          <ProductTile key={item.id} product={item} />
+        <li className="productList-item" key={item.id}>
+          <ProductTile product={item} />
         </li>
       ))}
     </ul>
