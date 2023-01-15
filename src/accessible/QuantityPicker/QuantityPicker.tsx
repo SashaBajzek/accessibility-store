@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./QuantityPicker.css";
 
 interface QuantityPickerProps {
