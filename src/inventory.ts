@@ -33,6 +33,12 @@ export const inventory: Bracelet[] = [
     description:
       "Monet inspired: ruby, sapphire & peridot lilies // emerald, sapphire & tanzanite bridge over the water // tsavorite, tourmaline & grandidierite lush greenery all around",
     id: "monet1",
+    images: [
+      {
+        description: "Bracelet in front",
+        fileName: "Monet.jpg",
+      },
+    ],
     name: "Water Lilies",
     price: 200,
   },
@@ -41,6 +47,12 @@ export const inventory: Bracelet[] = [
     description:
       "In a sea of plain morganite, a colorful waterfall of sapphire, fire opal, spinel, ruby, garnet, emerald, peridot and just about every gem stone type I have",
     id: "flowers1",
+    images: [
+      {
+        description: "Bracelet in front",
+        fileName: "Flowers.jpg",
+      },
+    ],
     name: "Melting into Flowers",
     price: 200,
   },
@@ -65,6 +77,12 @@ export const inventory: Bracelet[] = [
     description:
       "Twenty Skies by @alexhyner reimagined in 12 colorful sky-scapes of sapphire, spinel, grandiderite, moonstone, citrine, and rubies. Check out the original art piece by Alex, it’s beautiful!",
     id: "20skies",
+    images: [
+      {
+        description: "Bracelet in front",
+        fileName: "Twenty.jpg",
+      },
+    ],
     name: "Twenty Skies",
     price: 200,
   },
@@ -89,6 +107,12 @@ export const inventory: Bracelet[] = [
     description:
       "The Starry Night by Van Gogh. Ironically, it’s one of his most popular paintings today, but in a letter he wrote to Emile Bernard, he considered it a “failure”. A blue swirly sky of sapphire, tanzanite, and aquamarine with a bright orange sapphire moon, lemon quartz stars and Venus. Rolling blue sapphire hills with green peridots heading into the town. Finally, towering dark garnet, sapphire, and grandiderite cypress trees.",
     id: "starry",
+    images: [
+      {
+        description: "Bracelet in front",
+        fileName: "Starry.jpg",
+      },
+    ],
     name: "Starry Night",
     price: 200,
   },
@@ -97,6 +121,12 @@ export const inventory: Bracelet[] = [
     description:
       "Jimson Weed/White Flower No. 1, 1932 by Georgia O’Keeffe. A blue sapphire sky, lush green grandidierite and sapphire leaves, and a delicate tsavorite and morganite bloom",
     id: "georgia1",
+    images: [
+      {
+        description: "Bracelet in front",
+        fileName: "WhiteFlower.jpg",
+      },
+    ],
     name: "White Flower",
     price: 200,
   },
@@ -113,6 +143,12 @@ export const inventory: Bracelet[] = [
     description:
       "Lake and Mountains by Lawren Harris: A deep blue sapphire and kyanite sky streaked with pale blue aquamarine clouds and a large billowing cloud of white topaz, morganite, and pale pink sapphires. Towering blue sapphire and kyanite mountains with pale purple spinel and aqua amazonite snow, rolling hills of teal grandidierite, to a teal lake of amazonite, finally a cool brown tundra sapphire shore.",
     id: "lake",
+    images: [
+      {
+        description: "Bracelet in front",
+        fileName: "Lake.jpg",
+      },
+    ],
     name: "Lake and Mountains",
     price: 200,
   },
@@ -159,6 +195,12 @@ export const inventory: Bracelet[] = [
     description:
       "A celebration of art with bright spring colors. Sapphires, moonstones, fire opals, lapis, lemon quartz, topaz, sunstones, labradorite, and tourmalines to name a few ",
     id: "artwall",
+    images: [
+      {
+        description: "Bracelet in front",
+        fileName: "Spring.jpg",
+      },
+    ],
     name: "Spring Art Wall",
     price: 200,
   },
