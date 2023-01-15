@@ -1,0 +1,86 @@
+.productDetailsPage {
+  display: flex;
+}
+
+.productDetailsPage h1 {
+  font-family: "ChongModernW01", serif;
+  font-size: 50px;
+}
+
+.productDetailsPage .image {
+  max-inline-size: 55%;
+  object-fit: contain;
+}
+
+.productDetailsPage .info {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1.69px;
+  max-inline-size: 45%;
+  padding-inline-start: 60px;
+}
+
+.productDetailsPage input {
+  appearance: none;
+}
+
+.productDetailsPage .price {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.69px;
+}
+
+.productDetailsPage .quantity-label {
+  display: block;
+  font-size: 17px;
+  margin-block-start: 20px;
+}
+
+.productDetailsPage .quantity-picker {
+  block-size: 60px;
+  border: 1px solid black;
+  display: flex;
+  inline-size: 142px;
+  margin-block: 10px;
+}
+
+.productDetailsPage .quantity-picker input {
+  block-size: 100%;
+  border-width: 0;
+  font-size: 18px;
+  inline-size: 50px;
+  padding: 0;
+  text-align: center;
+}
+
+.productDetailsPage .quantity-picker button {
+  background: transparent;
+  block-size: 100%;
+  border-width: 0;
+  font-size: 24px;
+  inline-size: 45px;
+}
+
+.productDetailsPage .quantity-picker button:hover {
+  cursor: pointer;
+}
+
+.productDetailsPage .description {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1.69px;
+}
+
+.productDetailsPage .submit {
+  background: transparent;
+  block-size: 60px;
+  border: 1px solid black;
+  font-size: 20px;
+  inline-size: 100%;
+  margin-block: 20px;
+}
+
+.productDetailsPage .submit:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}

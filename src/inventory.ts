@@ -207,7 +207,7 @@ export const inventory: Bracelet[] = [
       },
     ],
     name: "Blackberry bushes",
-    price: 200,
+    price: 381.0,
   },
 ];
 

@@ -11,7 +11,6 @@
 
 .productTile .price {
   color: var(--text-primary);
-  font-family: "Madera", sans-serif;
   font-size: 18px;
 }
 
