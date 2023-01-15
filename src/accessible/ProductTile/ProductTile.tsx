@@ -11,18 +11,19 @@ const ProductTile = ({ product }: ProductTileProps) => {
   const productImage = images && images[0];
   return (
     <article className="productTile">
-      {productImage ? (
-        <img
-          alt={productImage.description}
-          className="image"
-          src={`${process.env.PUBLIC_URL}/assets/${productImage.fileName}`}
-        ></img>
-      ) : (
-        <div className="image">Product Image Loading</div>
-      )}
-      <h3 className="name">{name}</h3>
-      <div className="price">${price}</div>
-      <Link to={"items/" + id}>To Product Page</Link>
+      <Link className="link" to={"items/" + id}>
+        {productImage ? (
+          <img
+            alt={productImage.description}
+            className="image"
+            src={`${process.env.PUBLIC_URL}/assets/${productImage.fileName}`}
+          ></img>
+        ) : (
+          <div className="image">Product Image Loading</div>
+        )}
+        <h3 className="name">{name}</h3>
+        <div className="price">${price}</div>
+      </Link>
     </article>
   );
 };

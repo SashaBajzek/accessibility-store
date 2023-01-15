@@ -1,17 +1,48 @@
 .productTile {
-  background-color: aliceblue;
   inline-size: 100%;
+  padding: 8px;
+  position: relative;
+}
+
+.productTile:hover::before {
+  content: "";
+  position: absolute;
+  border-radius: 9px;
+  top: -9px;
+  right: -9px;
+  bottom: -9px;
+  left: -9px;
+  z-index: -1;
+  box-shadow: 0 2px 18px rgb(34 34 34 / 20%);
+  background: #fff;
+  border: 1px dotted rgba(0, 0, 0, 0);
+  transform: scale(0.96);
+  transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),
+    opacity 150ms ease-out, border-color 200ms ease-out;
+}
+
+.productTile:hover .name {
+  text-decoration: underline;
+}
+
+.productTile .link {
+  text-decoration: none;
 }
 
 .productTile .name {
   color: var(--text-accent);
   font-family: "Chong Modern", serif;
   font-size: 20px;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  text-decoration: none;
 }
 
 .productTile .price {
   color: var(--text-primary);
   font-size: 18px;
+  font-weight: 600;
+  padding-block-end: 20px;
 }
 
 .productTile .image {

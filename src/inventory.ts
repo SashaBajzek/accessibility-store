@@ -121,6 +121,12 @@ export const inventory: Bracelet[] = [
     description:
       "Abstraction Blue by Georgia O’Keeffe Layers of beautiful blue sky topaz, pale blue aquamarine, a splash of pink sapphires, deep dark polite, teal ammonite and clear topaz",
     id: "georgia2",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "AbstractionBlue.jpg",
+      },
+    ],
     name: "Abstraction Blue",
     price: 200,
   },
@@ -153,7 +159,7 @@ export const inventory: Bracelet[] = [
     description:
       "A celebration of art with bright spring colors. Sapphires, moonstones, fire opals, lapis, lemon quartz, topaz, sunstones, labradorite, and tourmalines to name a few ",
     id: "artwall",
-    name: "Spring art wall",
+    name: "Spring Art Wall",
     price: 200,
   },
   {
@@ -206,7 +212,7 @@ export const inventory: Bracelet[] = [
         fileName: "Blackberry1.jpg",
       },
     ],
-    name: "Blackberry bushes",
+    name: "Blackberry Bushes",
     price: 381.0,
   },
 ];
