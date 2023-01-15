@@ -19,7 +19,7 @@
 main {
   flex-grow: 1;
   margin: 0 auto;
-  margin-block-start: 40px;
+  margin-block: 40px;
   max-inline-size: 1400px;
   padding-inline: 60px;
 }
