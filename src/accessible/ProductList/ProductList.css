@@ -1,0 +1,34 @@
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.productList .productList-item {
+  flex-basis: 50%;
+  flex-grow: 1;
+  max-inline-size: 50%;
+  padding: 10px;
+}
+
+.productlist .productList-item:hover {
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .productList .productList-item {
+    flex-basis: 33.3333333%;
+    max-inline-size: 33.3333333%;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .productList .productList-item {
+    flex-basis: 25%;
+    max-inline-size: 25%;
+    padding: 10px;
+  }
+}

@@ -1,14 +1,13 @@
 import {
   Bracelet,
-  Category,
   getArtItems,
   getFruitItems,
   getMiscItems,
+  getNatureItems,
 } from "../../inventory";
-import ProductTile from "../ProductTile/ProductTile";
 import { CartItem } from "../../App";
 import { useEffect, useState } from "react";
-import { getNatureItems } from "../../inventory";
+import ProductList from "../ProductList/ProductList";
 
 interface HomePageProps {
   addToCart: (product: CartItem) => void;
@@ -29,45 +28,13 @@ const HomePage = ({ addToCart }: HomePageProps) => {
     <>
       <h1>All Bracelets</h1>
       <h2>Art Inspired</h2>
-      {artItems &&
-        artItems.map((product: Bracelet) => (
-          <ProductTile
-            addToCart={addToCart}
-            key={product.id}
-            product={product}
-          />
-        ))}
+      <ProductList items={artItems} />
       <h2>Fruit Inspired</h2>
-      <ul>
-        {fruitItems &&
-          fruitItems.map((product: Bracelet) => (
-            <li>
-              <ProductTile
-                addToCart={addToCart}
-                key={product.id}
-                product={product}
-              />
-            </li>
-          ))}
-      </ul>
+      <ProductList items={fruitItems} />
       <h2>Nature Inspired</h2>
-      {natureItems &&
-        natureItems.map((product: Bracelet) => (
-          <ProductTile
-            addToCart={addToCart}
-            key={product.id}
-            product={product}
-          />
-        ))}
+      <ProductList items={natureItems} />
       <h2>Miscellaneous</h2>
-      {miscItems &&
-        miscItems.map((product: Bracelet) => (
-          <ProductTile
-            addToCart={addToCart}
-            key={product.id}
-            product={product}
-          />
-        ))}
+      <ProductList items={miscItems} />
     </>
   );
 };

@@ -9,7 +9,7 @@ import { Bracelet } from "./inventory";
 import ProductDetailsPage from "./accessible/ProductDetailsPage/ProductDetailsPage";
 
 export interface CartItem {
-  product: Bracelet;
+  item: Bracelet;
   quantity: number;
 }
 
@@ -31,6 +31,7 @@ function App() {
   }, [cart, setCartQuantity]);
 
   const addToCart = (cartItem: CartItem) => {
+    if (cartItem.quantity <= 0) return;
     const newCart = [...cart, cartItem];
     setCart(newCart);
   };
@@ -46,7 +47,10 @@ function App() {
               element={<HomePage addToCart={addToCart} />}
             ></Route>
             <Route path="/checkout" element={<CheckoutPage />}></Route>
-            <Route path="/items/:id" element={<ProductDetailsPage />} />
+            <Route
+              path="/items/:id"
+              element={<ProductDetailsPage addToCart={addToCart} />}
+            />
           </Routes>
         </main>
         <footer>Sasha</footer>
