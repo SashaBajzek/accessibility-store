@@ -5,6 +5,12 @@
   width: 100%;
 }
 
+.Footer .container {
+  max-inline-size: 1400px;
+  min-block-size: 100vh;
+  padding-inline: 60px;
+}
+
 .Footer .copyright {
   color: white;
   display: block;

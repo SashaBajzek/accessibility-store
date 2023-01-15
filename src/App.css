@@ -13,11 +13,13 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-inline-size: 1400px;
-  min-block-size: 100vh;
-  padding-inline: 60px;
 }
 
 main {
   flex-grow: 1;
+  margin: 0 auto;
+  margin-block-start: 40px;
+  max-inline-size: 1400px;
+  min-block-size: 100vh;
+  padding-inline: 60px;
 }

@@ -29,13 +29,19 @@ interface HeaderProps {
 const Header = ({ cartQuantity }: HeaderProps) => {
   return (
     <header className="header">
-      <Link to="/" aria-label={`${shopName} Home`} className="brand">
-        {shopName}
-      </Link>
-      <button aria-label="Cart" aria-haspopup="dialog" className="cart-button">
-        <ShoppingBag />
-        {cartQuantity > 0 && cartQuantity}
-      </button>
+      <div className="container">
+        <Link to="/" aria-label={`${shopName} Home`} className="brand">
+          {shopName}
+        </Link>
+        <button
+          aria-label="Cart"
+          aria-haspopup="dialog"
+          className="cart-button"
+        >
+          <ShoppingBag />
+          {cartQuantity > 0 && cartQuantity}
+        </button>
+      </div>
     </header>
   );
 };
