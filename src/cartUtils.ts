@@ -23,3 +23,11 @@ export const indexOfCartItem = (cartItem: CartItem, cart: CartItem[]) => {
   }
   return -1;
 };
+
+export const getTotal = (cart: CartItem[]): number => {
+  let total = 0;
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].item.price * cart[i].quantity;
+  }
+  return total;
+};
