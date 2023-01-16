@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { shopName } from "../../constants";
 import { Close } from "../../SVGs/Close";
 import "./EmptyCartContent.css";
 
@@ -14,9 +12,6 @@ const EmptyCartContent = ({ closeCart }: EmptyCartContentProps) => {
         <Close />
       </button>
       <h2 id="cart-heading">Your cart is empty</h2>
-      <Link to="/" aria-label={`${shopName} Home`} className="continue">
-        Continue Shopping
-      </Link>
     </div>
   );
 };
