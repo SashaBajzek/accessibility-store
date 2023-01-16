@@ -7,8 +7,15 @@
   position: relative;
 }
 
+.Cart::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .Cart .no-dismiss {
+  display: flex;
+  flex-direction: column;
   inset: 0;
+  justify-content: space-between;
   padding: 20px;
   position: absolute;
 }
