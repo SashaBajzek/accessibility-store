@@ -5,9 +5,9 @@ import {
   getMiscItems,
   getNatureItems,
 } from "../../inventory";
-import { CartItem } from "../../App";
 import { useEffect, useState } from "react";
 import ProductList from "../ProductList/ProductList";
+import { CartItem } from "../../cartUtils";
 
 interface HomePageProps {
   addToCart: (product: CartItem) => void;

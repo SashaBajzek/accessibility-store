@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { CartItem } from "../../App";
+import { CartItem } from "../../cartUtils";
 import { getItemById } from "../../inventory";
 import QuantityPicker from "../QuantityPicker/QuantityPicker";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";

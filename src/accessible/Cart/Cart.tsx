@@ -2,17 +2,22 @@ import {
   forwardRef,
   MouseEvent,
   Ref,
+  useContext,
   useImperativeHandle,
   useRef,
 } from "react";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../App";
 import CartContent from "../CartContent/CartContent";
+import EmptyCartContent from "../EmptyCartContent/EmptyCartContent";
 import "./Cart.css";
 
 const Cart = forwardRef<HTMLDialogElement>(
   (props, ref: Ref<{ showModal: () => void }>) => {
     const cartRef = useRef<HTMLDialogElement>(null);
     const navigate = useNavigate();
+
+    const { cart } = useContext(CartContext);
 
     useImperativeHandle(
       ref,
@@ -50,7 +55,11 @@ const Cart = forwardRef<HTMLDialogElement>(
         ref={cartRef}
       >
         <div className="no-dismiss">
-          <CartContent checkout={checkout} closeCart={closeCart} />
+          {cart.length > 0 ? (
+            <CartContent checkout={checkout} closeCart={closeCart} />
+          ) : (
+            <EmptyCartContent closeCart={closeCart} />
+          )}
         </div>
       </dialog>
     );
