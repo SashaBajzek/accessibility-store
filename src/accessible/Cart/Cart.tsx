@@ -5,6 +5,7 @@ import {
   useImperativeHandle,
   useRef,
 } from "react";
+import { useNavigate } from "react-router-dom";
 import { Close } from "../../SVGs/Close";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import "./Cart.css";
@@ -12,6 +13,7 @@ import "./Cart.css";
 const Cart = forwardRef<HTMLDialogElement>(
   (props, ref: Ref<{ showModal: () => void }>) => {
     const cartRef = useRef<HTMLDialogElement>(null);
+    const navigate = useNavigate();
 
     useImperativeHandle(
       ref,
@@ -36,6 +38,11 @@ const Cart = forwardRef<HTMLDialogElement>(
       }
     };
 
+    const checkout = () => {
+      cartRef.current?.close();
+      navigate("/checkout");
+    };
+
     return (
       <dialog
         aria-labelledby="cart-heading"
@@ -53,7 +60,7 @@ const Cart = forwardRef<HTMLDialogElement>(
 
           <form method="dialog"></form>
           <SubmitButton
-            onSubmit={() => {}}
+            onSubmit={checkout}
             text="Checkout"
             variant={ButtonVariant.Primary}
           />
