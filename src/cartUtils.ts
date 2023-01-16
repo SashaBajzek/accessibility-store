@@ -5,7 +5,7 @@ export interface CartItem {
   quantity: number;
 }
 
-export const calculateItemQuantity = (cart: CartItem[]): number => {
+export const getTotalItemsInCart = (cart: CartItem[]): number => {
   const initialValue = 0;
   const sumWithInitial = cart.reduce(
     (accumulator, currentValue) => accumulator + currentValue.quantity,
@@ -24,7 +24,7 @@ export const indexOfCartItem = (cartItem: CartItem, cart: CartItem[]) => {
   return -1;
 };
 
-export const getTotal = (cart: CartItem[]): number => {
+export const getTotalCost = (cart: CartItem[]): number => {
   let total = 0;
   for (let i = 0; i < cart.length; i++) {
     total += cart[i].item.price * cart[i].quantity;

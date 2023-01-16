@@ -34,7 +34,9 @@ const QuantitySelect = ({
           value={quantity}
         >
           {options.map((option) => (
-            <option value={option}>{option}</option>
+            <option key={option} value={option}>
+              {option}
+            </option>
           ))}
         </select>
       ) : null}

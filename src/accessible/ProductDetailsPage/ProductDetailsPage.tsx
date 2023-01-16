@@ -1,16 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CartItem } from "../../cartUtils";
+import { CartContext } from "../../App";
 import { getItemById } from "../../inventory";
 import QuantityPicker from "../QuantityPicker/QuantityPicker";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import "./ProductDetailsPage.css";
-interface ProductDetailsPageProps {
-  addToCart: (cartItem: CartItem) => void;
-}
 
-const ProductDetailsPage = ({ addToCart }: ProductDetailsPageProps) => {
+const ProductDetailsPage = () => {
   const [quantity, setQuantity] = useState(1);
+  const { addItem } = useContext(CartContext);
 
   const params = useParams();
   const item = params.id && getItemById(params.id);
@@ -39,7 +37,7 @@ const ProductDetailsPage = ({ addToCart }: ProductDetailsPageProps) => {
           setQuantity={setQuantity}
         />
         <SubmitButton
-          onSubmit={() => addToCart({ item, quantity })}
+          onSubmit={() => addItem({ item, quantity })}
           text="Add to cart"
           variant={ButtonVariant.Secondary}
         />

@@ -4,14 +4,13 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { shopName } from "../../constants";
 import Cart from "../Cart/Cart";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import CartButton from "../CartButton/CartButton";
+import { CartContext } from "../../App";
 
-interface HeaderProps {
-  cartQuantity: number;
-}
+const Header = () => {
+  const { totalItemsInCart } = useContext(CartContext);
 
-const Header = ({ cartQuantity }: HeaderProps) => {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const openCart = () => {
     if (dialogRef.current) {
@@ -30,7 +29,7 @@ const Header = ({ cartQuantity }: HeaderProps) => {
             {shopName}
           </Link>
           {shouldShowCart && (
-            <CartButton cartQuantity={cartQuantity} openCart={openCart} />
+            <CartButton cartQuantity={totalItemsInCart} openCart={openCart} />
           )}
         </div>
       </header>

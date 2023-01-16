@@ -7,13 +7,8 @@ import {
 } from "../../inventory";
 import { useEffect, useState } from "react";
 import ProductList from "../ProductList/ProductList";
-import { CartItem } from "../../cartUtils";
 
-interface HomePageProps {
-  addToCart: (product: CartItem) => void;
-}
-
-const HomePage = ({ addToCart }: HomePageProps) => {
+const HomePage = () => {
   const [artItems, setArtItems] = useState<Bracelet[]>([]);
   const [fruitItems, setFruitItems] = useState<Bracelet[]>([]);
   const [natureItems, setNatureItems] = useState<Bracelet[]>([]);

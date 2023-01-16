@@ -1,4 +1,4 @@
-import React, { createContext, useCallback } from "react";
+import React, { createContext } from "react";
 import Header from "./accessible/Header/Header";
 import "./App.css";
 
@@ -7,54 +7,56 @@ import HomePage from "./accessible/HomePage/HomePage";
 import CheckoutPage from "./accessible/CheckoutPage/CheckoutPage";
 import ProductDetailsPage from "./accessible/ProductDetailsPage/ProductDetailsPage";
 import Footer from "./accessible/Footer/Footer";
-import { calculateItemQuantity, CartItem, indexOfCartItem } from "./cartUtils";
+import { CartItem } from "./cartUtils";
+import { useCart } from "./useCart";
 
 interface CartContextProps {
+  addItem: (item: CartItem) => void;
   cart: CartItem[];
-  addToCart: (item: CartItem) => void;
+  totalItemsInCart: number;
+  removeItem: (item: CartItem) => void;
+  totalCost: number;
+  updateItemQuantity: (item: CartItem) => void;
 }
 
 export const CartContext = createContext<CartContextProps>({
+  addItem: () => {},
   cart: [],
-  addToCart: () => {},
+  totalItemsInCart: 0,
+  removeItem: () => {},
+  totalCost: 0,
+  updateItemQuantity: () => {},
 });
 
 function App() {
-  const [cart, setCart] = React.useState<CartItem[]>([]);
-  const [cartQuantity, setCartQuantity] = React.useState(0);
-
-  const addToCart = useCallback(
-    (cartItem: CartItem) => {
-      if (cartItem.quantity <= 0) return;
-      let newCart = cart;
-      const index = indexOfCartItem(cartItem, cart);
-      if (cart.length === 0 || index === -1) {
-        newCart = [...cart, cartItem];
-      } else {
-        newCart[index].quantity += cartItem.quantity;
-      }
-      setCart(newCart);
-      setCartQuantity(calculateItemQuantity(newCart));
-    },
-    [cart, setCart]
-  );
+  const {
+    addItem,
+    cart,
+    removeItem,
+    totalCost,
+    totalItemsInCart,
+    updateItemQuantity,
+  } = useCart();
 
   return (
     <div className="App">
       <Router>
-        <CartContext.Provider value={{ cart, addToCart }}>
-          <Header cartQuantity={cartQuantity} />
+        <CartContext.Provider
+          value={{
+            addItem,
+            cart,
+            removeItem,
+            totalCost,
+            totalItemsInCart,
+            updateItemQuantity,
+          }}
+        >
+          <Header />
           <main>
             <Routes>
-              <Route
-                path="/"
-                element={<HomePage addToCart={addToCart} />}
-              ></Route>
+              <Route path="/" element={<HomePage />}></Route>
               <Route path="/checkout" element={<CheckoutPage />}></Route>
-              <Route
-                path="/items/:id"
-                element={<ProductDetailsPage addToCart={addToCart} />}
-              />
+              <Route path="/items/:id" element={<ProductDetailsPage />} />
             </Routes>
           </main>
           <Footer />

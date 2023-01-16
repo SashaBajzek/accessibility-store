@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../App";
-import { getTotal } from "../../cartUtils";
 import { Close } from "../../SVGs/Close";
-import QuantityPicker from "../QuantityPicker/QuantityPicker";
 import QuantitySelect from "../QuantitySelect/QuantitySelect";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
@@ -14,7 +12,7 @@ interface CartContentProps {
 }
 
 const CartContent = ({ checkout, closeCart }: CartContentProps) => {
-  const { cart, addToCart } = useContext(CartContext);
+  const { cart, totalCost } = useContext(CartContext);
 
   return (
     <div className="CartContent">
@@ -72,7 +70,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
       </form>
       <div className="total-container">
         <div className="label">Total</div>
-        <div className="number">${getTotal(cart)}</div>
+        <div className="number">${totalCost}</div>
       </div>
       <SubmitButton
         onSubmit={checkout}
