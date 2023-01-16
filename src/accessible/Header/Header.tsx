@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { shopName } from "../../constants";
 import Cart from "../Cart/Cart";
 import { useRef } from "react";
-import { ShoppingBag } from "../../SVGs/ShoppingBag";
+import CartButton from "../CartButton/CartButton";
 
 interface HeaderProps {
   cartQuantity: number;
@@ -30,15 +30,7 @@ const Header = ({ cartQuantity }: HeaderProps) => {
             {shopName}
           </Link>
           {shouldShowCart && (
-            <button
-              aria-label="Cart"
-              aria-haspopup="dialog"
-              className="cart-button"
-              onClick={openCart}
-            >
-              <ShoppingBag />
-              {cartQuantity > 0 && cartQuantity}
-            </button>
+            <CartButton cartQuantity={cartQuantity} openCart={openCart} />
           )}
         </div>
       </header>
