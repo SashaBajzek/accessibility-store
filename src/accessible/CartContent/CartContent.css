@@ -33,11 +33,31 @@
   cursor: pointer;
 }
 
+.CartContent form {
+  flex-grow: 1;
+}
+
 .CartContent .image {
   inline-size: 100px;
 }
 
-.CartContent .submit {
+.CartContent .total-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 20px;
+}
+
+.CartContent .total-container .label {
+  font-family: "ChongModernW01", serif;
+  font-size: 20px;
+}
+
+.CartContent .total-container .number {
+  font-size: 24px;
+}
+
+.CartContent . .CartContent .submit {
   block-size: 60px;
   inline-size: 100%;
 }

@@ -67,7 +67,10 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
           </tbody>
         </table>
       </form>
-      <div>Total ${getTotal(cart)}</div>
+      <div className="total-container">
+        <div className="label">Total</div>
+        <div className="number">${getTotal(cart)}</div>
+      </div>
       <SubmitButton
         onSubmit={checkout}
         text="Checkout"
