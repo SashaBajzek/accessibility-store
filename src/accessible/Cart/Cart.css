@@ -1,0 +1,25 @@
+.Cart {
+  block-size: 100%;
+  max-block-size: 100%;
+  inline-size: 500px;
+  margin-block: 0;
+  margin-inline-end: 0;
+  position: relative;
+}
+
+.Cart .no-dismiss {
+  inset: 0;
+  padding: 20px;
+  position: absolute;
+}
+
+.Cart h2 {
+  font-family: "ChongModernW01", serif;
+  font-size: 32px;
+  margin: 0;
+}
+
+.Cart .submit {
+  block-size: 60px;
+  inline-size: 100%;
+}

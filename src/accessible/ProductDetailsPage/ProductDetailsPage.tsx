@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { CartItem } from "../../App";
 import { getItemById } from "../../inventory";
 import QuantityPicker from "../QuantityPicker/QuantityPicker";
+import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import "./ProductDetailsPage.css";
 interface ProductDetailsPageProps {
   addToCart: (cartItem: CartItem) => void;
@@ -37,12 +38,12 @@ const ProductDetailsPage = ({ addToCart }: ProductDetailsPageProps) => {
           quantity={quantity}
           setQuantity={setQuantity}
         />
-        <button
-          className="submit"
-          onClick={() => addToCart({ item, quantity })}
-        >
-          Add to cart
-        </button>
+        <SubmitButton
+          onSubmit={() => addToCart({ item, quantity })}
+          text="Add to cart"
+          variant={ButtonVariant.Secondary}
+        />
+
         <p className="description">{description}</p>
       </div>
     </div>

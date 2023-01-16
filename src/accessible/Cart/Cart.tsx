@@ -5,6 +5,8 @@ import {
   useImperativeHandle,
   useRef,
 } from "react";
+import { Close } from "../../SVGs/Close";
+import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import "./Cart.css";
 
 const Cart = forwardRef<HTMLDialogElement>(
@@ -35,13 +37,23 @@ const Cart = forwardRef<HTMLDialogElement>(
     };
 
     return (
-      <dialog className="Cart" onClick={onClick} ref={cartRef}>
+      <dialog
+        aria-labelledby="cart-heading"
+        className="Cart"
+        onClick={onClick}
+        ref={cartRef}
+      >
         <div className="no-dismiss">
-          <h2>Your cart</h2>
-          <button onClick={closeCart}>Close</button>
-          <form>
-            <button>Check out</button>
-          </form>
+          <h2 id="cart-heading">Your cart</h2>
+          <button onClick={closeCart}>
+            <Close />
+          </button>
+          <form method="dialog"></form>
+          <SubmitButton
+            onSubmit={() => {}}
+            text="Checkout"
+            variant={ButtonVariant.Primary}
+          />
         </div>
       </dialog>
     );
