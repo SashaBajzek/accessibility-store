@@ -3,6 +3,7 @@ import { CartContext } from "../../App";
 import { getTotal } from "../../cartUtils";
 import { Close } from "../../SVGs/Close";
 import QuantityPicker from "../QuantityPicker/QuantityPicker";
+import QuantitySelect from "../QuantitySelect/QuantitySelect";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
 import "./CartContent.css";
@@ -14,6 +15,7 @@ interface CartContentProps {
 
 const CartContent = ({ checkout, closeCart }: CartContentProps) => {
   const { cart, addToCart } = useContext(CartContext);
+
   return (
     <div className="CartContent">
       <div className="heading">
@@ -30,10 +32,10 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
                 <VisuallyHidden>Product Image</VisuallyHidden>
               </th>
               <th>Product</th>
-              <th>Total</th>
               <th>
                 <VisuallyHidden>Quantity</VisuallyHidden>
               </th>
+              <th>Total</th>
             </tr>
           </thead>
           <tbody>
@@ -54,14 +56,15 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
                   <div>{cartItem.item.name}</div>
                   <div>${cartItem.item.price}</div>
                 </td>
-                <td>${cartItem.item.price * cartItem.quantity}</td>
                 <td>
-                  <QuantityPicker
-                    minQuantity={1}
+                  <QuantitySelect
+                    maxQuantity={Math.max(cartItem.quantity, 10)}
+                    minQuantity={0}
+                    onChange={() => {}}
                     quantity={cartItem.quantity}
-                    setQuantity={() => {}}
                   />
                 </td>
+                <td>${cartItem.item.price * cartItem.quantity}</td>
               </tr>
             ))}
           </tbody>
