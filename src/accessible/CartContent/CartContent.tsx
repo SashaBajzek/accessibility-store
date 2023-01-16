@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { CartContext } from "../../App";
 import { getTotal } from "../../cartUtils";
 import { Close } from "../../SVGs/Close";
+import QuantityPicker from "../QuantityPicker/QuantityPicker";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
+import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
 import "./CartContent.css";
 
 interface CartContentProps {
@@ -11,7 +13,7 @@ interface CartContentProps {
 }
 
 const CartContent = ({ checkout, closeCart }: CartContentProps) => {
-  const { cart } = useContext(CartContext);
+  const { cart, addToCart } = useContext(CartContext);
   return (
     <div className="CartContent">
       <div className="heading">
@@ -20,7 +22,51 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
           <Close />
         </button>
       </div>
-      <form method="dialog"></form>
+      <form method="dialog">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <VisuallyHidden>Product Image</VisuallyHidden>
+              </th>
+              <th>Product</th>
+              <th>Total</th>
+              <th>
+                <VisuallyHidden>Quantity</VisuallyHidden>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {cart.map((cartItem) => (
+              <tr key={cartItem.item.id}>
+                <td>
+                  {cartItem.item.images ? (
+                    <img
+                      alt={cartItem.item.images[0].description}
+                      className="image"
+                      src={`${process.env.PUBLIC_URL}/assets/${cartItem.item.images[0].fileName}`}
+                    ></img>
+                  ) : (
+                    <div>LoadingImage</div>
+                  )}
+                </td>
+                <td>
+                  <div>{cartItem.item.name}</div>
+                  <div>${cartItem.item.price}</div>
+                </td>
+                <td>${cartItem.item.price * cartItem.quantity}</td>
+                <td>
+                  <QuantityPicker
+                    minQuantity={1}
+                    quantity={cartItem.quantity}
+                    setQuantity={() => {}}
+                  />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </form>
       <div>Total ${getTotal(cart)}</div>
       <SubmitButton
         onSubmit={checkout}

@@ -11,9 +11,13 @@ import { calculateItemQuantity, CartItem, indexOfCartItem } from "./cartUtils";
 
 interface CartContextProps {
   cart: CartItem[];
+  addToCart: (item: CartItem) => void;
 }
 
-export const CartContext = createContext<CartContextProps>({ cart: [] });
+export const CartContext = createContext<CartContextProps>({
+  cart: [],
+  addToCart: () => {},
+});
 
 function App() {
   const [cart, setCart] = React.useState<CartItem[]>([]);
@@ -38,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <CartContext.Provider value={{ cart }}>
+        <CartContext.Provider value={{ cart, addToCart }}>
           <Header cartQuantity={cartQuantity} />
           <main>
             <Routes>

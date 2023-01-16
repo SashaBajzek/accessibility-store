@@ -33,6 +33,10 @@
   cursor: pointer;
 }
 
+.CartContent .image {
+  inline-size: 100px;
+}
+
 .CartContent .submit {
   block-size: 60px;
   inline-size: 100%;
