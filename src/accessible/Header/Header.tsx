@@ -1,5 +1,6 @@
 import "./Header.css";
 
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { shopName } from "../../constants";
 import Cart from "../Cart/Cart";
@@ -18,6 +19,9 @@ const Header = ({ cartQuantity }: HeaderProps) => {
     }
   };
 
+  const location = useLocation();
+  const shouldShowCart = location.pathname !== "/checkout";
+
   return (
     <>
       <header className="header">
@@ -25,15 +29,17 @@ const Header = ({ cartQuantity }: HeaderProps) => {
           <Link to="/" aria-label={`${shopName} Home`} className="brand">
             {shopName}
           </Link>
-          <button
-            aria-label="Cart"
-            aria-haspopup="dialog"
-            className="cart-button"
-            onClick={openCart}
-          >
-            <ShoppingBag />
-            {cartQuantity > 0 && cartQuantity}
-          </button>
+          {shouldShowCart && (
+            <button
+              aria-label="Cart"
+              aria-haspopup="dialog"
+              className="cart-button"
+              onClick={openCart}
+            >
+              <ShoppingBag />
+              {cartQuantity > 0 && cartQuantity}
+            </button>
+          )}
         </div>
       </header>
       <Cart ref={dialogRef} />
