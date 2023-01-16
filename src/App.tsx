@@ -30,7 +30,7 @@ function App() {
         newCart[index].quantity += cartItem.quantity;
       }
       setCart(newCart);
-      setCartQuantity(calculateItemQuantity(cart));
+      setCartQuantity(calculateItemQuantity(newCart));
     },
     [cart, setCart]
   );
