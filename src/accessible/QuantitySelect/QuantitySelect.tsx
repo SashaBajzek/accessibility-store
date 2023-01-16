@@ -4,7 +4,7 @@ import "./QuantitySelect.css";
 interface QuantitySelectProps {
   maxQuantity: number;
   minQuantity: number;
-  onChange: () => void;
+  onChange: (quantity: number) => void;
   quantity: number;
 }
 
@@ -24,13 +24,18 @@ const QuantitySelect = ({
     setOptions(newOptions);
   }, [maxQuantity, minQuantity]);
 
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = parseInt(event.target.value, 10);
+    onChange(value);
+  };
+
   return (
     <>
       {options.length > 0 ? (
         <select
           className="Select"
           required
-          onChange={onChange}
+          onChange={handleChange}
           value={quantity}
         >
           {options.map((option) => (

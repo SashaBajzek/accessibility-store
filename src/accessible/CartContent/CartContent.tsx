@@ -12,8 +12,7 @@ interface CartContentProps {
 }
 
 const CartContent = ({ checkout, closeCart }: CartContentProps) => {
-  const { cart, totalCost } = useContext(CartContext);
-
+  const { cart, totalCost, updateItemQuantity } = useContext(CartContext);
   return (
     <div className="CartContent">
       <div className="heading">
@@ -58,7 +57,12 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
                   <QuantitySelect
                     maxQuantity={Math.max(cartItem.quantity, 10)}
                     minQuantity={0}
-                    onChange={() => {}}
+                    onChange={(newQuantity: number) => {
+                      updateItemQuantity({
+                        item: cartItem.item,
+                        quantity: newQuantity,
+                      });
+                    }}
                     quantity={cartItem.quantity}
                   />
                 </td>
