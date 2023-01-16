@@ -1,0 +1,39 @@
+.CartContent {
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.CartContent .heading {
+  align-items: center;
+  display: flex;
+  inline-size: 100%;
+  justify-content: space-between;
+}
+
+.CartContent h2 {
+  font-family: "ChongModernW01", serif;
+  font-size: 32px;
+  margin: 0;
+}
+
+.CartContent .close {
+  align-items: center;
+  background: transparent;
+  block-size: 50px;
+  border-width: 0;
+  display: flex;
+  inline-size: 50px;
+  justify-content: center;
+}
+
+.CartContent .close:hover {
+  cursor: pointer;
+}
+
+.CartContent .submit {
+  block-size: 60px;
+  inline-size: 100%;
+}

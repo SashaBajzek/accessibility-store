@@ -6,8 +6,7 @@ import {
   useRef,
 } from "react";
 import { useNavigate } from "react-router-dom";
-import { Close } from "../../SVGs/Close";
-import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
+import CartContent from "../CartContent/CartContent";
 import "./Cart.css";
 
 const Cart = forwardRef<HTMLDialogElement>(
@@ -51,19 +50,7 @@ const Cart = forwardRef<HTMLDialogElement>(
         ref={cartRef}
       >
         <div className="no-dismiss">
-          <div className="heading">
-            <h2 id="cart-heading">Your cart</h2>
-            <button className="close" onClick={closeCart}>
-              <Close />
-            </button>
-          </div>
-
-          <form method="dialog"></form>
-          <SubmitButton
-            onSubmit={checkout}
-            text="Checkout"
-            variant={ButtonVariant.Primary}
-          />
+          <CartContent checkout={checkout} closeCart={closeCart} />
         </div>
       </dialog>
     );
