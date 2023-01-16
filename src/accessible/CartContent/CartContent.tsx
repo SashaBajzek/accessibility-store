@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../App";
 import { Close } from "../../SVGs/Close";
+import { Trash } from "../../SVGs/Trash";
 import QuantitySelect from "../QuantitySelect/QuantitySelect";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
@@ -12,7 +13,8 @@ interface CartContentProps {
 }
 
 const CartContent = ({ checkout, closeCart }: CartContentProps) => {
-  const { cart, totalCost, updateItemQuantity } = useContext(CartContext);
+  const { cart, removeItem, totalCost, updateItemQuantity } =
+    useContext(CartContext);
   return (
     <div className="CartContent">
       <div className="heading">
@@ -54,17 +56,26 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
                   <div>${cartItem.item.price}</div>
                 </td>
                 <td>
-                  <QuantitySelect
-                    maxQuantity={Math.max(cartItem.quantity, 10)}
-                    minQuantity={0}
-                    onChange={(newQuantity: number) => {
-                      updateItemQuantity({
-                        item: cartItem.item,
-                        quantity: newQuantity,
-                      });
-                    }}
-                    quantity={cartItem.quantity}
-                  />
+                  <div className="quantity-container">
+                    <QuantitySelect
+                      maxQuantity={Math.max(cartItem.quantity, 10)}
+                      minQuantity={0}
+                      onChange={(newQuantity: number) => {
+                        updateItemQuantity({
+                          item: cartItem.item,
+                          quantity: newQuantity,
+                        });
+                      }}
+                      quantity={cartItem.quantity}
+                    />
+                    <button
+                      aria-label={`Remove ${cartItem.item.name} braceletfrom cart`}
+                      className="remove-button"
+                      onClick={() => removeItem(cartItem)}
+                    >
+                      <Trash />
+                    </button>
+                  </div>
                 </td>
                 <td>${cartItem.item.price * cartItem.quantity}</td>
               </tr>

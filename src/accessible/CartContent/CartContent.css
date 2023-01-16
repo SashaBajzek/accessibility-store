@@ -41,6 +41,25 @@
   inline-size: 100px;
 }
 
+.CartContent .quantity-container {
+  align-items: center;
+  display: flex;
+}
+
+.CartContent .remove-button {
+  align-items: center;
+  background-color: transparent;
+  border-width: 0;
+  block-size: 42px;
+  display: flex;
+  inline-size: 42px;
+  justify-content: center;
+}
+
+.CartContent .remove-button:hover {
+  cursor: pointer;
+}
+
 .CartContent .total-container {
   align-items: center;
   display: flex;

@@ -57,7 +57,6 @@ export function useCart() {
   const addItem = useCallback(
     (item: CartItem) => {
       const index = indexOfCartItem(item, cart);
-      console.log("addItem item", item);
       if (index < 0) {
         firstAddOfItem(item);
       } else {
