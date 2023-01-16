@@ -20,10 +20,31 @@
   position: absolute;
 }
 
+.Cart .heading {
+  align-items: center;
+  display: flex;
+  inline-size: 100%;
+  justify-content: space-between;
+}
+
 .Cart h2 {
   font-family: "ChongModernW01", serif;
   font-size: 32px;
   margin: 0;
+}
+
+.Cart .close {
+  align-items: center;
+  background: transparent;
+  block-size: 50px;
+  border-width: 0;
+  display: flex;
+  inline-size: 50px;
+  justify-content: center;
+}
+
+.Cart .close:hover {
+  cursor: pointer;
 }
 
 .Cart .submit {

@@ -44,10 +44,13 @@ const Cart = forwardRef<HTMLDialogElement>(
         ref={cartRef}
       >
         <div className="no-dismiss">
-          <h2 id="cart-heading">Your cart</h2>
-          <button onClick={closeCart}>
-            <Close />
-          </button>
+          <div className="heading">
+            <h2 id="cart-heading">Your cart</h2>
+            <button className="close" onClick={closeCart}>
+              <Close />
+            </button>
+          </div>
+
           <form method="dialog"></form>
           <SubmitButton
             onSubmit={() => {}}
