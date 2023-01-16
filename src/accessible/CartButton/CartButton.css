@@ -7,6 +7,7 @@
   inline-size: 60px;
   justify-content: center;
   padding: 0;
+  position: relative;
 }
 
 .CartButton:hover {
@@ -16,4 +17,20 @@
 .CartButton svg path {
   fill: var(--text-primary);
   stroke: var(--text-primary);
+}
+
+.CartButton .quantity {
+  align-items: center;
+  background: var(--text-accent);
+  block-size: 22px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  font-size: 14px;
+  min-inline-size: 22px;
+  inset-block-end: 10px;
+  inset-inline-end: 8px;
+  justify-content: center;
+  padding-inline: 2px;
+  position: absolute;
 }

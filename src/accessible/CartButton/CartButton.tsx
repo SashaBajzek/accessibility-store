@@ -1,4 +1,5 @@
 import { ShoppingBag } from "../../SVGs/ShoppingBag";
+import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
 import "./CartButton.css";
 
 interface CartButtonProps {
@@ -15,7 +16,17 @@ const CartButton = ({ cartQuantity, openCart }: CartButtonProps) => {
       onClick={openCart}
     >
       <ShoppingBag />
-      {cartQuantity > 0 && cartQuantity}
+      <VisuallyHidden>Cart</VisuallyHidden>
+      {cartQuantity > 0 && (
+        <>
+          <div aria-hidden="true" className="quantity">
+            {cartQuantity}
+          </div>
+          <VisuallyHidden>
+            {cartQuantity === 1 ? "1 item" : `${cartQuantity} items`}
+          </VisuallyHidden>
+        </>
+      )}
     </button>
   );
 };
