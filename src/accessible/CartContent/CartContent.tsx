@@ -28,7 +28,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
           <thead>
             <tr>
               <th>
-                <VisuallyHidden>Product Image</VisuallyHidden>
+                <VisuallyHidden>PRODUCT IMAGE</VisuallyHidden>
               </th>
               <th>Product</th>
               <th>
@@ -39,7 +39,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
           </thead>
           <tbody>
             {cart.map((cartItem) => (
-              <tr key={cartItem.item.id}>
+              <tr key={cartItem.item.id + cartItem.size}>
                 <td>
                   {cartItem.item.images ? (
                     <img
@@ -52,7 +52,8 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
                   )}
                 </td>
                 <td>
-                  <div>{cartItem.item.name}</div>
+                  <div className="item-name">{cartItem.item.name}</div>
+                  <div>Size: {cartItem.size}</div>
                   <div>${cartItem.item.price}</div>
                 </td>
                 <td>
@@ -64,6 +65,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
                         updateItemQuantity({
                           item: cartItem.item,
                           quantity: newQuantity,
+                          size: cartItem.size,
                         });
                       }}
                       quantity={cartItem.quantity}

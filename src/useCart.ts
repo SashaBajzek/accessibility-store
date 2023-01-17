@@ -64,6 +64,7 @@ export function useCart() {
         updateItemQuantity({
           quantity: item.quantity + currentQuantity,
           item: item.item,
+          size: item.size,
         });
       }
     },

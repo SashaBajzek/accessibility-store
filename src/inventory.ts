@@ -5,6 +5,12 @@ export enum Category {
   Nature = "nature",
 }
 
+export enum Size {
+  Small = "small",
+  Medium = "medium",
+  Large = "large",
+}
+
 export interface ProductImage {
   description: string;
   fileName: any;

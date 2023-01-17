@@ -1,8 +1,9 @@
-import { Bracelet } from "./inventory";
+import { Bracelet, Size } from "./inventory";
 
 export interface CartItem {
   item: Bracelet;
   quantity: number;
+  size: Size;
 }
 
 export const getTotalItemsInCart = (cart: CartItem[]): number => {
@@ -17,7 +18,7 @@ export const getTotalItemsInCart = (cart: CartItem[]): number => {
 export const indexOfCartItem = (cartItem: CartItem, cart: CartItem[]) => {
   if (cart.length === 0) return -1;
   for (let i = 0; i < cart.length; i++) {
-    if (cartItem.item === cart[i].item) {
+    if (cartItem.item === cart[i].item && cartItem.size === cart[i].size) {
       return i;
     }
   }

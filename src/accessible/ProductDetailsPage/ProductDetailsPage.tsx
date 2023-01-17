@@ -1,13 +1,15 @@
 import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../App";
-import { getItemById } from "../../inventory";
+import { getItemById, Size } from "../../inventory";
 import QuantityPicker from "../QuantityPicker/QuantityPicker";
+import { SizeSelector } from "../SizeSelector/SizeSelector";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import "./ProductDetailsPage.css";
 
 const ProductDetailsPage = () => {
   const [quantity, setQuantity] = useState(1);
+  const [size, setSize] = useState(Size.Medium);
   const { addItem } = useContext(CartContext);
 
   const params = useParams();
@@ -31,13 +33,14 @@ const ProductDetailsPage = () => {
       <div className="info">
         <h1>{name}</h1>
         <div className="price">${price}</div>
+        <SizeSelector size={size} onChange={setSize}></SizeSelector>
         <QuantityPicker
           minQuantity={1}
           quantity={quantity}
           setQuantity={setQuantity}
         />
         <SubmitButton
-          onSubmit={() => addItem({ item, quantity })}
+          onSubmit={() => addItem({ item, quantity, size })}
           text="Add to cart"
           variant={ButtonVariant.Secondary}
         />
