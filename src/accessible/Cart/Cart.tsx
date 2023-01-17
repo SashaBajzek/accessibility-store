@@ -46,6 +46,7 @@ const Cart = forwardRef<HTMLDialogElement>(
 
     const checkout = () => {
       cartRef.current?.close();
+      setHideOverflow(false);
       navigate("/checkout");
     };
 
