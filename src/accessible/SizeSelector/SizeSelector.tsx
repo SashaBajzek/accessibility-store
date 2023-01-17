@@ -16,8 +16,6 @@ const getEnumKeys = <T extends Object>(
 
 export const SizeSelector = ({ onChange, size }: SizeSelectorProps) => {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log("Size event.target.value", event.target.value);
-    console.log("Size keyof typeof Size", typeof Size);
     let valueEnum: Size;
     const valueString = event.target.value;
     if (valueString === Size.XSmall) {
