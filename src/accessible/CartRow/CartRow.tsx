@@ -33,11 +33,15 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
             <div>LoadingImage</div>
           )}
         </Link>
-        <div className="product-text">
-          <Link to={"items/" + cartItem.item.id} onClick={closeCart}>
-            <div className="item-name">{cartItem.item.name}</div>
+        <div>
+          <Link
+            className="item-name"
+            to={"items/" + cartItem.item.id}
+            onClick={closeCart}
+          >
+            {cartItem.item.name}
           </Link>
-          <div>Length: {cartItem.size}</div>
+          <div className="item-options">Length: {cartItem.size}</div>
         </div>
       </td>
       <td>
@@ -57,7 +61,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           quantity={cartItem.quantity}
         />
       </td>
-      <td>${cartItem.item.price * cartItem.quantity}</td>
+      <td className="total-cell">${cartItem.item.price * cartItem.quantity}</td>
       <td>
         <button
           aria-label={`Remove ${cartItem.item.name} braceletfrom cart`}

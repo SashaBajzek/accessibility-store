@@ -1,13 +1,12 @@
+.CartRow {
+  padding-block: 20px;
+}
+
 .CartRow td {
-  padding: 8px;
 }
 
 .CartRow .product-col {
   display: flex;
-}
-
-.CartRow .product-col .product-text {
-  padding-inline-start: 8px;
 }
 
 .CartRow .image {
@@ -17,8 +16,23 @@
 }
 
 .CartRow .item-name {
+  color: black;
   font-family: "ChongModernW01", serif;
   font-size: 20px;
+  text-decoration: none;
+}
+
+.CartRow .item-name:hover {
+  text-decoration: underline;
+}
+
+.CartRow .item-options {
+  font-size: 18px;
+}
+
+.CartRow .total-cell {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .CartRow .remove-button {
