@@ -38,7 +38,9 @@
 }
 
 .CartContent .image {
+  block-size: 100px;
   inline-size: 100px;
+  object-fit: cover;
 }
 
 .CartContent .item-name {
