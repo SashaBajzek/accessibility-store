@@ -68,7 +68,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomePage />}></Route>
                 <Route
-                  path="/accessibility-store"
+                  path="/accessibility-store/"
                   element={<HomePage />}
                 ></Route>
 
