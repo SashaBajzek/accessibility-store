@@ -1,0 +1,36 @@
+.CartRow td {
+  padding: 8px;
+}
+
+.CartRow .product-col {
+  display: flex;
+}
+
+.CartRow .product-col .product-text {
+  padding-inline-start: 8px;
+}
+
+.CartRow .image {
+  block-size: 100px;
+  inline-size: 100px;
+  object-fit: cover;
+}
+
+.CartRow .item-name {
+  font-family: "ChongModernW01", serif;
+  font-size: 20px;
+}
+
+.CartRow .remove-button {
+  align-items: center;
+  background-color: transparent;
+  border-width: 0;
+  block-size: 42px;
+  display: flex;
+  inline-size: 42px;
+  justify-content: center;
+}
+
+.CartRow .remove-button:hover {
+  cursor: pointer;
+}

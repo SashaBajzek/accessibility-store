@@ -51,49 +51,7 @@
 
 .CartContent th {
   border-block-end: 1px solid black;
-}
-
-.CartContent th,
-.CartContent td {
   padding: 8px;
-}
-
-.CartContent .product-col {
-  display: flex;
-}
-
-.CartContent .product-col .product-text {
-  padding-inline-start: 8px;
-}
-
-.CartContent .image {
-  block-size: 100px;
-  inline-size: 100px;
-  object-fit: cover;
-}
-
-.CartContent .item-name {
-  font-family: "ChongModernW01", serif;
-  font-size: 20px;
-}
-
-.CartContent .quantity-container {
-  align-items: center;
-  display: flex;
-}
-
-.CartContent .remove-button {
-  align-items: center;
-  background-color: transparent;
-  border-width: 0;
-  block-size: 42px;
-  display: flex;
-  inline-size: 42px;
-  justify-content: center;
-}
-
-.CartContent .remove-button:hover {
-  cursor: pointer;
 }
 
 .CartContent .total-container {
