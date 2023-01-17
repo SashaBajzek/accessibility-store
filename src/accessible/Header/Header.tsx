@@ -6,15 +6,19 @@ import { shopName } from "../../constants";
 import Cart from "../Cart/Cart";
 import { useContext, useRef } from "react";
 import CartButton from "../CartButton/CartButton";
-import { CartContext } from "../../App";
+import { CartContext, HideOverflowContext } from "../../App";
 
 const Header = () => {
   const { totalItemsInCart } = useContext(CartContext);
+  const { setHideOverflow } = useContext(HideOverflowContext);
+
+  useContext(CartContext);
 
   const dialogRef = useRef<HTMLDialogElement>(null);
   const openCart = () => {
     if (dialogRef.current) {
       dialogRef.current.showModal();
+      setHideOverflow(true);
     }
   };
 

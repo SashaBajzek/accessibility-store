@@ -23,3 +23,8 @@ main {
   max-inline-size: 1400px;
   padding-inline: 60px;
 }
+
+.overflow-hidden {
+  block-size: 100vh;
+  overflow: hidden;
+}

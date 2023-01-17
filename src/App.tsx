@@ -9,6 +9,7 @@ import ProductDetailsPage from "./accessible/ProductDetailsPage/ProductDetailsPa
 import Footer from "./accessible/Footer/Footer";
 import { CartItem } from "./cartUtils";
 import { useCart } from "./useCart";
+import { useState } from "react";
 
 interface CartContextProps {
   addItem: (item: CartItem) => void;
@@ -28,6 +29,14 @@ export const CartContext = createContext<CartContextProps>({
   updateItemQuantity: () => {},
 });
 
+interface HideOverflowContextProps {
+  setHideOverflow: (hideOverflow: boolean) => void;
+}
+
+export const HideOverflowContext = createContext<HideOverflowContextProps>({
+  setHideOverflow: () => {},
+});
+
 function App() {
   const {
     addItem,
@@ -38,8 +47,10 @@ function App() {
     updateItemQuantity,
   } = useCart();
 
+  const [hideOverflow, setHideOverflow] = useState(false);
+
   return (
-    <div className="App">
+    <div className={`App ${hideOverflow ? "overflow-hidden" : ""}`}>
       <Router>
         <CartContext.Provider
           value={{
@@ -51,15 +62,17 @@ function App() {
             updateItemQuantity,
           }}
         >
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />}></Route>
-              <Route path="/checkout" element={<CheckoutPage />}></Route>
-              <Route path="/items/:id" element={<ProductDetailsPage />} />
-            </Routes>
-          </main>
-          <Footer />
+          <HideOverflowContext.Provider value={{ setHideOverflow }}>
+            <Header />
+            <main>
+              <Routes>
+                <Route path="/" element={<HomePage />}></Route>
+                <Route path="/checkout" element={<CheckoutPage />}></Route>
+                <Route path="/items/:id" element={<ProductDetailsPage />} />
+              </Routes>
+            </main>
+            <Footer />
+          </HideOverflowContext.Provider>
         </CartContext.Provider>
       </Router>
     </div>

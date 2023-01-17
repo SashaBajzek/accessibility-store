@@ -7,7 +7,7 @@ import {
   useRef,
 } from "react";
 import { useNavigate } from "react-router-dom";
-import { CartContext } from "../../App";
+import { CartContext, HideOverflowContext } from "../../App";
 import CartContent from "../CartContent/CartContent";
 import EmptyCartContent from "../EmptyCartContent/EmptyCartContent";
 import "./Cart.css";
@@ -18,6 +18,7 @@ const Cart = forwardRef<HTMLDialogElement>(
     const navigate = useNavigate();
 
     const { cart } = useContext(CartContext);
+    const { setHideOverflow } = useContext(HideOverflowContext);
 
     useImperativeHandle(
       ref,
@@ -34,6 +35,7 @@ const Cart = forwardRef<HTMLDialogElement>(
 
     const closeCart = () => {
       cartRef.current?.close();
+      setHideOverflow(false);
     };
 
     const onClick = (event: MouseEvent) => {
