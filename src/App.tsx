@@ -67,6 +67,11 @@ function App() {
             <main>
               <Routes>
                 <Route path="/" element={<HomePage />}></Route>
+                <Route
+                  path="/accessibility-store"
+                  element={<HomePage />}
+                ></Route>
+
                 <Route path="/checkout" element={<CheckoutPage />}></Route>
                 <Route path="/items/:id" element={<ProductDetailsPage />} />
               </Routes>
