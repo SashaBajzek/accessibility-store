@@ -41,6 +41,7 @@
 
 .CartContent table {
   border-collapse: collapse;
+  inline-size: 100%;
 }
 
 .CartContent thead {
@@ -51,7 +52,17 @@
 
 .CartContent th {
   border-block-end: 1px solid black;
-  padding: 8px;
+  font-size: 15px;
+  padding-block: 14px;
+  text-transform: uppercase;
+}
+
+.CartContent .product-heading {
+  text-align: left;
+}
+
+.CartContent .total-heading {
+  text-align: right;
 }
 
 .CartContent .total-container {

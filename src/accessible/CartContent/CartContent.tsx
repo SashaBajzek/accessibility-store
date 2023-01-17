@@ -25,14 +25,14 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
         <table>
           <thead>
             <tr>
-              <th>Product</th>
+              <th className="product-heading">Product</th>
               <th>
                 <VisuallyHidden>Price</VisuallyHidden>
               </th>
               <th>
                 <VisuallyHidden>Quantity</VisuallyHidden>
               </th>
-              <th>Total</th>
+              <th className="total-heading">Total</th>
               <th>
                 <VisuallyHidden>Remove</VisuallyHidden>
               </th>
