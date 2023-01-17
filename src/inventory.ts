@@ -6,9 +6,12 @@ export enum Category {
 }
 
 export enum Size {
-  Small = "small",
-  Medium = "medium",
-  Large = "large",
+  XSmall = '6"',
+  Small = '6.5"',
+  Medium = '7"',
+  Large = '7.5"',
+  XLarge = '8"',
+  XXLarge = '8.5"',
 }
 
 export interface ProductImage {

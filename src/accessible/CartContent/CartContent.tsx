@@ -53,7 +53,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
                 </td>
                 <td>
                   <div className="item-name">{cartItem.item.name}</div>
-                  <div>Size: {cartItem.size}</div>
+                  <div>Length: {cartItem.size}</div>
                   <div>${cartItem.item.price}</div>
                 </td>
                 <td>
