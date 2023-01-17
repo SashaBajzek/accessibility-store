@@ -30,3 +30,9 @@
   margin: 0;
   padding: 20px;
 }
+
+.EmptyCartContent .continue-shopping {
+  color: var(--text-accent);
+  font-size: 20px;
+  font-weight: 700;
+}
