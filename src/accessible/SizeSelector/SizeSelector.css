@@ -1,0 +1,13 @@
+.SizeSelector label {
+  display: block;
+  font-size: 17px;
+  margin-block-start: 20px;
+}
+
+.SizeSelector select {
+  block-size: 60px;
+  border: 1px solid black;
+  font-size: 18px;
+  margin-block-start: 10px;
+  padding-inline: 20px;
+}
