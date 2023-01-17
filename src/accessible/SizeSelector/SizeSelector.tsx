@@ -20,12 +20,18 @@ export const SizeSelector = ({ onChange, size }: SizeSelectorProps) => {
     console.log("Size keyof typeof Size", typeof Size);
     let valueEnum: Size;
     const valueString = event.target.value;
-    if (valueString === Size.Large) {
-      valueEnum = Size.Large;
+    if (valueString === Size.XSmall) {
+      valueEnum = Size.XSmall;
+    } else if (valueString === Size.Small) {
+      valueEnum = Size.Small;
     } else if (valueString === Size.Medium) {
       valueEnum = Size.Medium;
+    } else if (valueString === Size.Large) {
+      valueEnum = Size.Large;
+    } else if (valueString === Size.XLarge) {
+      valueEnum = Size.XLarge;
     } else {
-      valueEnum = Size.Small;
+      valueEnum = Size.XXLarge;
     }
     onChange(valueEnum);
   };
