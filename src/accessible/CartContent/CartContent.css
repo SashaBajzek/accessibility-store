@@ -36,21 +36,24 @@
 .CartContent form {
   flex-grow: 1;
   flex-shrink: 1;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .CartContent table {
   border-collapse: collapse;
-  inline-size: 100%;
 }
 
 .CartContent thead {
   background-color: white;
+  block-size: 52px;
   inset-block-start: 0;
   position: sticky;
+  z-index: 1;
 }
 
 .CartContent th {
+  background-color: white;
   border-block-end: 1px solid black;
   font-size: 15px;
   padding-block: 14px;
@@ -62,6 +65,7 @@
 }
 
 .CartContent .total-heading {
+  inline-size: 50px;
   text-align: right;
 }
 

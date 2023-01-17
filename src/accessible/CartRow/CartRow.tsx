@@ -15,7 +15,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
   const { removeItem, updateItemQuantity } = useContext(CartContext);
   return (
     <tr className="CartRow">
-      <td className="product-col">
+      <td className="product-cell">
         <Link
           aria-hidden={true}
           to={"items/" + cartItem.item.id}
@@ -33,7 +33,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
             <div>LoadingImage</div>
           )}
         </Link>
-        <div>
+        <div className="text">
           <Link
             className="item-name"
             to={"items/" + cartItem.item.id}
@@ -44,10 +44,10 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           <div className="item-options">Length: {cartItem.size}</div>
         </div>
       </td>
-      <td>
+      <td className="price-cell">
         <div>${cartItem.item.price}</div>
       </td>
-      <td>
+      <td className="quantity-cell">
         <QuantitySelect
           maxQuantity={Math.max(cartItem.quantity, 10)}
           minQuantity={0}
@@ -62,7 +62,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
         />
       </td>
       <td className="total-cell">${cartItem.item.price * cartItem.quantity}</td>
-      <td>
+      <td className="remove-cell">
         <button
           aria-label={`Remove ${cartItem.item.name} braceletfrom cart`}
           className="remove-button"

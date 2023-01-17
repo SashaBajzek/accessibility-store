@@ -1,38 +1,65 @@
 .CartRow {
-  padding-block: 20px;
+  display: block;
+  inline-size: 100%;
+  padding-block-start: 20px;
+  padding-block-end: 60px;
+  position: relative;
 }
 
-.CartRow td {
-}
-
-.CartRow .product-col {
+.CartRow .product-cell {
   display: flex;
+  inline-size: 407px;
 }
 
-.CartRow .image {
+.CartRow .product-cell .image {
   block-size: 100px;
   inline-size: 100px;
   object-fit: cover;
 }
 
-.CartRow .item-name {
+.CartRow .product-cell .text {
+  padding-inline-start: 20px;
+}
+
+.CartRow .product-cell .text .item-name {
   color: black;
   font-family: "ChongModernW01", serif;
   font-size: 20px;
   text-decoration: none;
 }
 
-.CartRow .item-name:hover {
+.CartRow .product-cell .text .item-name:hover {
   text-decoration: underline;
 }
 
-.CartRow .item-options {
+.CartRow .product-cell .text .item-options {
   font-size: 18px;
+}
+
+.CartRow .price-cell {
+  inset-block-start: 80px;
+  inset-inline-start: 120px;
+  position: absolute;
 }
 
 .CartRow .total-cell {
   font-size: 20px;
   font-weight: 700;
+  inset-block-start: 20px;
+  inset-inline-end: -42px;
+  position: absolute;
+}
+
+.CartRow .quantity-cell {
+  inset-block-start: 120px;
+  inset-inline-start: 120px;
+  position: absolute;
+}
+
+.CartRow .remove-cell {
+  inset-block-start: 128px;
+  inset-inline-start: 210px;
+  position: absolute;
 }
 
 .CartRow .remove-button {
