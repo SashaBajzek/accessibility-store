@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
 import "./QuantitySelect.css";
 
 interface QuantitySelectProps {
@@ -32,18 +33,24 @@ const QuantitySelect = ({
   return (
     <>
       {options.length > 0 ? (
-        <select
-          className="Select"
-          required
-          onChange={handleChange}
-          value={quantity}
-        >
-          {options.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
+        <>
+          <VisuallyHidden>
+            <label htmlFor="quantity-select">Quantity</label>
+          </VisuallyHidden>
+          <select
+            className="QuantitySelect"
+            id="quantity-select"
+            required
+            onChange={handleChange}
+            value={quantity}
+          >
+            {options.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </>
       ) : null}
     </>
   );
