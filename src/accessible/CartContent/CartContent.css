@@ -58,6 +58,14 @@
   padding: 8px;
 }
 
+.CartContent .product-col {
+  display: flex;
+}
+
+.CartContent .product-col .product-text {
+  padding-inline-start: 8px;
+}
+
 .CartContent .image {
   block-size: 100px;
   inline-size: 100px;

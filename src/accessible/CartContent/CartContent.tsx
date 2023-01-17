@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../App";
 import { Close } from "../../SVGs/Close";
 import { Trash } from "../../SVGs/Trash";
@@ -27,33 +28,48 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
         <table>
           <thead>
             <tr>
-              <th>
-                <VisuallyHidden>PRODUCT IMAGE</VisuallyHidden>
-              </th>
               <th>Product</th>
+              <th>
+                <VisuallyHidden>Price</VisuallyHidden>
+              </th>
               <th>
                 <VisuallyHidden>Quantity</VisuallyHidden>
               </th>
               <th>Total</th>
+              <th>
+                <VisuallyHidden>Remove</VisuallyHidden>
+              </th>
             </tr>
           </thead>
           <tbody>
             {cart.map((cartItem) => (
               <tr key={cartItem.item.id + cartItem.size}>
-                <td>
-                  {cartItem.item.images ? (
-                    <img
-                      alt={cartItem.item.images[0].description}
-                      className="image"
-                      src={`${process.env.PUBLIC_URL}/assets/${cartItem.item.images[0].fileName}`}
-                    ></img>
-                  ) : (
-                    <div>LoadingImage</div>
-                  )}
+                <td className="product-col">
+                  <Link
+                    aria-hidden={true}
+                    to={"items/" + cartItem.item.id}
+                    onClick={closeCart}
+                    tabIndex={-1}
+                  >
+                    {cartItem.item.images ? (
+                      <img
+                        alt=""
+                        aria-hidden={true}
+                        className="image"
+                        src={`${process.env.PUBLIC_URL}/assets/${cartItem.item.images[0].fileName}`}
+                      ></img>
+                    ) : (
+                      <div>LoadingImage</div>
+                    )}
+                  </Link>
+                  <div className="product-text">
+                    <Link to={"items/" + cartItem.item.id} onClick={closeCart}>
+                      <div className="item-name">{cartItem.item.name}</div>
+                    </Link>
+                    <div>Length: {cartItem.size}</div>
+                  </div>
                 </td>
                 <td>
-                  <div className="item-name">{cartItem.item.name}</div>
-                  <div>Length: {cartItem.size}</div>
                   <div>${cartItem.item.price}</div>
                 </td>
                 <td>
@@ -70,16 +86,18 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
                       }}
                       quantity={cartItem.quantity}
                     />
-                    <button
-                      aria-label={`Remove ${cartItem.item.name} braceletfrom cart`}
-                      className="remove-button"
-                      onClick={() => removeItem(cartItem)}
-                    >
-                      <Trash />
-                    </button>
                   </div>
                 </td>
                 <td>${cartItem.item.price * cartItem.quantity}</td>
+                <td>
+                  <button
+                    aria-label={`Remove ${cartItem.item.name} braceletfrom cart`}
+                    className="remove-button"
+                    onClick={() => removeItem(cartItem)}
+                  >
+                    <Trash />
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
