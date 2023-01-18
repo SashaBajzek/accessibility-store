@@ -447,7 +447,7 @@ export const inventory: Bracelet[] = [
       {
         description:
           "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
-        fileName: "Xena1.jpg",
+        fileName: "xena1.jpg",
       },
     ],
     name: "Xena the Warrior Princess",
