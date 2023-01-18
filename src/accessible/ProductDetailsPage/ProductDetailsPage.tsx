@@ -1,6 +1,6 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CartContext } from "../../App";
+import { CartContext, SetTitleContext } from "../../App";
 import { getItemById, Size } from "../../inventory";
 import QuantityPicker from "../QuantityPicker/QuantityPicker";
 import { SizeSelector } from "../SizeSelector/SizeSelector";
@@ -11,9 +11,15 @@ const ProductDetailsPage = () => {
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState(Size.Medium);
   const { addItem } = useContext(CartContext);
+  const { setTitle } = useContext(SetTitleContext);
 
   const params = useParams();
   const item = params.id && getItemById(params.id);
+
+  useEffect(() => {
+    setTitle(item ? item.name : "");
+  }, [item, setTitle]);
+
   if (item === undefined || item === "") return null;
 
   const { description, images, name, price } = item;

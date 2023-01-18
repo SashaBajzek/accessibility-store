@@ -5,10 +5,16 @@ import {
   getMiscItems,
   getNatureItems,
 } from "../../inventory";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductList from "../ProductList/ProductList";
+import { SetTitleContext } from "../../App";
 
 const HomePage = () => {
+  const { setTitle } = useContext(SetTitleContext);
+  useEffect(() => {
+    setTitle("All Bracelets");
+  }, [setTitle]);
+
   const [artItems, setArtItems] = useState<Bracelet[]>([]);
   const [fruitItems, setFruitItems] = useState<Bracelet[]>([]);
   const [natureItems, setNatureItems] = useState<Bracelet[]>([]);
