@@ -1,5 +1,6 @@
 .productDetailsPage {
   display: flex;
+  flex-direction: column;
 }
 
 .productDetailsPage h1 {
@@ -8,7 +9,7 @@
 }
 
 .productDetailsPage .image {
-  max-inline-size: 55%;
+  max-inline-size: 50%;
   object-fit: contain;
 }
 
@@ -16,8 +17,6 @@
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 1.69px;
-  max-inline-size: 45%;
-  padding-inline-start: 60px;
 }
 
 .productDetailsPage .price {
@@ -34,4 +33,21 @@
   font-size: 21px;
   font-weight: 600;
   letter-spacing: 1.69px;
+}
+
+@media (min-width: 800px) {
+  .productDetailsPage {
+    flex-direction: row;
+  }
+
+  .productDetailsPage .info {
+    max-inline-size: 45%;
+    padding-inline-start: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .productDetailsPage .image {
+    max-inline-size: 55%;
+  }
 }
