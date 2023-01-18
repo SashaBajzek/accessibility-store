@@ -12,7 +12,7 @@ import { SetTitleContext } from "../../App";
 const HomePage = () => {
   const { setTitle } = useContext(SetTitleContext);
   useEffect(() => {
-    setTitle("All Bracelets");
+    setTitle("Shop All Bracelets");
   }, [setTitle]);
 
   const [artItems, setArtItems] = useState<Bracelet[]>([]);

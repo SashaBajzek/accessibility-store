@@ -59,7 +59,7 @@ function App() {
   const [hideOverflow, setHideOverflow] = useState(false);
 
   const setTitle = (title: string) =>
-    (document.title = `${shopName} - ${title}`);
+    (document.title = `${title} - ${shopName}`);
 
   return (
     <div className={`App ${hideOverflow ? "overflow-hidden" : ""}`}>

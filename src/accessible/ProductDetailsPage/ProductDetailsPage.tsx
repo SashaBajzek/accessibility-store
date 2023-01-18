@@ -17,7 +17,7 @@ const ProductDetailsPage = () => {
   const item = params.id && getItemById(params.id);
 
   useEffect(() => {
-    setTitle(item ? item.name : "");
+    setTitle(item ? item.name : "Shop");
   }, [item, setTitle]);
 
   if (item === undefined || item === "") return null;
