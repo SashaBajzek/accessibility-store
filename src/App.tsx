@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 import Header from "./accessible/Header/Header";
 import "./App.css";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./accessible/HomePage/HomePage";
 import CheckoutPage from "./accessible/CheckoutPage/CheckoutPage";
 import ProductDetailsPage from "./accessible/ProductDetailsPage/ProductDetailsPage";
