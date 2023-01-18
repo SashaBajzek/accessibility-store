@@ -34,6 +34,16 @@ export const inventory: Bracelet[] = [
     description:
       "The beach in beads: Peach moonstones for sand, yellow quartz for sunshine, green garnets for seaweed, aquamarine for seafoam, apatite for ocean water, sapphire and spinels for deep ocean shadows",
     id: "ocean1",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "Beach1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Beach2.jpg",
+      },
+    ],
     name: "Ocean Sunset",
     price: 200,
   },
@@ -70,6 +80,20 @@ export const inventory: Bracelet[] = [
     description:
       "Inspired by an awesome night eating ice cream with Ellie in Delores Park staring at a cotton candy pink sky, reimagined in pink and rainbow opals mixed with mauve sapphires",
     id: "delores",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "Delores1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Delores2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Delores3.jpg",
+      },
+    ],
     name: "Candy Sky in Delores Park",
     price: 200,
   },
@@ -78,6 +102,24 @@ export const inventory: Bracelet[] = [
     description:
       "The Grand Canyon: a blue sapphire sky contrasting layers of sunstone, sapphire, citrine, and lemon quartz rocks, before settling into the peridot and sapphire water.",
     id: "grand",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "GrandCanyon1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "GrandCanyon2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "GrandCanyon3.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "GrandCanyon4.jpg",
+      },
+    ],
     name: "Grand Canyon",
     price: 200,
   },
@@ -100,6 +142,24 @@ export const inventory: Bracelet[] = [
     description:
       "A peach: Juicy peachy colors of red ruby, andesine, orange carnelian, sapphire, yellow citrine, lemon quartz, green peridot leaves and finally a tourmaline stem.",
     id: "peach",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "Peach1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Peach2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Peach3.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Peach4.jpg",
+      },
+    ],
     name: "Juicy Peach",
     price: 200,
   },
@@ -108,6 +168,20 @@ export const inventory: Bracelet[] = [
     description:
       "My favorite exhibit at the Exploratorium is the bubble wall! A kaleidoscope of ruby, sapphire, apatite, carnelian, chrysoprase, and amethyst.",
     id: "bubbles",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "Bubbles1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Bubbles2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Bubbles2.jpg",
+      },
+    ],
     name: "Bubbles",
     price: 200,
   },
@@ -144,6 +218,24 @@ export const inventory: Bracelet[] = [
     description:
       "The beautiful Cordelia, green catseye chrysoberyl and black tourmaline eyes, pink andesine and moonstone nose, brown andalusite and white topaz fur, and her black tourmaline tail",
     id: "cordelia",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "Cordelia1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Cordelia2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Cordelia3.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Cordelia4.jpg",
+      },
+    ],
     name: "Cordelia",
     price: 200,
   },
@@ -155,7 +247,23 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description: "Bracelet in front",
-        fileName: "Lake.jpg",
+        fileName: "Lake1.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Lake2.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Lake3.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Lake4.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Lake5.jpg",
       },
     ],
     name: "Lake and Mountains",
@@ -169,7 +277,23 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description: "Model holding",
-        fileName: "AbstractionBlue.jpg",
+        fileName: "AbstractionBlue1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "AbstractionBlue2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "AbstractionBlue3.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "AbstractionBlue4.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "AbstractionBlue5.jpg",
       },
     ],
     name: "Abstraction Blue",
@@ -180,6 +304,24 @@ export const inventory: Bracelet[] = [
     description:
       "A magical forest moment between 2 handlebars. Purple amethyst handlebars frame an array of green tsavorite leaves with sky blue topaz sunlight peeking through, and the brown tundra sapphire forest floor below.",
     id: "forest",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "Trees1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Trees2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Trees3.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Trees4.jpg",
+      },
+    ],
     name: "Forest",
     price: 200,
   },
@@ -188,6 +330,24 @@ export const inventory: Bracelet[] = [
     description:
       "Beach in Beads. Pink opal and peach moonstone sand, warm lemon quartz sunlight, seafoam green chrysoprase and bright aqua amazonite water with deeper blue sapphire and spinel water in the distance.",
     id: "ocean2",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "BeachDay1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "BeachDay2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "BeachDay3.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "BeachDay4.jpg",
+      },
+    ],
     name: "Beach Day",
     price: 200,
   },
@@ -196,6 +356,24 @@ export const inventory: Bracelet[] = [
     description:
       "Cotton Candy Sky at Joshua Tree A pastel colored sky in pale yellow citrine, lemon quartz, peach moonstones, orangey pink spinels, and bright blue topaz lead into the grey purple spinel mountains in the distance. Dark green tourmaline and peridot palm leaves provide contrast along with the brown andalusite earth.",
     id: "joshua",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "Joshua1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Joshua2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Joshua3.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Joshua4.jpg",
+      },
+    ],
     name: "Cotton Candy Sky at Joshua Tree",
     price: 200,
   },
@@ -218,6 +396,16 @@ export const inventory: Bracelet[] = [
     description:
       "The trans flag with blue apatite, pink Peruvian opals, and clear topaz.",
     id: "flag",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "Trans1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Trans2.jpg",
+      },
+    ],
     name: "Trans Flag",
     price: 200,
   },
@@ -225,6 +413,28 @@ export const inventory: Bracelet[] = [
     category: Category.Miscellaneous,
     description: "A happy rainbow of colors",
     id: "rainbow",
+    images: [
+      {
+        description: "Model holding",
+        fileName: "Rainbow1.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Rainbow2.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Rainbow3.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Rainbow4.jpg",
+      },
+      {
+        description: "Model holding",
+        fileName: "Rainbow5.jpg",
+      },
+    ],
     name: "Rainbow",
     price: 200,
   },
@@ -248,6 +458,24 @@ export const inventory: Bracelet[] = [
     description:
       "Dynamic photo of water and waves turned into a bracelet. Clear morganite and pale blue topaz beads for the foam on top of the water, aquamarines for the medium tones, and finally, deep grey and teal grandiderite and sapphire beads for the dark depths of the water.",
     id: "waves",
+    images: [
+      {
+        description: "",
+        fileName: "Waves1.jpg",
+      },
+      {
+        description: "",
+        fileName: "Waves2.jpg",
+      },
+      {
+        description: "",
+        fileName: "Waves3.jpg",
+      },
+      {
+        description: "",
+        fileName: "Waves4.jpg",
+      },
+    ],
     name: "Water and Waves",
     price: 200,
   },
