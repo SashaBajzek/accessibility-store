@@ -55,7 +55,19 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description: "Bracelet in front",
-        fileName: "Monet.jpg",
+        fileName: "Monet1.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Monet2.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Monet3.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Monet4.jpg",
       },
     ],
     name: "Water Lilies",
@@ -69,7 +81,15 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description: "Bracelet in front",
-        fileName: "Flowers.jpg",
+        fileName: "Flowers1.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Flowers2.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Flowers3.jpg",
       },
     ],
     name: "Melting into Flowers",
@@ -131,7 +151,23 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description: "Bracelet in front",
-        fileName: "Twenty.jpg",
+        fileName: "Twenty1.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Twenty2.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Twenty3.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Twenty4.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Twenty5.jpg",
       },
     ],
     name: "Twenty Skies",
@@ -193,7 +229,23 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description: "Bracelet in front",
-        fileName: "Starry.jpg",
+        fileName: "Starry1.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Starry2.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Starry3.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Starry4.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Starry5.jpg",
       },
     ],
     name: "Starry Night",
@@ -207,7 +259,23 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description: "Bracelet in front",
-        fileName: "WhiteFlower.jpg",
+        fileName: "WhiteFlower1.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "WhiteFlower2.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "WhiteFlower3.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "WhiteFlower4.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "WhiteFlower5.jpg",
       },
     ],
     name: "White Flower",
@@ -385,7 +453,23 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description: "Bracelet in front",
-        fileName: "Spring.jpg",
+        fileName: "Spring1.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Spring2.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Spring3.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Spring4.jpg",
+      },
+      {
+        description: "Bracelet in front",
+        fileName: "Spring5.jpg",
       },
     ],
     name: "Spring Art Wall",
@@ -447,7 +531,27 @@ export const inventory: Bracelet[] = [
       {
         description:
           "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
-        fileName: "xena1.jpg",
+        fileName: "Xena1.jpg",
+      },
+      {
+        description:
+          "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+        fileName: "Xena2.jpg",
+      },
+      {
+        description:
+          "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+        fileName: "Xena3.jpg",
+      },
+      {
+        description:
+          "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+        fileName: "Xena4.jpg",
+      },
+      {
+        description:
+          "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+        fileName: "Xena5.jpg",
       },
     ],
     name: "Xena the Warrior Princess",
@@ -489,6 +593,21 @@ export const inventory: Bracelet[] = [
         description:
           "Model holding the blackberry bushes bracelet next to real blackberries.  The bracelet has 3mm beads with an assortment of olive green, midnight blue, ruby red, and purple beads with a gold lobster clasp",
         fileName: "Blackberry1.jpg",
+      },
+      {
+        description:
+          "Model holding the blackberry bushes bracelet next to real blackberries.  The bracelet has 3mm beads with an assortment of olive green, midnight blue, ruby red, and purple beads with a gold lobster clasp",
+        fileName: "Blackberry2.jpg",
+      },
+      {
+        description:
+          "Model holding the blackberry bushes bracelet next to real blackberries.  The bracelet has 3mm beads with an assortment of olive green, midnight blue, ruby red, and purple beads with a gold lobster clasp",
+        fileName: "Blackberry3.jpg",
+      },
+      {
+        description:
+          "Model holding the blackberry bushes bracelet next to real blackberries.  The bracelet has 3mm beads with an assortment of olive green, midnight blue, ruby red, and purple beads with a gold lobster clasp",
+        fileName: "Blackberry4.jpg",
       },
     ],
     name: "Blackberry Bushes",
