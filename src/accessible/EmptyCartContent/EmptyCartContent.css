@@ -24,6 +24,11 @@
   cursor: pointer;
 }
 
+.EmptyCartContent .close svg {
+  block-size: 50px;
+  inline-size: 50px;
+}
+
 .EmptyCartContent h2 {
   font-family: "Noto Sans Lao Looped", serif;
   font-size: 32px;

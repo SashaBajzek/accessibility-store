@@ -14,6 +14,11 @@
   cursor: pointer;
 }
 
+.CartButton svg {
+  block-size: 60px;
+  inline-size: 60px;
+}
+
 .CartButton svg path {
   fill: var(--text-primary);
   stroke: var(--text-primary);

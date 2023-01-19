@@ -72,6 +72,11 @@
   justify-content: center;
 }
 
+.CartRow .remove-button svg {
+  block-size: 42px;
+  inline-size: 42px;
+}
+
 .CartRow .remove-button:hover {
   cursor: pointer;
 }
