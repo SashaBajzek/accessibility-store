@@ -17,7 +17,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
     <div className="CartContent">
       <div className="heading">
         <h2 id="cart-heading">Your cart</h2>
-        <button className="close" onClick={closeCart}>
+        <button aria-label="Close cart" className="close" onClick={closeCart}>
           <Close />
         </button>
       </div>

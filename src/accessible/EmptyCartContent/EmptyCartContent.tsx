@@ -9,7 +9,7 @@ interface EmptyCartContentProps {
 const EmptyCartContent = ({ closeCart }: EmptyCartContentProps) => {
   return (
     <div className="EmptyCartContent">
-      <button className="close" onClick={closeCart}>
+      <button aria-label="Close cart" className="close" onClick={closeCart}>
         <Close />
       </button>
       <h2 id="cart-heading">Your cart is empty</h2>
