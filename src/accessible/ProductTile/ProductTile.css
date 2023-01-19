@@ -4,7 +4,8 @@
   position: relative;
 }
 
-.productTile:hover::before {
+.productTile:hover::before,
+.productTile:focus-within::before {
   content: "";
   position: absolute;
   border-radius: 9px;
@@ -15,17 +16,23 @@
   z-index: -1;
   box-shadow: 0 2px 18px rgb(34 34 34 / 20%);
   background: #fff;
-  border: 1px dotted rgba(0, 0, 0, 0);
+  border: 2px solid rgba(0, 0, 0, 0);
   transform: scale(0.96);
   transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),
     opacity 150ms ease-out, border-color 200ms ease-out;
 }
 
-.productTile:hover .name {
+.productTile:focus-within::before {
+  border: 2px solid rgba(0, 0, 0, 0.9);
+}
+
+.productTile:hover .name,
+.productTile:focus-within .name {
   text-decoration: underline;
 }
 
 .productTile .link {
+  outline: none;
   text-decoration: none;
 }
 
