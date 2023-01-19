@@ -23,19 +23,18 @@ const ProductDetailsPage = () => {
   if (item === undefined || item === "") return null;
 
   const { description, images, name, price } = item;
-  const productImage = images && images[0];
 
   return (
     <div className="productDetailsPage">
-      {productImage ? (
-        <img
-          alt={productImage.description}
-          className="image"
-          src={`${process.env.PUBLIC_URL}/assets/${productImage.fileName}`}
-        ></img>
-      ) : (
-        <div className="image">Product Image Loading</div>
-      )}
+      <div className="images">
+        {images.map((image) => (
+          <img
+            alt={image.description}
+            className="image"
+            src={`${process.env.PUBLIC_URL}/assets/${image.fileName}`}
+          ></img>
+        ))}
+      </div>
       <div className="info">
         <h1>{name}</h1>
         <div className="price">${price}</div>

@@ -23,7 +23,7 @@ export interface Bracelet {
   category: Category;
   description: string;
   id: string;
-  images?: ProductImage[];
+  images: ProductImage[];
   name: string;
   price: number;
 }
