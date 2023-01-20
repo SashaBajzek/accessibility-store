@@ -26,6 +26,7 @@ export interface Bracelet {
   images: ProductImage[];
   name: string;
   price: number;
+  stock: number;
 }
 
 export const inventory: Bracelet[] = [
@@ -46,6 +47,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Ocean Sunset",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Art,
@@ -72,6 +74,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Water Lilies",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Art,
@@ -94,6 +97,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Melting into Flowers",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Nature,
@@ -116,6 +120,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Candy Sky in Delores Park",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Nature,
@@ -142,6 +147,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Grand Canyon",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Art,
@@ -172,6 +178,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Twenty Skies",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Fruit,
@@ -198,6 +205,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Juicy Peach",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Miscellaneous,
@@ -220,6 +228,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Bubbles",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Art,
@@ -250,6 +259,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Starry Night",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Art,
@@ -280,6 +290,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "White Flower",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Miscellaneous,
@@ -306,6 +317,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Cordelia",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Art,
@@ -336,6 +348,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Lake and Mountains",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Art,
@@ -366,6 +379,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Abstraction Blue",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Nature,
@@ -392,6 +406,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Forest",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Nature,
@@ -418,6 +433,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Beach Day",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Nature,
@@ -444,6 +460,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Cotton Candy Sky at Joshua Tree",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Art,
@@ -474,6 +491,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Spring Art Wall",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Miscellaneous,
@@ -492,6 +510,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Trans Flag",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Miscellaneous,
@@ -521,6 +540,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Rainbow",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Miscellaneous,
@@ -556,6 +576,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Xena the Warrior Princess",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Nature,
@@ -582,6 +603,7 @@ export const inventory: Bracelet[] = [
     ],
     name: "Water and Waves",
     price: 200,
+    stock: 10,
   },
   {
     category: Category.Fruit,
@@ -611,7 +633,8 @@ export const inventory: Bracelet[] = [
       },
     ],
     name: "Blackberry Bushes",
-    price: 381.0,
+    price: 200,
+    stock: 10,
   },
 ];
 

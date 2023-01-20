@@ -32,3 +32,23 @@ export const getTotalCost = (cart: CartItem[]): number => {
   }
   return total;
 };
+
+export const getQuantityOfItemInCart = (
+  cartItem: CartItem,
+  cart: CartItem[]
+) => {
+  if (cart.length === 0) return 0;
+  let quantityInCart = 0;
+  for (let i = 0; i < cart.length; i++) {
+    if (cartItem.item === cart[i].item) {
+      quantityInCart += cart[i].quantity;
+    }
+  }
+  return quantityInCart;
+};
+
+export const getAvailableQuantity = (cartItem: CartItem, cart: CartItem[]) => {
+  if (cart.length === 0) return cartItem.item.stock;
+  let quantityInCart = getQuantityOfItemInCart(cartItem, cart);
+  return cartItem.item.stock - quantityInCart;
+};

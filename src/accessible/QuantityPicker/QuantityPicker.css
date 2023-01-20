@@ -9,7 +9,7 @@
   border: 1px solid black;
   display: flex;
   inline-size: 142px;
-  margin-block: 10px;
+  margin-block-start: 10px;
 }
 
 .QuantityPicker input {
@@ -28,14 +28,41 @@
   margin: 0;
 }
 
+.QuantityPicker .helper {
+  color: var(--text-accent);
+  font-size: 16px;
+  margin-block-start: 4px;
+}
+
+.QuantityPicker .error {
+  font-size: 16px;
+  margin-block-start: 4px;
+}
+
 .QuantityPicker button {
+  align-items: center;
   background: transparent;
   block-size: 100%;
   border-width: 0;
+  display: flex;
   font-size: 24px;
   inline-size: 45px;
+  justify-content: center;
 }
 
 .QuantityPicker button:hover {
   cursor: pointer;
+}
+
+.QuantityPicker button svg {
+  block-size: 18px;
+  inline-size: 18px;
+}
+
+.QuantityPicker.error .picker {
+  border: 3px solid var(--halaya-ube);
+}
+
+.QuantityPicker .error {
+  color: var(--halaya-ube);
 }

@@ -1,12 +1,20 @@
+import { Minus } from "../../SVGs/Minus";
+import { Plus } from "../../SVGs/Plus";
 import "./QuantityPicker.css";
 
 interface QuantityPickerProps {
+  error: string;
+  itemName: string;
+  maxQuantity: number;
   minQuantity: number;
   quantity: number;
   setQuantity: (setQuantity: number) => void;
 }
 
 const QuantityPicker = ({
+  error,
+  itemName,
+  maxQuantity,
   minQuantity,
   quantity,
   setQuantity,
@@ -16,7 +24,7 @@ const QuantityPicker = ({
   };
 
   const increment = () => {
-    setQuantity(quantity + 1);
+    setQuantity(Math.min(maxQuantity, quantity + 1));
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,20 +38,41 @@ const QuantityPicker = ({
   };
 
   return (
-    <div className="QuantityPicker">
+    <div className={`QuantityPicker ${error && "error"}`}>
       <label htmlFor="quantity">Quantity</label>
       <div className="picker">
-        <button onClick={decrement}>-</button>
+        <button
+          aria-label={`Decrement quantity of ${itemName}`}
+          onClick={decrement}
+        >
+          <Minus />
+        </button>
         <input
+          aria-describedby="helper"
           id="quantity"
-          min="1"
+          max={maxQuantity}
+          min={minQuantity}
           name="quantity"
           onChange={handleChange}
           type="number"
           value={quantity}
         />
-        <button onClick={increment}>+</button>
+        <button
+          aria-label={`Increment quantity of ${itemName}`}
+          onClick={increment}
+        >
+          <Plus />
+        </button>
       </div>
+      {error ? (
+        <div className="error" id="helper">
+          {error}
+        </div>
+      ) : (
+        <div className="helper" id="helper">
+          {maxQuantity} in stock
+        </div>
+      )}
     </div>
   );
 };
