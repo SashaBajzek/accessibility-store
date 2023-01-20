@@ -36,7 +36,7 @@ const ProductDetailsPage = () => {
       addItem(cartItem);
     } else if (quantityOfItemInCart > 0) {
       setError(
-        `Invalid quantity.  There are only ${item.stock} available and there are already ${quantityOfItemInCart} in cart`
+        `Invalid quantity.  There are only ${item.stock} available and there are ${quantityOfItemInCart} already in cart`
       );
     } else {
       setError(`Invalid quantity.  There are only ${item.stock} available`);

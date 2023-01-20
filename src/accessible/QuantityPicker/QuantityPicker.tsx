@@ -1,3 +1,4 @@
+import { Error } from "../../SVGs/Error";
 import { Minus } from "../../SVGs/Minus";
 import { Plus } from "../../SVGs/Plus";
 import "./QuantityPicker.css";
@@ -65,8 +66,9 @@ const QuantityPicker = ({
         </button>
       </div>
       {error ? (
-        <div className="error" id="helper">
-          {error}
+        <div className="error" id="helper" role="alert">
+          <Error />
+          <div className="text"> {error}</div>
         </div>
       ) : (
         <div className="helper" id="helper">

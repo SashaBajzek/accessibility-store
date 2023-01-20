@@ -60,9 +60,21 @@
 }
 
 .QuantityPicker.error .picker {
-  border: 3px solid var(--halaya-ube);
+  border: 3px solid var(--error);
 }
 
 .QuantityPicker .error {
-  color: var(--halaya-ube);
+  color: var(--error);
+  display: flex;
+}
+
+.QuantityPicker .error svg {
+  block-size: 20px;
+  inline-size: 20px;
+  flex-shrink: 0;
+  margin-block-start: 2px;
+}
+
+.QuantityPicker .error .text {
+  padding-inline-start: 8px;
 }
