@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../App";
-import { CartItem } from "../../cartUtils";
+import { CartItem, getAvailableQuantity } from "../../cartUtils";
 import { Trash } from "../../SVGs/Trash";
 import QuantitySelect from "../QuantitySelect/QuantitySelect";
 import "./CartRow.css";
@@ -12,7 +12,8 @@ interface CartRowProps {
 }
 
 const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
-  const { removeItem, updateItemQuantity } = useContext(CartContext);
+  const { cart, removeItem, updateItemQuantity } = useContext(CartContext);
+  const availableQuantity = getAvailableQuantity(cartItem, cart);
   return (
     <tr className="CartRow">
       <td className="product-cell">
@@ -49,7 +50,10 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
       </td>
       <td className="quantity-cell">
         <QuantitySelect
-          maxQuantity={Math.max(cartItem.quantity, 10)}
+          maxQuantity={Math.max(
+            cartItem.quantity,
+            cartItem.quantity + availableQuantity
+          )}
           minQuantity={0}
           onChange={(newQuantity: number) => {
             updateItemQuantity({
