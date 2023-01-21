@@ -23,7 +23,7 @@ const ProductTile = ({ product }: ProductTileProps) => {
 
   return (
     <article className="productTile">
-      <Link className="link" to={"items/" + id}>
+      <Link className="link" to={id}>
         {productImage ? (
           <img
             alt={productImage.description}

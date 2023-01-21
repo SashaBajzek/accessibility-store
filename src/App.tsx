@@ -72,9 +72,13 @@ function App() {
                       element={<CheckoutPage />}
                     />
 
-                    <Route path="/items/:id" element={<ProductDetailsPage />} />
+                    <Route path="/:id" element={<ProductDetailsPage />} />
                     <Route
-                      path="/accessibility-store/items/:id"
+                      path="/accessibility-store/:id"
+                      element={<ProductDetailsPage />}
+                    />
+                    <Route
+                      path="/favorites/:id"
                       element={<ProductDetailsPage />}
                     />
                   </Routes>
