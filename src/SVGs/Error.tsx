@@ -1,11 +1,6 @@
 export function Error() {
   return (
-    <svg
-      aria-hidden="true"
-      focusable="false"
-      role="presentation"
-      viewBox="0 0 13 13"
-    >
+    <svg aria-label="Error" focusable="false" viewBox="0 0 13 13">
       <circle
         cx="6.5"
         cy="6.50049"
