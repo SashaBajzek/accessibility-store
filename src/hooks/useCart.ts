@@ -4,7 +4,7 @@ import {
   getTotalCost,
   getTotalItemsInCart,
   indexOfCartItem,
-} from "./cartUtils";
+} from "../cartUtils";
 
 export function useCart() {
   const [cart, setCart] = useState<CartItem[]>([]);

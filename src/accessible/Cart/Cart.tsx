@@ -7,8 +7,9 @@ import {
   useRef,
 } from "react";
 import { useNavigate } from "react-router-dom";
-import { CartContext, HideOverflowContext } from "../../App";
 import CartContent from "../CartContent/CartContent";
+import { CartContext } from "../../context/CartContext";
+import { HideOverflowContext } from "../../context/HideOverflowContext";
 import EmptyCartContent from "../EmptyCartContent/EmptyCartContent";
 import "./Cart.css";
 

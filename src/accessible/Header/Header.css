@@ -20,6 +20,22 @@
   text-decoration: none;
 }
 
+.header .inline-end-links {
+  display: flex;
+}
+
+.header .favorites {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-inline-end: 10px;
+}
+
+.header .favorites svg {
+  block-size: 30px;
+  inline-size: 30px;
+}
+
 .Cart {
   padding: 0;
 }

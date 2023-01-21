@@ -6,7 +6,9 @@ import { shopName } from "../../constants";
 import Cart from "../Cart/Cart";
 import { useContext, useRef } from "react";
 import CartButton from "../CartButton/CartButton";
-import { CartContext, HideOverflowContext } from "../../App";
+import { CartContext } from "../../context/CartContext";
+import { HideOverflowContext } from "../../context/HideOverflowContext";
+import { HeartHollow } from "../../SVGs/HeartHollow";
 
 const Header = () => {
   const { totalItemsInCart } = useContext(CartContext);
@@ -32,9 +34,14 @@ const Header = () => {
           <Link to="/" aria-label={`${shopName} Home`} className="brand">
             {shopName}
           </Link>
-          {shouldShowCart && (
-            <CartButton cartQuantity={totalItemsInCart} openCart={openCart} />
-          )}
+          <div className="inline-end-links">
+            <Link to="/favorites" aria-label="Favorites" className="favorites">
+              <HeartHollow />
+            </Link>
+            {shouldShowCart && (
+              <CartButton cartQuantity={totalItemsInCart} openCart={openCart} />
+            )}
+          </div>
         </div>
       </header>
       <Cart ref={dialogRef} />

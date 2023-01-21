@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { CartContext } from "../../App";
 import { Close } from "../../SVGs/Close";
 import CartRow from "../CartRow/CartRow";
+import { CartContext } from "../../context/CartContext";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
 import "./CartContent.css";

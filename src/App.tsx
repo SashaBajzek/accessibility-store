@@ -1,4 +1,3 @@
-import React, { createContext } from "react";
 import Header from "./accessible/Header/Header";
 import "./App.css";
 
@@ -7,44 +6,15 @@ import HomePage from "./accessible/HomePage/HomePage";
 import CheckoutPage from "./accessible/CheckoutPage/CheckoutPage";
 import ProductDetailsPage from "./accessible/ProductDetailsPage/ProductDetailsPage";
 import Footer from "./accessible/Footer/Footer";
-import { CartItem } from "./cartUtils";
-import { useCart } from "./useCart";
+import { useCart } from "./hooks/useCart";
 import { useState } from "react";
 import { shopName } from "./constants";
-
-interface CartContextProps {
-  addItem: (item: CartItem) => void;
-  cart: CartItem[];
-  totalItemsInCart: number;
-  removeItem: (item: CartItem) => void;
-  totalCost: number;
-  updateItemQuantity: (item: CartItem) => void;
-}
-
-export const CartContext = createContext<CartContextProps>({
-  addItem: () => {},
-  cart: [],
-  totalItemsInCart: 0,
-  removeItem: () => {},
-  totalCost: 0,
-  updateItemQuantity: () => {},
-});
-
-interface SetTitleContextProps {
-  setTitle: (title: string) => void;
-}
-
-export const SetTitleContext = createContext<SetTitleContextProps>({
-  setTitle: (title: string) => {},
-});
-
-interface HideOverflowContextProps {
-  setHideOverflow: (hideOverflow: boolean) => void;
-}
-
-export const HideOverflowContext = createContext<HideOverflowContextProps>({
-  setHideOverflow: () => {},
-});
+import { CartContext } from "./context/CartContext";
+import { HideOverflowContext } from "./context/HideOverflowContext";
+import { SetTitleContext } from "./context/SetTitleContext";
+import { FavoritesContext } from "./context/FavoritesContext";
+import { useFavorites } from "./hooks/useFavorites";
+import FavoritesPage from "./accessible/FavoritesPage/FavoritesPage";
 
 function App() {
   const {
@@ -55,6 +25,8 @@ function App() {
     totalItemsInCart,
     updateItemQuantity,
   } = useCart();
+
+  const { favorites, isFavorite, toggleFavorite } = useFavorites();
 
   const [hideOverflow, setHideOverflow] = useState(false);
 
@@ -74,32 +46,43 @@ function App() {
             updateItemQuantity,
           }}
         >
-          <HideOverflowContext.Provider value={{ setHideOverflow }}>
-            <SetTitleContext.Provider value={{ setTitle }}>
-              <Header />
-              <main>
-                <Routes>
-                  <Route path="/" element={<HomePage />}></Route>
-                  <Route
-                    path="/accessibility-store/"
-                    element={<HomePage />}
-                  ></Route>
+          <FavoritesContext.Provider
+            value={{ favorites, isFavorite, toggleFavorite }}
+          >
+            <HideOverflowContext.Provider value={{ setHideOverflow }}>
+              <SetTitleContext.Provider value={{ setTitle }}>
+                <Header />
+                <main>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route
+                      path="/accessibility-store/"
+                      element={<HomePage />}
+                    />
 
-                  <Route path="/checkout" element={<CheckoutPage />}></Route>
-                  <Route
-                    path="/accessibility-store/checkout"
-                    element={<CheckoutPage />}
-                  ></Route>
-                  <Route path="/items/:id" element={<ProductDetailsPage />} />
-                  <Route
-                    path="/accessibility-store/items/:id"
-                    element={<ProductDetailsPage />}
-                  />
-                </Routes>
-              </main>
-              <Footer />
-            </SetTitleContext.Provider>
-          </HideOverflowContext.Provider>
+                    <Route path="/favorites" element={<FavoritesPage />} />
+                    <Route
+                      path="/accessibility-store/favorites"
+                      element={<FavoritesPage />}
+                    />
+
+                    <Route path="/checkout" element={<CheckoutPage />} />
+                    <Route
+                      path="/accessibility-store/checkout"
+                      element={<CheckoutPage />}
+                    />
+
+                    <Route path="/items/:id" element={<ProductDetailsPage />} />
+                    <Route
+                      path="/accessibility-store/items/:id"
+                      element={<ProductDetailsPage />}
+                    />
+                  </Routes>
+                </main>
+                <Footer />
+              </SetTitleContext.Provider>
+            </HideOverflowContext.Provider>{" "}
+          </FavoritesContext.Provider>
         </CartContext.Provider>
       </Router>
     </div>
