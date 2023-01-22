@@ -1,0 +1,15 @@
+.ConfirmationPage {
+  text-align: center;
+}
+
+.ConfirmationPage div {
+  padding-block: 6px;
+}
+
+.ConfirmationPage .continue-shopping {
+  color: var(--text-accent);
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  padding-block-start: 20px;
+}

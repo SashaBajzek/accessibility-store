@@ -15,6 +15,7 @@ import { SetTitleContext } from "./context/SetTitleContext";
 import { FavoritesContext } from "./context/FavoritesContext";
 import { useFavorites } from "./hooks/useFavorites";
 import FavoritesPage from "./accessible/FavoritesPage/FavoritesPage";
+import ConfirmationPage from "./accessible/ConfirmationPage/ConfirmationPage";
 
 function App() {
   const {
@@ -70,6 +71,15 @@ function App() {
                     <Route
                       path="/accessibility-store/checkout"
                       element={<CheckoutPage />}
+                    />
+
+                    <Route
+                      path="/confirmation"
+                      element={<ConfirmationPage />}
+                    />
+                    <Route
+                      path="/accessibility-store/confirmation"
+                      element={<ConfirmationPage />}
                     />
 
                     <Route path="/:id" element={<ProductDetailsPage />} />
