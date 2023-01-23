@@ -1,24 +1,23 @@
 .CartRow {
-  display: block;
-  inline-size: 100%;
-  padding-block-start: 20px;
-  padding-block-end: 60px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-rows: 3;
+  padding-block: 20px;
+  padding-inline-start: 120px;
   position: relative;
 }
 
 .CartRow .product-cell {
-  display: flex;
-  inline-size: 407px;
+  grid-column: 1/3;
+  grid-row: 1/2;
 }
 
 .CartRow .product-cell .image {
   block-size: 100px;
   inline-size: 100px;
+  inset-inline-start: 0;
   object-fit: cover;
-}
-
-.CartRow .product-cell .text {
-  padding-inline-start: 20px;
+  position: absolute;
 }
 
 .CartRow .product-cell .text .item-name {
@@ -37,29 +36,30 @@
 }
 
 .CartRow .price-cell {
-  inset-block-start: 80px;
-  inset-inline-start: 120px;
-  position: absolute;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  padding-block: 8px;
 }
 
 .CartRow .total-cell {
   font-size: 20px;
   font-weight: 700;
-  inset-block-start: 20px;
-  inset-inline-end: -42px;
-  position: absolute;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  text-align: right;
 }
 
 .CartRow .quantity-cell {
-  inset-block-start: 120px;
-  inset-inline-start: 120px;
-  position: absolute;
+  grid-column: 1/2;
+  grid-row: 3/4;
 }
 
 .CartRow .remove-cell {
-  inset-block-start: 128px;
-  inset-inline-start: 210px;
-  position: absolute;
+  align-items: center;
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin-inline-start: -40px;
 }
 
 .CartRow .remove-button {

@@ -1,5 +1,5 @@
 .CartContent {
-  block-size: 100vh;
+  block-size: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,11 +47,14 @@
 
 .CartContent table {
   border-collapse: collapse;
+  inline-size: 100%;
 }
 
 .CartContent thead {
   background-color: white;
   block-size: 52px;
+  display: inline-table;
+  inline-size: 100%;
   inset-block-start: 0;
   position: sticky;
   z-index: 1;
@@ -65,6 +68,10 @@
   text-transform: uppercase;
 }
 
+.CartContent th:last-of-type {
+  inline-size: 0;
+}
+
 .CartContent .product-heading {
   text-align: left;
 }
@@ -72,6 +79,11 @@
 .CartContent .total-heading {
   inline-size: 50px;
   text-align: right;
+}
+
+.CartContent tbody {
+  display: block;
+  inline-size: 100%;
 }
 
 .CartContent .total-container {
