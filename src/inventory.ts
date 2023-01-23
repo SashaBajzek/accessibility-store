@@ -37,11 +37,11 @@ export const inventory: Bracelet[] = [
     id: "ocean1",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Beach1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Beach2.jpg",
       },
     ],
@@ -56,19 +56,19 @@ export const inventory: Bracelet[] = [
     id: "monet1",
     images: [
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Monet1.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Monet2.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Monet3.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Monet4.jpg",
       },
     ],
@@ -83,15 +83,15 @@ export const inventory: Bracelet[] = [
     id: "flowers1",
     images: [
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Flowers1.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Flowers2.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Flowers3.jpg",
       },
     ],
@@ -106,15 +106,15 @@ export const inventory: Bracelet[] = [
     id: "delores",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Delores1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Delores2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Delores3.jpg",
       },
     ],
@@ -129,19 +129,19 @@ export const inventory: Bracelet[] = [
     id: "grand",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "GrandCanyon1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "GrandCanyon2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "GrandCanyon3.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "GrandCanyon4.jpg",
       },
     ],
@@ -156,23 +156,23 @@ export const inventory: Bracelet[] = [
     id: "20skies",
     images: [
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Twenty1.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Twenty2.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Twenty3.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Twenty4.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Twenty5.jpg",
       },
     ],
@@ -187,19 +187,19 @@ export const inventory: Bracelet[] = [
     id: "peach",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Peach1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Peach2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Peach3.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Peach4.jpg",
       },
     ],
@@ -214,15 +214,15 @@ export const inventory: Bracelet[] = [
     id: "bubbles",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Bubbles1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Bubbles2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Bubbles2.jpg",
       },
     ],
@@ -237,23 +237,23 @@ export const inventory: Bracelet[] = [
     id: "starry",
     images: [
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Starry1.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Starry2.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Starry3.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Starry4.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Starry5.jpg",
       },
     ],
@@ -268,23 +268,23 @@ export const inventory: Bracelet[] = [
     id: "georgia1",
     images: [
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "WhiteFlower1.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "WhiteFlower2.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "WhiteFlower3.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "WhiteFlower4.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "WhiteFlower5.jpg",
       },
     ],
@@ -299,19 +299,19 @@ export const inventory: Bracelet[] = [
     id: "cordelia",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Cordelia1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Cordelia2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Cordelia3.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Cordelia4.jpg",
       },
     ],
@@ -326,23 +326,23 @@ export const inventory: Bracelet[] = [
     id: "lake",
     images: [
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Lake1.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Lake2.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Lake3.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Lake4.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Lake5.jpg",
       },
     ],
@@ -357,23 +357,23 @@ export const inventory: Bracelet[] = [
     id: "georgia2",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "AbstractionBlue1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "AbstractionBlue2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "AbstractionBlue3.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "AbstractionBlue4.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "AbstractionBlue5.jpg",
       },
     ],
@@ -388,19 +388,19 @@ export const inventory: Bracelet[] = [
     id: "forest",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Trees1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Trees2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Trees3.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Trees4.jpg",
       },
     ],
@@ -415,19 +415,19 @@ export const inventory: Bracelet[] = [
     id: "ocean2",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "BeachDay1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "BeachDay2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "BeachDay3.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "BeachDay4.jpg",
       },
     ],
@@ -442,19 +442,19 @@ export const inventory: Bracelet[] = [
     id: "joshua",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Joshua1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Joshua2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Joshua3.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Joshua4.jpg",
       },
     ],
@@ -469,23 +469,23 @@ export const inventory: Bracelet[] = [
     id: "artwall",
     images: [
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Spring1.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Spring2.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Spring3.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Spring4.jpg",
       },
       {
-        description: "Bracelet in front",
+        description: "TODO write bracelet image description",
         fileName: "Spring5.jpg",
       },
     ],
@@ -500,11 +500,11 @@ export const inventory: Bracelet[] = [
     id: "flag",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Trans1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Trans2.jpg",
       },
     ],
@@ -518,23 +518,23 @@ export const inventory: Bracelet[] = [
     id: "rainbow",
     images: [
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Rainbow1.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Rainbow2.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Rainbow3.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Rainbow4.jpg",
       },
       {
-        description: "Model holding",
+        description: "TODO write bracelet image description",
         fileName: "Rainbow5.jpg",
       },
     ],
@@ -585,19 +585,19 @@ export const inventory: Bracelet[] = [
     id: "waves",
     images: [
       {
-        description: "",
+        description: "TODO write bracelet image description",
         fileName: "Waves1.jpg",
       },
       {
-        description: "",
+        description: "TODO write bracelet image description",
         fileName: "Waves2.jpg",
       },
       {
-        description: "",
+        description: "TODO write bracelet image description",
         fileName: "Waves3.jpg",
       },
       {
-        description: "",
+        description: "TODO write bracelet image description",
         fileName: "Waves4.jpg",
       },
     ],

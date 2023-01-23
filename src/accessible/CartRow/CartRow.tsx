@@ -16,7 +16,11 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
   const availableQuantity = getAvailableQuantity(cartItem, cart);
   return (
     <tr className="CartRow" role="row">
-      <td className="product-cell" role="cell">
+      <td
+        className="product-cell"
+        headers="CartContent-product-heading"
+        role="cell"
+      >
         <Link
           aria-hidden={true}
           to={"items/" + cartItem.item.id}
@@ -45,10 +49,18 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           <div className="item-options">Length: {cartItem.size}</div>
         </div>
       </td>
-      <td className="price-cell" role="cell">
+      <td
+        className="price-cell"
+        headers="CartContent-price-heading"
+        role="cell"
+      >
         <div>${cartItem.item.price}</div>
       </td>
-      <td className="quantity-cell" role="cell">
+      <td
+        className="quantity-cell"
+        headers="CartContent-quantity-heading"
+        role="cell"
+      >
         <QuantitySelect
           itemName={cartItem.item.name}
           maxQuantity={Math.max(
@@ -66,10 +78,18 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           quantity={cartItem.quantity}
         />
       </td>
-      <td className="total-cell" role="cell">
+      <td
+        className="total-cell"
+        headers="CartContent-total-heading"
+        role="cell"
+      >
         ${cartItem.item.price * cartItem.quantity}
       </td>
-      <td className="remove-cell" role="cell">
+      <td
+        className="remove-cell"
+        headers="CartContent-remove-heading"
+        role="cell"
+      >
         <button
           aria-label={`Remove ${cartItem.item.name} bracelet from cart`}
           className="remove-button"

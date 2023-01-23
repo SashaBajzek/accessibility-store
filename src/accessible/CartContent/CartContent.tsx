@@ -25,19 +25,41 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
         <table role="table">
           <thead role="rowgroup">
             <tr role="row">
-              <th className="product-heading" role="columnheader">
+              <th
+                className="product-heading"
+                id="CartContent-product-heading"
+                role="columnheader"
+                scope="col"
+              >
                 Product
               </th>
-              <th className="visually-hidden" role="columnheader">
+              <th
+                className="visually-hidden"
+                id="CartContent-price-heading"
+                role="columnheader"
+              >
                 <VisuallyHidden>Price</VisuallyHidden>
               </th>
-              <th className="visually-hidden" role="columnheader">
+              <th
+                className="visually-hidden"
+                id="CartContent-quantity-heading"
+                role="columnheader"
+              >
                 <VisuallyHidden>Quantity</VisuallyHidden>
               </th>
-              <th className="total-heading" role="columnheader">
+              <th
+                className="total-heading"
+                id="CartContent-total-heading"
+                role="columnheader"
+                scope="col"
+              >
                 Total
               </th>
-              <th className="visually-hidden" role="columnheader">
+              <th
+                className="visually-hidden"
+                id="CartContent-remove-heading"
+                role="columnheader"
+              >
                 <VisuallyHidden>Remove</VisuallyHidden>
               </th>
             </tr>
