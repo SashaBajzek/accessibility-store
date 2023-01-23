@@ -8,25 +8,9 @@
 }
 
 .EmptyCartContent .close {
-  align-items: center;
-  background: transparent;
-  block-size: 50px;
-  border-width: 0;
-  display: flex;
-  inline-size: 50px;
   inset-block-start: 20px;
   inset-inline-end: 20px;
-  justify-content: center;
   position: absolute;
-}
-
-.EmptyCartContent .close:hover {
-  cursor: pointer;
-}
-
-.EmptyCartContent .close svg {
-  block-size: 50px;
-  inline-size: 50px;
 }
 
 .EmptyCartContent h2 {

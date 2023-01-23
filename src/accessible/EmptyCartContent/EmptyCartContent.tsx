@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Close } from "../../SVGs/Close";
+import IconButton, { IconButtonVariant } from "../IconButton/IconButton";
 import "./EmptyCartContent.css";
 
 interface EmptyCartContentProps {
@@ -9,9 +10,13 @@ interface EmptyCartContentProps {
 const EmptyCartContent = ({ closeCart }: EmptyCartContentProps) => {
   return (
     <div className="EmptyCartContent">
-      <button aria-label="Close cart" className="close" onClick={closeCart}>
-        <Close />
-      </button>
+      <IconButton
+        ariaLabel="Close cart"
+        className="close"
+        icon={<Close />}
+        onClick={closeCart}
+        variant={IconButtonVariant.Large}
+      />
       <h2 id="cart-heading">Your cart is empty</h2>
       <Link to="/" className="continue-shopping" onClick={closeCart}>
         Continue Shopping
