@@ -8,6 +8,7 @@ import "./ProductDetailsPage.css";
 import { getAvailableQuantity, getQuantityOfItemInCart } from "../../cartUtils";
 import { CartContext } from "../../context/CartContext";
 import { SetTitleContext } from "../../context/SetTitleContext";
+import ImageGallery from "../ImageGallery/ImageGallery";
 
 const ProductDetailsPage = () => {
   const [quantity, setQuantity] = useState(1);
@@ -46,15 +47,7 @@ const ProductDetailsPage = () => {
 
   return (
     <div className="productDetailsPage">
-      <div className="images">
-        {images.map((image) => (
-          <img
-            alt={image.description}
-            className="image"
-            src={`${process.env.PUBLIC_URL}/assets/${image.fileName}`}
-          ></img>
-        ))}
-      </div>
+      <ImageGallery images={images} />
       <div className="info">
         <h1>{name}</h1>
         <div className="price">${price}</div>

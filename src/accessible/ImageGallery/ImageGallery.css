@@ -1,0 +1,17 @@
+.ImageGallery {
+  column-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-inline-size: 50%;
+  row-gap: 10px;
+}
+
+.ImageGallery .image:first-child {
+  max-inline-size: 100%;
+}
+
+.ImageGallery .image {
+  inline-size: 100%;
+  object-fit: cover;
+}
