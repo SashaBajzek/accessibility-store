@@ -1,0 +1,22 @@
+.IconButton {
+  align-items: center;
+  background-color: white;
+  block-size: 44px;
+  border-width: 0;
+  border-radius: 50%;
+  display: flex;
+  inline-size: 44px;
+  inset-block-start: 14px;
+  inset-inline-end: 14px;
+  justify-content: center;
+  position: absolute;
+}
+
+.IconButton:hover {
+  cursor: pointer;
+}
+
+.IconButton svg {
+  block-size: 24px;
+  inline-size: 24px;
+}

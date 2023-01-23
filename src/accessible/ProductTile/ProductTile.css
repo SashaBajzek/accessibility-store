@@ -53,27 +53,10 @@
   object-fit: cover;
 }
 
-.productTile .favorite-button {
-  align-items: center;
-  background-color: white;
-  block-size: 44px;
-  border-width: 0;
-  border-radius: 50%;
-  display: flex;
-  inline-size: 44px;
+.productTile .IconButton {
   inset-block-start: 14px;
   inset-inline-end: 14px;
-  justify-content: center;
   position: absolute;
-}
-
-.productTile .favorite-button:hover {
-  cursor: pointer;
-}
-
-.productTile .favorite-button svg {
-  block-size: 24px;
-  inline-size: 24px;
 }
 
 .productTile svg.heart {
