@@ -8,27 +8,29 @@
   display: flex;
   max-inline-size: 1400px;
   margin: 0 auto;
-  padding-inline: 60px;
+  padding-inline: var(--compact-inline);
   justify-content: space-between;
 }
 
 .header .brand {
   color: var(--text-accent);
   font-family: "Noto Sans Lao Looped", serif;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
 }
 
 .header .inline-end-links {
+  align-items: center;
   display: flex;
 }
 
 .header .favorites {
   align-items: center;
+  block-size: 44px;
   display: flex;
+  inline-size: 44px;
   justify-content: center;
-  margin-inline-end: 10px;
 }
 
 .header .favorites svg {
@@ -36,6 +38,24 @@
   inline-size: 30px;
 }
 
-.Cart {
-  padding: 0;
+@media (min-width: 300px) {
+  .header .brand {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 400px) {
+  .header .brand {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 420px) {
+  .header .container {
+    padding-inline: var(--regular-inline);
+  }
+
+  .header .favorites {
+    margin-inline-end: 10px;
+  }
 }

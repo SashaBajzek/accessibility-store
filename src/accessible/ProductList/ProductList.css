@@ -24,7 +24,7 @@
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 750px) {
   .productList .productList-item {
     flex-basis: 33.3333333%;
     max-inline-size: 33.3333333%;

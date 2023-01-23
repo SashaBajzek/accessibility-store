@@ -3,7 +3,7 @@
   grid-template-columns: 2fr 2fr 1fr;
   grid-rows: 3;
   padding-block: 20px;
-  padding-inline-start: 120px;
+  padding-inline-start: 70px;
   position: relative;
 }
 
@@ -13,8 +13,8 @@
 }
 
 .CartRow .product-cell .image {
-  block-size: 100px;
-  inline-size: 100px;
+  block-size: 60px;
+  inline-size: 60px;
   inset-inline-start: 0;
   object-fit: cover;
   position: absolute;
@@ -103,4 +103,15 @@
 
 .CartRow .remove-button:hover {
   cursor: pointer;
+}
+
+@media (min-width: 400px) {
+  .CartRow {
+    padding-inline-start: 120px;
+  }
+
+  .CartRow .product-cell .image {
+    block-size: 100px;
+    inline-size: 100px;
+  }
 }

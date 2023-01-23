@@ -41,9 +41,3 @@
     padding-inline-start: 60px;
   }
 }
-
-@media (min-width: 1200px) {
-  .productDetailsPage .image {
-    max-inline-size: 49%;
-  }
-}

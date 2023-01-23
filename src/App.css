@@ -4,6 +4,8 @@
   --deep-space-sparkle: #40616c;
   --halaya-ube: #6c4061;
   --error: #a80014;
+  --compact-inline: 20px;
+  --regular-inline: 60px;
 }
 
 * {
@@ -23,10 +25,16 @@ main {
   margin: 0 auto;
   margin-block: 40px;
   max-inline-size: 1400px;
-  padding-inline: 60px;
+  padding-inline: var(--compact-inline);
 }
 
 .overflow-hidden {
   block-size: 100vh;
   overflow: hidden;
+}
+
+@media (min-width: 420px) {
+  main {
+    padding-inline: var(--regular-inline);
+  }
 }
