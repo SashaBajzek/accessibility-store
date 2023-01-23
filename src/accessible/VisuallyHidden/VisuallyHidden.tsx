@@ -11,9 +11,5 @@ import * as React from "react";
 export const VisuallyHidden: React.FunctionComponent<{
   children: React.ReactNode;
 }> = ({ children }) => {
-  return (
-    <div className="VisuallyHidden" role="presentation">
-      {children}
-    </div>
-  );
+  return <div className="VisuallyHidden">{children}</div>;
 };

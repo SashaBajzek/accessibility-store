@@ -3,6 +3,7 @@ import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
 import "./QuantitySelect.css";
 
 interface QuantitySelectProps {
+  itemName: string;
   maxQuantity: number;
   minQuantity: number;
   onChange: (quantity: number) => void;
@@ -10,6 +11,7 @@ interface QuantitySelectProps {
 }
 
 const QuantitySelect = ({
+  itemName,
   maxQuantity,
   minQuantity,
   onChange,
@@ -35,7 +37,7 @@ const QuantitySelect = ({
       {options.length > 0 ? (
         <>
           <VisuallyHidden>
-            <label htmlFor="quantity-select">Quantity</label>
+            <label htmlFor="quantity-select">Quantity of {itemName}</label>
           </VisuallyHidden>
           <select
             className="QuantitySelect"

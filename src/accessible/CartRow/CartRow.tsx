@@ -15,8 +15,8 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
   const { cart, removeItem, updateItemQuantity } = useContext(CartContext);
   const availableQuantity = getAvailableQuantity(cartItem, cart);
   return (
-    <tr className="CartRow">
-      <td className="product-cell">
+    <tr className="CartRow" role="row">
+      <td className="product-cell" role="cell">
         <Link
           aria-hidden={true}
           to={"items/" + cartItem.item.id}
@@ -45,11 +45,12 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           <div className="item-options">Length: {cartItem.size}</div>
         </div>
       </td>
-      <td className="price-cell">
+      <td className="price-cell" role="cell">
         <div>${cartItem.item.price}</div>
       </td>
-      <td className="quantity-cell">
+      <td className="quantity-cell" role="cell">
         <QuantitySelect
+          itemName={cartItem.item.name}
           maxQuantity={Math.max(
             cartItem.quantity,
             cartItem.quantity + availableQuantity
@@ -65,10 +66,12 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           quantity={cartItem.quantity}
         />
       </td>
-      <td className="total-cell">${cartItem.item.price * cartItem.quantity}</td>
-      <td className="remove-cell">
+      <td className="total-cell" role="cell">
+        ${cartItem.item.price * cartItem.quantity}
+      </td>
+      <td className="remove-cell" role="cell">
         <button
-          aria-label={`Remove ${cartItem.item.name} braceletfrom cart`}
+          aria-label={`Remove ${cartItem.item.name} bracelet from cart`}
           className="remove-button"
           onClick={() => removeItem(cartItem)}
         >

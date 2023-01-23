@@ -68,7 +68,7 @@
   text-transform: uppercase;
 }
 
-.CartContent th:last-of-type {
+.CartContent th.visually-hidden {
   inline-size: 0;
 }
 

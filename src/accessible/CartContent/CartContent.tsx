@@ -22,23 +22,27 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
         </button>
       </div>
       <form method="dialog">
-        <table>
-          <thead>
-            <tr>
-              <th className="product-heading">Product</th>
-              <th>
+        <table role="table">
+          <thead role="rowgroup">
+            <tr role="row">
+              <th className="product-heading" role="columnheader">
+                Product
+              </th>
+              <th className="visually-hidden" role="columnheader">
                 <VisuallyHidden>Price</VisuallyHidden>
               </th>
-              <th>
+              <th className="visually-hidden" role="columnheader">
                 <VisuallyHidden>Quantity</VisuallyHidden>
               </th>
-              <th className="total-heading">Total</th>
-              <th>
+              <th className="total-heading" role="columnheader">
+                Total
+              </th>
+              <th className="visually-hidden" role="columnheader">
                 <VisuallyHidden>Remove</VisuallyHidden>
               </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody role="rowgroup">
             {cart.map((cartItem) => (
               <CartRow
                 cartItem={cartItem}
