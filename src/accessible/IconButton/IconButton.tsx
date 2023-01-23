@@ -1,14 +1,33 @@
 import "./IconButton.css";
 
-interface IconButtonProps {
-  ariaLabel: string;
-  icon: any;
-  onClick: () => void;
+export enum IconButtonVariant {
+  Medium = "medium",
+  Large = "large",
 }
 
-const IconButton = ({ ariaLabel, icon, onClick }: IconButtonProps) => {
+interface IconButtonProps {
+  ariaLabel: string;
+  className?: string;
+  hasBoxShadow?: boolean;
+  icon: any;
+  onClick: () => void;
+  variant?: IconButtonVariant;
+}
+
+const IconButton = ({
+  ariaLabel,
+  className,
+  hasBoxShadow = false,
+  icon,
+  onClick,
+  variant = IconButtonVariant.Medium,
+}: IconButtonProps) => {
   return (
-    <button aria-label={ariaLabel} className="IconButton" onClick={onClick}>
+    <button
+      aria-label={ariaLabel}
+      className={`IconButton ${variant} ${className} ${hasBoxShadow}`}
+      onClick={onClick}
+    >
       {icon}
     </button>
   );

@@ -1,22 +1,29 @@
 .CartButton {
   align-items: center;
-  background-color: transparent;
-  block-size: 60px;
+  background-color: var(--white-default);
+  block-size: 56px;
   border-width: 0;
+  border-radius: 50%;
   display: flex;
-  inline-size: 60px;
+  inline-size: 56px;
   justify-content: center;
   padding: 0;
   position: relative;
 }
 
-.CartButton:hover {
+.CartButton:hover,
+.CartButton:focus-visible {
+  background-color: var(--white-hover-focus);
   cursor: pointer;
 }
 
+.CartButton:active {
+  background-color: var(--white-active);
+}
+
 .CartButton svg {
-  block-size: 60px;
-  inline-size: 60px;
+  block-size: 52px;
+  inline-size: 52px;
 }
 
 .CartButton svg path {

@@ -5,6 +5,7 @@ import { Trash } from "../../SVGs/Trash";
 import { CartContext } from "../../context/CartContext";
 import QuantitySelect from "../QuantitySelect/QuantitySelect";
 import "./CartRow.css";
+import IconButton, { IconButtonVariant } from "../IconButton/IconButton";
 
 interface CartRowProps {
   cartItem: CartItem;
@@ -90,13 +91,13 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
         headers="CartContent-remove-heading"
         role="cell"
       >
-        <button
-          aria-label={`Remove ${cartItem.item.name} bracelet from cart`}
+        <IconButton
+          ariaLabel={`Remove ${cartItem.item.name} bracelet from cart`}
           className="remove-button"
-          onClick={() => removeItem(cartItem)}
-        >
-          <Trash />
-        </button>
+          icon={<Trash />}
+          onClick={() => () => removeItem(cartItem)}
+          variant={IconButtonVariant.Large}
+        />
       </td>
     </tr>
   );

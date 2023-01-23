@@ -40,12 +40,14 @@ const ProductTile = ({ product }: ProductTileProps) => {
       {favorite ? (
         <IconButton
           ariaLabel={`Remove ${name} from favorites`}
+          hasBoxShadow={true}
           icon={<Heart />}
           onClick={() => toggleFavorite(product)}
         />
       ) : (
         <IconButton
           ariaLabel={`Add ${name} to favorites`}
+          hasBoxShadow={true}
           icon={<HeartHollow />}
           onClick={() => toggleFavorite(product)}
         />

@@ -86,25 +86,6 @@
   }
 }
 
-.CartRow .remove-button {
-  align-items: center;
-  background-color: transparent;
-  border-width: 0;
-  block-size: 42px;
-  display: flex;
-  inline-size: 42px;
-  justify-content: center;
-}
-
-.CartRow .remove-button svg {
-  block-size: 42px;
-  inline-size: 42px;
-}
-
-.CartRow .remove-button:hover {
-  cursor: pointer;
-}
-
 @media (min-width: 400px) {
   .CartRow {
     padding-inline-start: 120px;

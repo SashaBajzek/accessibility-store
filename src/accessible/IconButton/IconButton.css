@@ -1,22 +1,43 @@
 .IconButton {
   align-items: center;
-  background-color: white;
-  block-size: 44px;
+  background-color: var(--white-default);
   border-width: 0;
   border-radius: 50%;
   display: flex;
-  inline-size: 44px;
-  inset-block-start: 14px;
-  inset-inline-end: 14px;
   justify-content: center;
-  position: absolute;
 }
 
-.IconButton:hover {
+.IconButton.hasBoxShadow {
+  box-shadow: rgba(34, 34, 34, 0.25) 0px 4px 20px;
+}
+
+.IconButton:hover,
+.IconButton:focus-visible {
+  background-color: var(--white-hover-focus);
   cursor: pointer;
 }
 
-.IconButton svg {
+.IconButton:active {
+  background-color: var(--white-active);
+  cursor: pointer;
+}
+
+.IconButton.medium {
+  block-size: 44px;
+  inline-size: 44px;
+}
+
+.IconButton.medium svg {
   block-size: 24px;
   inline-size: 24px;
+}
+
+.IconButton.large {
+  block-size: 56px;
+  inline-size: 56px;
+}
+
+.IconButton.large svg {
+  block-size: 30px;
+  inline-size: 30px;
 }

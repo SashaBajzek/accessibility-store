@@ -5,6 +5,7 @@ import { CartContext } from "../../context/CartContext";
 import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
 import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
 import "./CartContent.css";
+import IconButton, { IconButtonVariant } from "../IconButton/IconButton";
 
 interface CartContentProps {
   checkout: () => void;
@@ -17,9 +18,13 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
     <div className="CartContent">
       <div className="heading">
         <h2 id="cart-heading">Your cart</h2>
-        <button aria-label="Close cart" className="close" onClick={closeCart}>
-          <Close />
-        </button>
+        <IconButton
+          ariaLabel="Close cart"
+          className="close"
+          icon={<Close />}
+          onClick={closeCart}
+          variant={IconButtonVariant.Large}
+        />
       </div>
       <form method="dialog">
         <table role="table">
