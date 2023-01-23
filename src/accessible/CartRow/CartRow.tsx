@@ -95,7 +95,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           ariaLabel={`Remove ${cartItem.item.name} bracelet from cart`}
           className="remove-button"
           icon={<Trash />}
-          onClick={() => () => removeItem(cartItem)}
+          onClick={() => removeItem(cartItem)}
           variant={IconButtonVariant.Large}
         />
       </td>
