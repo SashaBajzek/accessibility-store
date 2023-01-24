@@ -33,15 +33,16 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Nature,
     description:
-      "The beach in beads: Peach moonstones for sand, yellow quartz for sunshine, green garnets for seaweed, aquamarine for seafoam, apatite for ocean water, sapphire and spinels for deep ocean shadows",
+      "This bracelet is inspired by the sunsets of Hawaii.  Peach moonstones represent the sand, yellow quartz represent the sunshine, green garnets represent the seaweed, pale blue aquamarines represent the seafoam, dark aqua blue apatites represent the ocean water, cornflower blue sapphires and purple spinels represent the deep ocean shadows.",
     id: "ocean1",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Ocean Sunset Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of pale peach to yellow to light green to light blue to dark aqua blue to cornflower blue and purple",
         fileName: "Beach1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Ocean Sunset Product Image 2",
         fileName: "Beach2.jpg",
       },
     ],
@@ -52,23 +53,24 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Art,
     description:
-      "Monet inspired: ruby, sapphire & peridot lilies // emerald, sapphire & tanzanite bridge over the water // tsavorite, tourmaline & grandidierite lush greenery all around",
+      "This bracelet is inspired by Monet's paintings of water lilies. Rubies, pale pink sapphires, and green peridot respresent the lilies. Pale green emeralds, cornflower blue sapphires & pale purple tanzanites represent the water and bridge in the painting. Green tsavorites, tourmalines & teal grandidierites represent the lush greenery all around.",
     id: "monet1",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Water Lilies Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of hot pink to pale pink to pale olive green, to pale seafoam green, to deep teal, to cornflower blue, to pale purple, and black",
         fileName: "Monet1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Water Lilies Product Image 2",
         fileName: "Monet2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Water Lilies Product Image 3",
         fileName: "Monet3.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Water Lilies Product Image 4",
         fileName: "Monet4.jpg",
       },
     ],
@@ -79,19 +81,20 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Art,
     description:
-      "In a sea of plain morganite, a colorful waterfall of sapphire, fire opal, spinel, ruby, garnet, emerald, peridot and just about every gem stone type I have",
+      "This bracelet is inspired by my sister's favorite painting that shows a woman in a grey business suit with a cascade of flowers falling down across her body.  Clear morganites represents the plainness of the grey business suit, with a colorful waterfall of sapphires, fire opals, spinels, rubies, garnets, emeralds, and peridots.",
     id: "flowers1",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Melting into Flowers Product Image 1:  the bracelet has a gold lobster clasp and small gemstone beads arranged in 3 segments.  The first and last third of the bracelet are clear beads, and the middle third has a variety of colors in a random pattern with greens, pinks, oranges, yellows, reds, and blues",
         fileName: "Flowers1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Melting into Flowers Product Image 2",
         fileName: "Flowers2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Melting into Flowers Product Image 3",
         fileName: "Flowers3.jpg",
       },
     ],
@@ -102,19 +105,21 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Nature,
     description:
-      "Inspired by an awesome night eating ice cream with Ellie in Delores Park staring at a cotton candy pink sky, reimagined in pink and rainbow opals mixed with mauve sapphires",
+      "This bracelet is inspired by an awesome night eating ice cream with my friend Ellie in Delores Park, staring at a cotton candy pink sunset.  The colorful sky is represented by pink and rainbow opals mixed with mauve sapphires",
     id: "delores",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Candy Sky in Delores Park Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in a random color pattern of blush pink, mauve, and rainbow opals",
         fileName: "Delores1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Candy Sky in Delores Park Product Image 2",
         fileName: "Delores2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "A view of the San Francisco skyline viewed from Delores Park during a sunset where the sky is colored pastel pink, orange, and purple.",
         fileName: "Delores3.jpg",
       },
     ],
