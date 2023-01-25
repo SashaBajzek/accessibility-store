@@ -130,23 +130,24 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Nature,
     description:
-      "The Grand Canyon: a blue sapphire sky contrasting layers of sunstone, sapphire, citrine, and lemon quartz rocks, before settling into the peridot and sapphire water.",
+      "This bracelet is inspired by the Grand Canyon.  Blue sapphires represent the sky contrasting layers of speckled orange sunstones, orange sapphires, honey citrines, and lemon quartz represent the layered rocks, and green peridots and blue sapphires represent the water at the base of the canyon.",
     id: "grand",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Grand Canyon Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of blue, orange, yellow, green, and blue again",
         fileName: "GrandCanyon1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Grand Canyon Product Image 2",
         fileName: "GrandCanyon2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Grand Canyon Product Image 3",
         fileName: "GrandCanyon3.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Grand Canyon Product Image 4",
         fileName: "GrandCanyon4.jpg",
       },
     ],
@@ -157,27 +158,28 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Art,
     description:
-      "Twenty Skies by @alexhyner reimagined in 12 colorful sky-scapes of sapphire, spinel, grandiderite, moonstone, citrine, and rubies. Check out the original art piece by Alex, it’s beautiful!",
+      "This bracelet is inspired by the art piece Twenty Skies by @alexhyner where multiple sunset images are combined using the geometry created by power lines.  This piece was reimagined in 12 gradients of color separated by 18k gold beads to represent the powerlines.  The sky-scapes are represented by gradients of pink, orange, yellow and blue sapphires, purple spinels, teals grandiderites, peach moonstones, yellow citrines, and hot pink rubies. Check out the original art piece by Alex, it’s beautiful!",
     id: "20skies",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Twenty Skies Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in 12 color segments with gold beads separating them.  The segments are:  (1) blue, peach, purple, (2) white, pink, blue, (3) orange, red, purple, (4) yellow, orange, pink, (5) light blue, (6) dark teal, (7) blue, pink, (8) purple, (9) peach, light teal, (10) white, light blue, (11) yellow, (12) pink, purple",
         fileName: "Twenty1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Twenty Skies Product Image 2",
         fileName: "Twenty2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Twenty Skies Product Image 3",
         fileName: "Twenty3.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Twenty Skies Product Image 4",
         fileName: "Twenty4.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Twenty Skies Product Image 5",
         fileName: "Twenty5.jpg",
       },
     ],
