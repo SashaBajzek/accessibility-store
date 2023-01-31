@@ -1,14 +1,17 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getItemById, Size } from "../../inventory";
-import QuantityPicker from "../QuantityPicker/QuantityPicker";
-import { SizeSelector } from "../SizeSelector/SizeSelector";
-import SubmitButton, { ButtonVariant } from "../SubmitButton/SubmitButton";
+import { getItemById, Size } from "../../../inventory";
+import QuantityPicker from "../../QuantityPicker/QuantityPicker";
+import { SizeSelector } from "../../SizeSelector/SizeSelector";
+import SubmitButton, { ButtonVariant } from "../../SubmitButton/SubmitButton";
 import "./ProductDetailsPage.css";
-import { getAvailableQuantity, getQuantityOfItemInCart } from "../../cartUtils";
-import { CartContext } from "../../context/CartContext";
-import { SetTitleContext } from "../../context/SetTitleContext";
-import ImageGallery from "../ImageGallery/ImageGallery";
+import {
+  getAvailableQuantity,
+  getQuantityOfItemInCart,
+} from "../../../cartUtils";
+import { CartContext } from "../../../context/CartContext";
+import { SetTitleContext } from "../../../context/SetTitleContext";
+import ImageGallery from "../../ImageGallery/ImageGallery";
 
 const ProductDetailsPage = () => {
   const [quantity, setQuantity] = useState(1);

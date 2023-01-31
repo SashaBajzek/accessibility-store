@@ -2,9 +2,9 @@ import Header from "./accessible/Header/Header";
 import "./App.css";
 
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./accessible/HomePage/HomePage";
-import CheckoutPage from "./accessible/CheckoutPage/CheckoutPage";
-import ProductDetailsPage from "./accessible/ProductDetailsPage/ProductDetailsPage";
+import HomePage from "./accessible/pages/HomePage/HomePage";
+import CheckoutPage from "./accessible/pages/CheckoutPage/CheckoutPage";
+import ProductDetailsPage from "./accessible/pages/ProductDetailsPage/ProductDetailsPage";
 import Footer from "./accessible/Footer/Footer";
 import { useCart } from "./hooks/useCart";
 import { useState } from "react";
@@ -14,8 +14,8 @@ import { HideOverflowContext } from "./context/HideOverflowContext";
 import { SetTitleContext } from "./context/SetTitleContext";
 import { FavoritesContext } from "./context/FavoritesContext";
 import { useFavorites } from "./hooks/useFavorites";
-import FavoritesPage from "./accessible/FavoritesPage/FavoritesPage";
-import ConfirmationPage from "./accessible/ConfirmationPage/ConfirmationPage";
+import FavoritesPage from "./accessible/pages/FavoritesPage/FavoritesPage";
+import ConfirmationPage from "./accessible/pages/ConfirmationPage/ConfirmationPage";
 
 function App() {
   const {

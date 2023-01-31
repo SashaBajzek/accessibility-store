@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { SetTitleContext } from "../../context/SetTitleContext";
+import { SetTitleContext } from "../../../context/SetTitleContext";
 import "./CheckoutPage.css";
 
 export default function CheckoutPage() {

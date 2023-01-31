@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import "./FavoritesPage.css";
-import { FavoritesContext } from "../../context/FavoritesContext";
-import { SetTitleContext } from "../../context/SetTitleContext";
-import ProductList from "../ProductList/ProductList";
+import { FavoritesContext } from "../../../context/FavoritesContext";
+import { SetTitleContext } from "../../../context/SetTitleContext";
+import ProductList from "../../ProductList/ProductList";
 
 const FavoritesPage = () => {
   const { favorites } = useContext(FavoritesContext);

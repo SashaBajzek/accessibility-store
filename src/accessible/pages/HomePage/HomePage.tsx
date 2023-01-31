@@ -4,10 +4,10 @@ import {
   getFruitItems,
   getMiscItems,
   getNatureItems,
-} from "../../inventory";
+} from "../../../inventory";
 import { useContext, useEffect, useState } from "react";
-import ProductList from "../ProductList/ProductList";
-import { SetTitleContext } from "../../context/SetTitleContext";
+import ProductList from "../../ProductList/ProductList";
+import { SetTitleContext } from "../../../context/SetTitleContext";
 
 const HomePage = () => {
   const { setTitle } = useContext(SetTitleContext);
