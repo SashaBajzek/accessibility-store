@@ -23,7 +23,7 @@ const ProductTile = ({ product }: ProductTileProps) => {
   }, [favorites, isFavorite, product]);
 
   return (
-    <article className="productTile">
+    <article className="productTile" aria-labelledby={`name-${id}`}>
       <Link className="link" to={id}>
         {productImage ? (
           <img
@@ -34,7 +34,9 @@ const ProductTile = ({ product }: ProductTileProps) => {
         ) : (
           <div className="image">Product Image Loading</div>
         )}
-        <h3 className="name">{name}</h3>
+        <h3 className="name" id={`name-${id}`}>
+          {name}
+        </h3>
         <div className="price">${price}</div>
       </Link>
       {favorite ? (
