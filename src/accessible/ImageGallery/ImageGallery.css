@@ -3,21 +3,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
   max-inline-size: 50%;
+  padding: 0;
   row-gap: 10px;
 }
 
-.ImageGallery .image:first-child {
+.ImageGallery .listItem:first-child {
   max-inline-size: 100%;
 }
 
-.ImageGallery .image {
+.ImageGallery .listItem {
+  inline-size: 100%;
+}
+
+.ImageGallery .listItem .image {
+  block-size: 100%;
   inline-size: 100%;
   object-fit: cover;
 }
 
 @media (min-width: 1200px) {
-  .ImageGallery .image {
+  .ImageGallery .listItem {
     max-inline-size: 49%;
   }
 }

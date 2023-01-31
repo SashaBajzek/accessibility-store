@@ -7,15 +7,21 @@ interface ImageGallerytProps {
 
 const ImageGallery = ({ images }: ImageGallerytProps) => {
   return (
-    <div className="ImageGallery">
+    <ul
+      aria-label="Product Image Gallery"
+      className="ImageGallery"
+      role="region"
+    >
       {images.map((image) => (
-        <img
-          alt={image.description}
-          className="image"
-          src={`${process.env.PUBLIC_URL}/assets/${image.fileName}`}
-        ></img>
+        <li className="listItem" key={image.fileName}>
+          <img
+            alt={image.description}
+            className="image"
+            src={`${process.env.PUBLIC_URL}/assets/${image.fileName}`}
+        />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
