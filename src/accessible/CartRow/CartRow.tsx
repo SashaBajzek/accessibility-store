@@ -6,6 +6,7 @@ import { CartContext } from "../../context/CartContext";
 import QuantitySelect from "../QuantitySelect/QuantitySelect";
 import "./CartRow.css";
 import IconButton, { IconButtonVariant } from "../IconButton/IconButton";
+import { useAriaLiveAnnouncer } from "../../hooks/AriaLiveAnnouncer";
 
 interface CartRowProps {
   cartItem: CartItem;
@@ -15,6 +16,14 @@ interface CartRowProps {
 const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
   const { cart, removeItem, updateItemQuantity } = useContext(CartContext);
   const availableQuantity = getAvailableQuantity(cartItem, cart);
+  const announcer = useAriaLiveAnnouncer();
+  const handleRemove = (cartItem: CartItem) => {
+    removeItem(cartItem);
+    // I think this is failing because it's in a dialog component
+    announcer.addMessage(
+      `${cartItem.item.name} size ${cartItem.size} removed from cart`
+    );
+  };
   return (
     <tr className="CartRow" role="row">
       <td
@@ -95,7 +104,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           ariaLabel={`Remove ${cartItem.item.name} bracelet from cart`}
           className="remove-button"
           icon={<Trash />}
-          onClick={() => removeItem(cartItem)}
+          onClick={() => handleRemove(cartItem)}
           variant={IconButtonVariant.Large}
         />
       </td>

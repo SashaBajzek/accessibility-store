@@ -16,6 +16,15 @@ import { FavoritesContext } from "./context/FavoritesContext";
 import { useFavorites } from "./hooks/useFavorites";
 import FavoritesPage from "./accessible/pages/FavoritesPage/FavoritesPage";
 import ConfirmationPage from "./accessible/pages/ConfirmationPage/ConfirmationPage";
+import { AriaLiveAnnouncerProvider } from "./hooks/AriaLiveAnnouncer";
+
+// const ButtonTester = () => {
+//   const announcer = useAriaLiveAnnouncer();
+//   const handleAriaTest = () => {
+//     announcer.addMessage("Sasha2");
+//   };
+//   return <button onClick={handleAriaTest}>here</button>;
+// };
 
 function App() {
   const {
@@ -37,67 +46,69 @@ function App() {
   return (
     <div className={`App ${hideOverflow ? "overflow-hidden" : ""}`}>
       <Router>
-        <CartContext.Provider
-          value={{
-            addItem,
-            cart,
-            removeItem,
-            totalCost,
-            totalItemsInCart,
-            updateItemQuantity,
-          }}
-        >
-          <FavoritesContext.Provider
-            value={{ favorites, isFavorite, toggleFavorite }}
+        <AriaLiveAnnouncerProvider>
+          <CartContext.Provider
+            value={{
+              addItem,
+              cart,
+              removeItem,
+              totalCost,
+              totalItemsInCart,
+              updateItemQuantity,
+            }}
           >
-            <HideOverflowContext.Provider value={{ setHideOverflow }}>
-              <SetTitleContext.Provider value={{ setTitle }}>
-                <Header />
-                <main>
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route
-                      path="/accessibility-store/"
-                      element={<HomePage />}
-                    />
+            <FavoritesContext.Provider
+              value={{ favorites, isFavorite, toggleFavorite }}
+            >
+              <HideOverflowContext.Provider value={{ setHideOverflow }}>
+                <SetTitleContext.Provider value={{ setTitle }}>
+                  <Header />
+                  <main>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      <Route
+                        path="/accessibility-store/"
+                        element={<HomePage />}
+                      />
 
-                    <Route path="/favorites" element={<FavoritesPage />} />
-                    <Route
-                      path="/accessibility-store/favorites"
-                      element={<FavoritesPage />}
-                    />
+                      <Route path="/favorites" element={<FavoritesPage />} />
+                      <Route
+                        path="/accessibility-store/favorites"
+                        element={<FavoritesPage />}
+                      />
 
-                    <Route path="/checkout" element={<CheckoutPage />} />
-                    <Route
-                      path="/accessibility-store/checkout"
-                      element={<CheckoutPage />}
-                    />
+                      <Route path="/checkout" element={<CheckoutPage />} />
+                      <Route
+                        path="/accessibility-store/checkout"
+                        element={<CheckoutPage />}
+                      />
 
-                    <Route
-                      path="/confirmation"
-                      element={<ConfirmationPage />}
-                    />
-                    <Route
-                      path="/accessibility-store/confirmation"
-                      element={<ConfirmationPage />}
-                    />
+                      <Route
+                        path="/confirmation"
+                        element={<ConfirmationPage />}
+                      />
+                      <Route
+                        path="/accessibility-store/confirmation"
+                        element={<ConfirmationPage />}
+                      />
 
-                    <Route path="/:id" element={<ProductDetailsPage />} />
-                    <Route
-                      path="/accessibility-store/:id"
-                      element={<ProductDetailsPage />}
-                    />
-                    <Route
-                      path="/favorites/:id"
-                      element={<ProductDetailsPage />}
-                    />
-                  </Routes>
-                </main>
-                <Footer />
-              </SetTitleContext.Provider>
-            </HideOverflowContext.Provider>{" "}
-          </FavoritesContext.Provider>
-        </CartContext.Provider>
+                      <Route path="/:id" element={<ProductDetailsPage />} />
+                      <Route
+                        path="/accessibility-store/:id"
+                        element={<ProductDetailsPage />}
+                      />
+                      <Route
+                        path="/favorites/:id"
+                        element={<ProductDetailsPage />}
+                      />
+                    </Routes>
+                  </main>
+                  <Footer />
+                </SetTitleContext.Provider>
+              </HideOverflowContext.Provider>
+            </FavoritesContext.Provider>
+          </CartContext.Provider>
+        </AriaLiveAnnouncerProvider>
       </Router>
     </div>
   );
