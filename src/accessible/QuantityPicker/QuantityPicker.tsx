@@ -43,6 +43,7 @@ const QuantityPicker = ({
       <label htmlFor="quantity">Quantity</label>
       <div className="picker">
         <button
+          aria-describedby={error ? "" : "helper"}
           aria-label={`Decrement quantity of ${itemName}`}
           onClick={decrement}
         >
@@ -52,6 +53,7 @@ const QuantityPicker = ({
           aria-errormessage="helper-error"
           aria-describedby={error ? "" : "helper"}
           aria-invalid={!!error}
+          aria-live="polite"
           id="quantity"
           max={maxQuantity}
           min={minQuantity}
@@ -61,6 +63,7 @@ const QuantityPicker = ({
           value={quantity}
         />
         <button
+          aria-describedby={error ? "" : "helper"}
           aria-label={`Increment quantity of ${itemName}`}
           onClick={increment}
         >
