@@ -1,6 +1,7 @@
 export function Minus() {
   return (
     <svg
+      aria-hidden={true}
       viewBox="0 0 82.713623046875 10.9873046875"
       xmlns="http://www.w3.org/2000/svg"
     >
