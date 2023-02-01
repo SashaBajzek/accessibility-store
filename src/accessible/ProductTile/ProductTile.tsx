@@ -23,7 +23,7 @@ const ProductTile = ({ product }: ProductTileProps) => {
   }, [favorites, isFavorite, product]);
 
   return (
-    <article className="productTile" aria-labelledby={`name-${id}`}>
+    <div className="productTile">
       <Link className="link" to={id}>
         {productImage ? (
           <img
@@ -54,7 +54,7 @@ const ProductTile = ({ product }: ProductTileProps) => {
           onClick={() => toggleFavorite(product)}
         />
       )}
-    </article>
+    </div>
   );
 };
 

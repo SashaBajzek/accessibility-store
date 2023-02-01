@@ -28,14 +28,22 @@ const HomePage = () => {
   return (
     <>
       <h1>All Bracelets</h1>
-      <h2>Art Inspired</h2>
-      <ProductList items={artItems} />
-      <h2>Fruit Inspired</h2>
-      <ProductList items={fruitItems} />
-      <h2>Nature Inspired</h2>
-      <ProductList items={natureItems} />
-      <h2>Miscellaneous</h2>
-      <ProductList items={miscItems} />
+      <article aria-labelledby="art">
+        <h2 id="art">Art Inspired</h2>
+        <ProductList items={artItems} />
+      </article>
+      <article aria-labelledby="fruit">
+        <h2 id="fruit">Fruit Inspired</h2>
+        <ProductList items={fruitItems} />
+      </article>
+      <article aria-labelledby="nature">
+        <h2 id="nature">Nature Inspired</h2>
+        <ProductList items={natureItems} />
+      </article>
+      <article aria-labelledby="misc">
+        <h2 id="misc">Miscellaneous</h2>
+        <ProductList items={miscItems} />{" "}
+      </article>
     </>
   );
 };
