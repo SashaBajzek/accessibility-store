@@ -49,7 +49,9 @@ const QuantityPicker = ({
           <Minus />
         </button>
         <input
-          aria-describedby="helper"
+          aria-errormessage="helper-error"
+          aria-describedby={error ? "" : "helper"}
+          aria-invalid={!!error}
           id="quantity"
           max={maxQuantity}
           min={minQuantity}
@@ -66,7 +68,7 @@ const QuantityPicker = ({
         </button>
       </div>
       {error ? (
-        <div className="error" id="helper" role="alert">
+        <div className="error" id="helper-error" role="alert">
           <Error />
           <div className="text"> {error}</div>
         </div>
