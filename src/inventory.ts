@@ -360,27 +360,28 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Art,
     description:
-      "Abstraction Blue by Georgia O’Keeffe Layers of beautiful blue sky topaz, pale blue aquamarine, a splash of pink sapphires, deep dark polite, teal ammonite and clear topaz",
+      "This bracelet is inspired by the painting Abstraction Blue by Georgia O’Keeffe.  The paintings abstract layers of color are represented with sky blue topaz, pale blue aquamarines, a splash of pink sapphires, deep dark iolites, teal ammonites and clear topaz.",
     id: "georgia2",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Abstraction Blue Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged a symmetrical pattern of light blue, pink, purple, teal, and clear",
         fileName: "AbstractionBlue1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Abstraction Blue Product Image 2",
         fileName: "AbstractionBlue2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Abstraction Blue Product Image 3",
         fileName: "AbstractionBlue3.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Abstraction Blue Product Image 4",
         fileName: "AbstractionBlue4.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description: "Abstraction Blue Product Image 5",
         fileName: "AbstractionBlue5.jpg",
       },
     ],
