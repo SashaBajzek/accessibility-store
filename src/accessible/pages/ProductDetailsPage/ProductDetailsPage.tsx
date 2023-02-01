@@ -12,8 +12,11 @@ import {
 import { CartContext } from "../../../context/CartContext";
 import { SetTitleContext } from "../../../context/SetTitleContext";
 import ImageGallery from "../../ImageGallery/ImageGallery";
+import { useAriaLiveAnnouncer } from "../../../hooks/AriaLiveAnnouncer";
 
 const ProductDetailsPage = () => {
+  const announcer = useAriaLiveAnnouncer();
+
   const [quantity, setQuantity] = useState(1);
   const [error, setError] = useState("");
   const [size, setSize] = useState(Size.Medium);
@@ -39,6 +42,7 @@ const ProductDetailsPage = () => {
     if (quantity <= availableQuantity) {
       setError("");
       addItem(cartItem);
+      announcer.addMessage(`${quantity} of ${name} added to cart`);
     } else if (quantityOfItemInCart > 0) {
       setError(
         `Invalid quantity.  There are only ${item.stock} available and there are ${quantityOfItemInCart} already in cart`

@@ -47,7 +47,6 @@ export function AriaLiveAnnouncerProvider(props: React.PropsWithChildren<{}>) {
         <div
           ref={messageRef}
           role="region"
-          aria-atomic="true"
           aria-live="polite"
           aria-relevant="additions text"
         ></div>
