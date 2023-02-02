@@ -27,10 +27,11 @@ const ProductTile = ({ product }: ProductTileProps) => {
       <Link className="link" to={id}>
         {productImage ? (
           <img
-            alt={productImage.description}
+            alt=""
+            aria-hidden={true}
             className="image"
             src={`${process.env.PUBLIC_URL}/assets/${productImage.fileName}`}
-          ></img>
+          />
         ) : (
           <div className="image">Product Image Loading</div>
         )}
