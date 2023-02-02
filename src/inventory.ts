@@ -383,7 +383,7 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Art,
     description:
-      "This bracelet is inspired by the painting Abstraction Blue by Georgia O’Keeffe.  The paintings abstract layers of color are represented with sky blue topaz, pale blue aquamarines, a splash of pink sapphires, deep dark iolites, teal ammonites and clear topaz.",
+      "This bracelet is inspired by the painting Abstraction Blue by Georgia O’Keeffe.  The painting's abstract layers of color are represented with sky blue topaz, pale blue aquamarines, a splash of pink sapphires, deep dark iolites, teal ammonites and clear topaz.",
     id: "georgia2",
     images: [
       {
@@ -531,19 +531,21 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Miscellaneous,
     description:
-      "The trans flag with blue apatite, pink Peruvian opals, and clear topaz.",
+      "This bracelet is inspired by the trans pride flag.  The blue stripes are represented with blue apatite, the pink stripes with pink Peruvian opals, and the white stripes with clear topazes.",
     id: "flag",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Trans Pride bracelet: the bracelet has a gold lobster clasp and small gemstone beads arranged a symmetrical pattern of blue, pink, and clear",
         fileName: "Trans1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "The Trans Pride bracelet being held in the palm of a person's hand",
         fileName: "Trans2.jpg",
       },
     ],
-    name: "Trans Flag",
+    name: "Trans Pride",
     price: 200,
     stock: 10,
   },
@@ -580,27 +582,26 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Miscellaneous,
     description:
-      "Xena the Warrior Princess, fire opals backdrop her iconic sterling silver and gold chakram, her black spinel leather outfit embellished with more 18k gold beads, and her skin in peach carnelians",
+      "This bracelet is inspired by Xena the Warrior Princess. Orange fire opals backdrop her iconic sterling silver and gold chakram, black spinels represent her leather outfit embellished with more 18k gold beads, and her skin represented by peach carnelians",
     id: "xena",
     images: [
       {
-        description:
-          "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+        description: "Xena the Warrior Princess bracelet:  ",
         fileName: "Xena1.jpg",
       },
       {
         description:
-          "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+          "TODO The Xena bracelet held in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
         fileName: "Xena2.jpg",
       },
       {
         description:
-          "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+          "TODO Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
         fileName: "Xena3.jpg",
       },
       {
         description:
-          "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+          "TODO Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
         fileName: "Xena4.jpg",
       },
       {
