@@ -38,11 +38,12 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description:
-          "Ocean Sunset Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of pale peach to yellow to light green to light blue to dark aqua blue to cornflower blue and purple",
+          "Ocean Sunset bracelet: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of pale peach to yellow to light green to light blue to dark aqua blue to cornflower blue and purple",
         fileName: "Beach1.jpg",
       },
       {
-        description: "Ocean Sunset Product Image 2",
+        description:
+          "The Ocean Sunset bracelet being held in the palm of a person's hand",
         fileName: "Beach2.jpg",
       },
     ],
@@ -58,19 +59,22 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description:
-          "Water Lilies Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of hot pink to pale pink to pale olive green, to pale seafoam green, to deep teal, to cornflower blue, to pale purple, and black",
+          "Water Lilies Bracelet: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of hot pink to pale pink to pale olive green, to pale seafoam green, to deep teal, to cornflower blue, to pale purple, and black",
         fileName: "Monet1.jpg",
       },
       {
-        description: "Water Lilies Product Image 2",
+        description:
+          "The Water Lilies bracelet being held in the palm of a person's hand",
         fileName: "Monet2.jpg",
       },
       {
-        description: "Water Lilies Product Image 3",
+        description:
+          "Water Lilies bracelet being worn with the pink and green side showing",
         fileName: "Monet3.jpg",
       },
       {
-        description: "Water Lilies Product Image 4",
+        description:
+          "Water Lilies bracelet being worn with the green, teal, blue and purple side showing",
         fileName: "Monet4.jpg",
       },
     ],
@@ -86,15 +90,17 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description:
-          "Melting into Flowers Product Image 1:  the bracelet has a gold lobster clasp and small gemstone beads arranged in 3 segments.  The first and last third of the bracelet are clear beads, and the middle third has a variety of colors in a random pattern with greens, pinks, oranges, yellows, reds, and blues",
+          "Melting into Flowers bracelet:  the bracelet has a gold lobster clasp and small gemstone beads arranged in 3 segments.  The first and last third of the bracelet are clear beads, and the middle third has a variety of colors in a random pattern with greens, pinks, oranges, yellows, reds, and blues",
         fileName: "Flowers1.jpg",
       },
       {
-        description: "Melting into Flowers Product Image 2",
+        description:
+          "Melting into Flowers bracelet being held in the palm of a person's hand",
         fileName: "Flowers2.jpg",
       },
       {
-        description: "Melting into Flowers Product Image 3",
+        description:
+          "Melting into Flowers being worn with the colorful side showing",
         fileName: "Flowers3.jpg",
       },
     ],
@@ -110,11 +116,12 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description:
-          "Candy Sky in Delores Park Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in a random color pattern of blush pink, mauve, and rainbow opals",
+          "Candy Sky in Delores Park bracelet: the bracelet has a gold lobster clasp and small gemstone beads arranged in a random color pattern of blush pink, mauve, and rainbow opals",
         fileName: "Delores1.jpg",
       },
       {
-        description: "Candy Sky in Delores Park Product Image 2",
+        description:
+          "Candy Sky in Delores Park bracelet being held in the palm of a person's hand",
         fileName: "Delores2.jpg",
       },
       {
@@ -135,19 +142,22 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description:
-          "Grand Canyon Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of blue, orange, yellow, green, and blue again",
+          "Grand Canyon bracelet: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of blue, orange, yellow, green, and blue again",
         fileName: "GrandCanyon1.jpg",
       },
       {
-        description: "Grand Canyon Product Image 2",
+        description:
+          "Grand Canyon bracelet held in front of image of the Grand Canyon",
         fileName: "GrandCanyon2.jpg",
       },
       {
-        description: "Grand Canyon Product Image 3",
+        description:
+          "Grand Canyon bracelet being worn with the blue and orange side showing",
         fileName: "GrandCanyon3.jpg",
       },
       {
-        description: "Grand Canyon Product Image 4",
+        description:
+          "Grand Canyon bracelet being worn with the yellow and green side showing",
         fileName: "GrandCanyon4.jpg",
       },
     ],
@@ -163,23 +173,27 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description:
-          "Twenty Skies Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged in 12 color segments with gold beads separating them.  The segments are:  (1) blue, peach, purple, (2) white, pink, blue, (3) orange, red, purple, (4) yellow, orange, pink, (5) light blue, (6) dark teal, (7) blue, pink, (8) purple, (9) peach, light teal, (10) white, light blue, (11) yellow, (12) pink, purple",
+          "Twenty Skies bracelet: the bracelet has a gold lobster clasp and small gemstone beads arranged in 12 color segments with gold beads separating them.  The segments are:  (1) blue, peach, purple, (2) white, pink, blue, (3) orange, red, purple, (4) yellow, orange, pink, (5) light blue, (6) dark teal, (7) blue, pink, (8) purple, (9) peach, light teal, (10) white, light blue, (11) yellow, (12) pink, purple",
         fileName: "Twenty1.jpg",
       },
       {
-        description: "Twenty Skies Product Image 2",
+        description:
+          "Twenty Skies bracelet being worn with the (2) white, pink, blue, (3) orange, red, purple, and (4) yellow, orange, pink segments showing",
         fileName: "Twenty2.jpg",
       },
       {
-        description: "Twenty Skies Product Image 3",
+        description:
+          "Twenty Skies bracelet being worn with the (6) dark teal, (7) blue, pink, and (8) purple segments showing",
         fileName: "Twenty3.jpg",
       },
       {
-        description: "Twenty Skies Product Image 4",
+        description:
+          "Twenty Skies bracelet being worn with the (8) purple, (9) peach, light teal, (10) white, light blue, and (11) yellow segments showing",
         fileName: "Twenty4.jpg",
       },
       {
-        description: "Twenty Skies Product Image 5",
+        description:
+          "Twenty Skies bracelet being held in the palm of a person's hand",
         fileName: "Twenty5.jpg",
       },
     ],
@@ -365,23 +379,27 @@ export const inventory: Bracelet[] = [
     images: [
       {
         description:
-          "Abstraction Blue Product Image 1: the bracelet has a gold lobster clasp and small gemstone beads arranged a symmetrical pattern of light blue, pink, purple, teal, and clear",
+          "Abstraction Blue bracelet: the bracelet has a gold lobster clasp and small gemstone beads arranged a symmetrical pattern of light blue, pink, purple, teal, and clear",
         fileName: "AbstractionBlue1.jpg",
       },
       {
-        description: "Abstraction Blue Product Image 2",
+        description:
+          "Abstraction Blue bracelet being held in front of the Abstraction Blue painting",
         fileName: "AbstractionBlue2.jpg",
       },
       {
-        description: "Abstraction Blue Product Image 3",
+        description:
+          "Abstraction Blue bracelet being worn with the blue, pink and purple side showing",
         fileName: "AbstractionBlue3.jpg",
       },
       {
-        description: "Abstraction Blue Product Image 4",
+        description:
+          "Abstraction Blue bracelet being worn with the teal and white side showin",
         fileName: "AbstractionBlue4.jpg",
       },
       {
-        description: "Abstraction Blue Product Image 5",
+        description:
+          "Abstraction Blue bracelet being worn with the other blue, pink and purple side showing",
         fileName: "AbstractionBlue5.jpg",
       },
     ],
