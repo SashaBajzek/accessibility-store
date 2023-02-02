@@ -204,23 +204,27 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Fruit,
     description:
-      "A peach: Juicy peachy colors of red ruby, andesine, orange carnelian, sapphire, yellow citrine, lemon quartz, green peridot leaves and finally a tourmaline stem.",
+      "This bracelet is inspired by peaches. The gradient of colors of the peach are represented by red rubies and andesines, orange carnelians and sapphires, yellow citrines, lemon quartz, green peridots for the leaves and finally brown tourmalines for the peach stem.",
     id: "peach",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Juicy Peach bracelet:  the bracelet has a gold lobster clasp and small gemstone beads arranged in a gradient from dark red, to lighter red, to dark orange, to lighter orange, to golden yellow, to light yellow, to green and finally brown",
         fileName: "Peach1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Juicy Peach bracelet being worn with the red side showing",
         fileName: "Peach2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Juicy Peach bracelet being worn with the orange side showing",
         fileName: "Peach3.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Juicy Peach bracelet being worn with the light orange, ywllow, and green side showing",
         fileName: "Peach4.jpg",
       },
     ],
@@ -343,27 +347,32 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Art,
     description:
-      "Lake and Mountains by Lawren Harris: A deep blue sapphire and kyanite sky streaked with pale blue aquamarine clouds and a large billowing cloud of white topaz, morganite, and pale pink sapphires. Towering blue sapphire and kyanite mountains with pale purple spinel and aqua amazonite snow, rolling hills of teal grandidierite, to a teal lake of amazonite, finally a cool brown tundra sapphire shore.",
+      "This bracelet is inspired by the art piece Lake and Mountains by Lawren Harris.  Deep blue sapphires and kyanites represent the sky streaked with pale blue aquamarine clouds and a large billowing cloud of white topaz, morganite, and pale pink sapphires. Towering blue sapphire and kyanite mountains with pale purple spinel and aqua amazonite snow, rolling hills of teal grandidierite, to a teal lake of amazonite, finally a cool brown tundra sapphire shore.",
     id: "lake",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Lake and Mountains bracelet:  the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of medium blue, pale blue, white with pale pink, blue, dark teal, light teal and brown.",
         fileName: "Lake1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Lake and Mountains bracelet being held in front of the Lake and Mountains art piece",
         fileName: "Lake2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Lake and Mountains bracelet being worn with the medium blue and pale blue side showing",
         fileName: "Lake3.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Lake and Mountains bracelet being worn with the blue and teal side showing",
         fileName: "Lake4.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Lake and Mountains bracelet being worn with the white and pale pink side showing",
         fileName: "Lake5.jpg",
       },
     ],
