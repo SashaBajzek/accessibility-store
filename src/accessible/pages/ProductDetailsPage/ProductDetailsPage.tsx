@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getItemById, Size } from "../../../inventory";
 import QuantityPicker from "../../QuantityPicker/QuantityPicker";
@@ -10,9 +10,9 @@ import {
   getQuantityOfItemInCart,
 } from "../../../cartUtils";
 import { CartContext } from "../../../context/CartContext";
-import { SetTitleContext } from "../../../context/SetTitleContext";
 import ImageGallery from "../../ImageGallery/ImageGallery";
 import { useAriaLiveAnnouncer } from "../../../hooks/AriaLiveAnnouncer";
+import Page from "../Page/Page";
 
 const ProductDetailsPage = () => {
   const announcer = useAriaLiveAnnouncer();
@@ -21,14 +21,9 @@ const ProductDetailsPage = () => {
   const [error, setError] = useState("");
   const [size, setSize] = useState(Size.Medium);
   const { addItem, cart } = useContext(CartContext);
-  const { setTitle } = useContext(SetTitleContext);
 
   const params = useParams();
   const item = params.id && getItemById(params.id);
-
-  useEffect(() => {
-    setTitle(item ? item.name : "Shop");
-  }, [item, setTitle]);
 
   if (item === undefined || item === "") return null;
 
@@ -53,29 +48,29 @@ const ProductDetailsPage = () => {
   };
 
   return (
-    <div className="productDetailsPage">
-      <ImageGallery images={images} />
-      <div className="info">
-        <h1>{name}</h1>
-        <div className="price">${price}</div>
-        <SizeSelector size={size} onChange={setSize}></SizeSelector>
-        <QuantityPicker
-          error={error}
-          itemName={name}
-          maxQuantity={stock}
-          minQuantity={1}
-          quantity={quantity}
-          setQuantity={setQuantity}
-        />
-        <SubmitButton
-          onSubmit={onSubmit}
-          text="Add to cart"
-          variant={ButtonVariant.Secondary}
-        />
-
-        <p className="description">{description}</p>
+    <Page heading={name} title={item ? item.name : "Shop"}>
+      <div className="productDetailsPage">
+        <ImageGallery images={images} />
+        <div className="info">
+          <p className="description">{description}</p>
+          <div className="price">${price}</div>
+          <SizeSelector size={size} onChange={setSize}></SizeSelector>
+          <QuantityPicker
+            error={error}
+            itemName={name}
+            maxQuantity={stock}
+            minQuantity={1}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
+          <SubmitButton
+            onSubmit={onSubmit}
+            text="Add to cart"
+            variant={ButtonVariant.Secondary}
+          />
+        </div>
       </div>
-    </div>
+    </Page>
   );
 };
 

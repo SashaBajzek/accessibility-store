@@ -1,16 +1,9 @@
-import { useContext, useEffect } from "react";
-import { SetTitleContext } from "../../../context/SetTitleContext";
+import Page from "../Page/Page";
 import "./CheckoutPage.css";
 
 export default function CheckoutPage() {
-  const { setTitle } = useContext(SetTitleContext);
-  useEffect(() => {
-    setTitle("Checkout");
-  }, [setTitle]);
-
   return (
-    <div className="CheckoutPage">
-      <h1>Checkout</h1>
+    <Page className="CheckoutPage" heading="Checkout" title="Checkout">
       <form>
         <label>
           Name
@@ -22,6 +15,6 @@ export default function CheckoutPage() {
         </label>
         <button>Submit</button>
       </form>
-    </div>
+    </Page>
   );
 }

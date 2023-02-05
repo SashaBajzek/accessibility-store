@@ -1,10 +1,12 @@
 .ImageGallery {
   column-gap: 10px;
   display: flex;
+  flex-basis: 50%;
+  flex-grow: 1;
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
-  max-inline-size: 50%;
+  max-inline-size: 100%;
   padding: 0;
   row-gap: 10px;
 }

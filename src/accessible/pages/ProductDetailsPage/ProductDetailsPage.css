@@ -1,22 +1,20 @@
 .productDetailsPage {
   display: flex;
   flex-direction: column;
+  gap: 60px;
   inline-size: 100%;
 }
 
 .productDetailsPage .info {
+  flex-basis: 50%;
+  flex-grow: 1;
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 1.69px;
 }
 
-.productDetailsPage h1 {
-  font-family: "Noto Sans Lao Looped", serif;
-  font-size: 50px;
-}
-
 .productDetailsPage .price {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
   letter-spacing: 1.69px;
 }
@@ -34,10 +32,10 @@
 @media (min-width: 800px) {
   .productDetailsPage {
     flex-direction: row;
+    gap: 60px;
   }
 
   .productDetailsPage .info {
     max-inline-size: 45%;
-    padding-inline-start: 60px;
   }
 }

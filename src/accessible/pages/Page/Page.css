@@ -1,0 +1,19 @@
+.Page {
+  flex-grow: 1;
+  inline-size: 100%;
+  margin: 0 auto;
+  margin-block: 20px;
+  max-inline-size: 1400px;
+  padding-inline: var(--compact-inline);
+}
+
+.Page h1 {
+  font-family: "Noto Sans Lao Looped", serif;
+  font-size: 2.2em;
+}
+
+@media (min-width: 420px) {
+  .Page {
+    padding-inline: var(--regular-inline);
+  }
+}

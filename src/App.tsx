@@ -63,46 +63,44 @@ function App() {
               <HideOverflowContext.Provider value={{ setHideOverflow }}>
                 <SetTitleContext.Provider value={{ setTitle }}>
                   <Header />
-                  <main>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route
-                        path="/accessibility-store/"
-                        element={<HomePage />}
-                      />
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route
+                      path="/accessibility-store/"
+                      element={<HomePage />}
+                    />
 
-                      <Route path="/favorites" element={<FavoritesPage />} />
-                      <Route
-                        path="/accessibility-store/favorites"
-                        element={<FavoritesPage />}
-                      />
+                    <Route path="/favorites" element={<FavoritesPage />} />
+                    <Route
+                      path="/accessibility-store/favorites"
+                      element={<FavoritesPage />}
+                    />
 
-                      <Route path="/checkout" element={<CheckoutPage />} />
-                      <Route
-                        path="/accessibility-store/checkout"
-                        element={<CheckoutPage />}
-                      />
+                    <Route path="/checkout" element={<CheckoutPage />} />
+                    <Route
+                      path="/accessibility-store/checkout"
+                      element={<CheckoutPage />}
+                    />
 
-                      <Route
-                        path="/confirmation"
-                        element={<ConfirmationPage />}
-                      />
-                      <Route
-                        path="/accessibility-store/confirmation"
-                        element={<ConfirmationPage />}
-                      />
+                    <Route
+                      path="/confirmation"
+                      element={<ConfirmationPage />}
+                    />
+                    <Route
+                      path="/accessibility-store/confirmation"
+                      element={<ConfirmationPage />}
+                    />
 
-                      <Route path="/:id" element={<ProductDetailsPage />} />
-                      <Route
-                        path="/accessibility-store/:id"
-                        element={<ProductDetailsPage />}
-                      />
-                      <Route
-                        path="/favorites/:id"
-                        element={<ProductDetailsPage />}
-                      />
-                    </Routes>
-                  </main>
+                    <Route path="/:id" element={<ProductDetailsPage />} />
+                    <Route
+                      path="/accessibility-store/:id"
+                      element={<ProductDetailsPage />}
+                    />
+                    <Route
+                      path="/favorites/:id"
+                      element={<ProductDetailsPage />}
+                    />
+                  </Routes>
                   <Footer />
                 </SetTitleContext.Provider>
               </HideOverflowContext.Provider>
