@@ -33,7 +33,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
       >
         <Link
           aria-hidden={true}
-          to={"items/" + cartItem.item.id}
+          to={cartItem.item.id}
           onClick={closeCart}
           tabIndex={-1}
         >
@@ -49,11 +49,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           )}
         </Link>
         <div className="text">
-          <Link
-            className="item-name"
-            to={"items/" + cartItem.item.id}
-            onClick={closeCart}
-          >
+          <Link className="item-name" to={cartItem.item.id} onClick={closeCart}>
             {cartItem.item.name}
           </Link>
           <div className="item-options">Length: {cartItem.size}</div>
