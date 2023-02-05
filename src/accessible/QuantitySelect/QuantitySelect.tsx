@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { VisuallyHidden } from "../VisuallyHidden/VisuallyHidden";
 import "./QuantitySelect.css";
 
 interface QuantitySelectProps {
@@ -36,10 +35,8 @@ const QuantitySelect = ({
     <>
       {options.length > 0 ? (
         <>
-          <VisuallyHidden>
-            <label htmlFor="quantity-select">Quantity of {itemName}</label>
-          </VisuallyHidden>
           <select
+            aria-label={`Quantity of ${itemName}`}
             className="QuantitySelect"
             id="quantity-select"
             required

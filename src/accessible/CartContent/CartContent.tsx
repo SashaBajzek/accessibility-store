@@ -28,7 +28,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
       </div>
       <form method="dialog">
         <table role="table">
-          <thead role="rowgroup">
+          <thead>
             <tr role="row">
               <th
                 className="product-heading"
@@ -69,7 +69,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
               </th>
             </tr>
           </thead>
-          <tbody role="rowgroup">
+          <tbody>
             {cart.map((cartItem) => (
               <CartRow
                 cartItem={cartItem}
