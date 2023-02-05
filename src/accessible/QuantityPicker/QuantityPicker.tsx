@@ -53,7 +53,6 @@ const QuantityPicker = ({
           aria-errormessage="helper-error"
           aria-describedby={error ? "" : "helper"}
           aria-invalid={!!error}
-          aria-live="polite"
           id="quantity"
           max={maxQuantity}
           min={minQuantity}
