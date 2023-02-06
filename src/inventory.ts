@@ -235,20 +235,23 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Miscellaneous,
     description:
-      "My favorite exhibit at the Exploratorium is the bubble wall! A kaleidoscope of ruby, sapphire, apatite, carnelian, chrysoprase, and amethyst.",
+      "This bracelet is inspired by my favorite exhibit at the Exploratorium: the bubble wall! The kaleidoscope of colors of the bubbles are represented by deep red and hot pink rubies, pink and yellow sapphires, blue apatites, orange carnelians, green chrysoprases, and purple amethysts.",
     id: "bubbles",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Bubbles bracelet: the bracelet has a gold lobster clasp and small gemstone beads arranged in colored segments of purple, yellow, red, blue, pink, green, orange, hot pink, yellow, blue, purple, red, green, pink, blue, yellow, orange, hot pink, purple, and red",
         fileName: "Bubbles1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Water Lilies bracelet being worn with the blue, yellow, orange, hot pink, purple and red side showing",
         fileName: "Bubbles2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
-        fileName: "Bubbles2.jpg",
+        description:
+          "Water Lilies bracelet being worn with the yellow, red, blue, pink, green, orange, and hot pink side showing",
+        fileName: "Bubbles3.jpg",
       },
     ],
     name: "Bubbles",
@@ -258,27 +261,32 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Art,
     description:
-      "The Starry Night by Van Gogh. Ironically, it’s one of his most popular paintings today, but in a letter he wrote to Emile Bernard, he considered it a “failure”. A blue swirly sky of sapphire, tanzanite, and aquamarine with a bright orange sapphire moon, lemon quartz stars and Venus. Rolling blue sapphire hills with green peridots heading into the town. Finally, towering dark garnet, sapphire, and grandiderite cypress trees.",
+      "This bracelet is inspired by the Starry Night painting by Van Gogh. A blue swirly sky is represented by blue sapphires, pale purple tanzanites, and light blue aquamarines, the moon with a bright orange sapphires, and the starts and Venus with lemon quartz. The rolling hills are represented with blue sapphires and green peridots. Finally, the dark, towering cypress trees are represented by dark red garnets, inky dark blue sapphires, and deep teal grandiderites.",
     id: "starry",
     images: [
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Starry Night Bracelet: the bracelet has a gold lobster clasp and small gemstone beads arranged in 4 colored segments: (1) blue, light blue, pale purple, yellow and orange, (2) 2 gradients of dark to light blue, (3) blue, light blue, green, and (4) dark red, dark teal, dark blue.",
         fileName: "Starry1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Starry Night bracelet being worn with the blue, light blue, pale purple, yellow and orange side showing",
         fileName: "Starry2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Starry Night bracelet being worn with the gradients of dark to light blue side showing",
         fileName: "Starry3.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "Starry Night bracelet being worn with the blue, light blue, green, and dark red, dark teal, dark blue sides showing",
         fileName: "Starry4.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "The Starry Night bracelet being held in the palm of a person's hand",
         fileName: "Starry5.jpg",
       },
     ],
@@ -595,18 +603,15 @@ export const inventory: Bracelet[] = [
         fileName: "Xena2.jpg",
       },
       {
-        description:
-          "TODO Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+        description: "TODO write bracelet image description",
         fileName: "Xena3.jpg",
       },
       {
-        description:
-          "TODO Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+        description: "TODO write bracelet image description",
         fileName: "Xena4.jpg",
       },
       {
-        description:
-          "Model holding the Xena bracelet in front of image of Xena the warrior princess wearing leather armour dress and holding up her circular metal chakram weapon.  The Xena bracelet ",
+        description: "TODO write bracelet image description",
         fileName: "Xena5.jpg",
       },
     ],
@@ -653,18 +658,15 @@ export const inventory: Bracelet[] = [
         fileName: "Blackberry1.jpg",
       },
       {
-        description:
-          "Model holding the blackberry bushes bracelet next to real blackberries.  The bracelet has 3mm beads with an assortment of olive green, midnight blue, ruby red, and purple beads with a gold lobster clasp",
+        description: "TODO write bracelet image description",
         fileName: "Blackberry2.jpg",
       },
       {
-        description:
-          "Model holding the blackberry bushes bracelet next to real blackberries.  The bracelet has 3mm beads with an assortment of olive green, midnight blue, ruby red, and purple beads with a gold lobster clasp",
+        description: "TODO write bracelet image description",
         fileName: "Blackberry3.jpg",
       },
       {
-        description:
-          "Model holding the blackberry bushes bracelet next to real blackberries.  The bracelet has 3mm beads with an assortment of olive green, midnight blue, ruby red, and purple beads with a gold lobster clasp",
+        description: "TODO write bracelet image description",
         fileName: "Blackberry4.jpg",
       },
     ],
