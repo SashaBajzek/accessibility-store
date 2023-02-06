@@ -15,6 +15,7 @@
 .IconButton:focus-visible {
   background-color: var(--white-hover-focus);
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .IconButton:active {

@@ -39,6 +39,7 @@
 .header .favorites:hover,
 .header .favorites:focus-visible {
   background-color: var(--white-hover-focus);
+  transition: background-color 0.2s;
 }
 
 .header .favorites:active {
