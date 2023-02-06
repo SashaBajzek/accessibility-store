@@ -20,6 +20,11 @@
   text-decoration: none;
 }
 
+.header .brand:hover,
+.header .brand:hover {
+  color: var(--text-accent-active);
+}
+
 .header .inline-end-links {
   align-items: center;
   display: flex;

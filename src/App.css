@@ -1,8 +1,9 @@
 :root {
   --text-primary: rgb(50, 50, 50);
   --text-accent: rgb(97, 108, 64);
+  --text-accent-active: rgb(77, 86, 51);
   --deep-space-sparkle: #40616c;
-  --halaya-ube: #6c4061;
+  --raspberry: rgb(140, 0, 82);
   --white-default: rgb(255, 255, 255);
   --white-hover-focus: rgb(240, 240, 240);
   --white-active: rgb(250, 250, 250);
