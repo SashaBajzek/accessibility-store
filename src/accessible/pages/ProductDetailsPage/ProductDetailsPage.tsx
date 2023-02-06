@@ -13,6 +13,7 @@ import { CartContext } from "../../../context/CartContext";
 import ImageGallery from "../../ImageGallery/ImageGallery";
 import { useAriaLiveAnnouncer } from "../../../hooks/AriaLiveAnnouncer";
 import Page from "../Page/Page";
+import FavoriteButton from "../../FavoriteButton/FavoriteButton";
 
 const ProductDetailsPage = () => {
   const announcer = useAriaLiveAnnouncer();
@@ -53,6 +54,7 @@ const ProductDetailsPage = () => {
         <ImageGallery images={images} />
         <div className="info">
           <p className="description">{description}</p>
+          <FavoriteButton product={item} />
           <div className="price">${price}</div>
           <SizeSelector size={size} onChange={setSize}></SizeSelector>
           <QuantityPicker

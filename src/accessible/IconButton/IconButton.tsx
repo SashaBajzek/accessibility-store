@@ -25,7 +25,9 @@ const IconButton = ({
   return (
     <button
       aria-label={ariaLabel}
-      className={`IconButton ${variant} ${className} ${hasBoxShadow}`}
+      className={`IconButton ${variant} ${className} ${
+        hasBoxShadow ? "hasBoxShadow" : ""
+      }`}
       onClick={onClick}
     >
       {icon}

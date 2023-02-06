@@ -53,13 +53,8 @@
   object-fit: cover;
 }
 
-.productTile .IconButton {
+.productTile .FavoriteButton {
   inset-block-start: 14px;
   inset-inline-end: 14px;
   position: absolute;
-}
-
-.productTile svg.heart {
-  fill: var(--halaya-ube);
-  stroke: var(--halaya-ube);
 }

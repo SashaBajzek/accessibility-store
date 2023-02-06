@@ -1,0 +1,4 @@
+.FavoriteButton svg.heart {
+  fill: var(--halaya-ube);
+  stroke: var(--halaya-ube);
+}
