@@ -1,3 +1,13 @@
+.FavoriteButton {
+  align-items: center;
+  display: flex;
+}
+
+.FavoriteButton .message {
+  font-size: 18px;
+  margin-inline-start: 12px;
+}
+
 .FavoriteButton svg.heart {
   fill: var(--raspberry);
   stroke: var(--raspberry);

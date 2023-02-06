@@ -7,10 +7,14 @@ import IconButton from "../IconButton/IconButton";
 import "./FavoriteButton.css";
 
 interface FavoriteButtonProps {
+  hasMessage?: boolean;
   product: Bracelet;
 }
 
-const FavoriteButton = ({ product }: FavoriteButtonProps) => {
+const FavoriteButton = ({
+  hasMessage = false,
+  product,
+}: FavoriteButtonProps) => {
   const { isFavorite, favorites, toggleFavorite } =
     useContext(FavoritesContext);
 
@@ -21,11 +25,10 @@ const FavoriteButton = ({ product }: FavoriteButtonProps) => {
   }, [favorites, isFavorite, product]);
 
   return (
-    <>
+    <div className="FavoriteButton">
       {favorite ? (
         <IconButton
           ariaLabel={`Remove ${product.name} from favorites`}
-          className="FavoriteButton"
           hasBoxShadow={true}
           icon={<Heart />}
           onClick={() => toggleFavorite(product)}
@@ -33,13 +36,15 @@ const FavoriteButton = ({ product }: FavoriteButtonProps) => {
       ) : (
         <IconButton
           ariaLabel={`Add ${product.name} to favorites`}
-          className="FavoriteButton"
           hasBoxShadow={true}
           icon={<HeartHollow />}
           onClick={() => toggleFavorite(product)}
         />
       )}
-    </>
+      {hasMessage && (
+        <div className="message">{favorite ? "Saved to Favorites" : ""}</div>
+      )}
+    </div>
   );
 };
 

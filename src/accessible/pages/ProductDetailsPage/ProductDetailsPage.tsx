@@ -89,7 +89,7 @@ const ProductDetailsPage = () => {
         <ImageGallery images={images} />
         <div className="info">
           <p className="description">{description}</p>
-          <FavoriteButton product={item} />
+          <FavoriteButton hasMessage={true} product={item} />
           <div className="price">${price}</div>
           <SizeSelector size={size} onChange={setSize}></SizeSelector>
           <QuantityPicker
