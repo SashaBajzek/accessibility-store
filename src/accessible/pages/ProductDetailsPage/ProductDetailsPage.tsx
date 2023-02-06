@@ -30,22 +30,45 @@ const ProductDetailsPage = () => {
 
   const { description, images, name, price, stock } = item;
 
+  const getErrorMessage = (
+    quantity: number,
+    quantityOfItemInCart: number,
+    availableQuantity: number
+  ): string => {
+    if (quantity <= availableQuantity) {
+      return "";
+    } else if (quantityOfItemInCart > 0) {
+      const numAvailable = item.stock - quantityOfItemInCart;
+      return numAvailable > 0
+        ? `Invalid quantity.  You've already added ${quantityOfItemInCart} items to your cart and there are only ${numAvailable} more available.`
+        : `Invalid quantity.  You've already added ${quantityOfItemInCart} items to your cart and there are no more available.`;
+    } else {
+      return `Invalid quantity.  There are only ${item.stock} available`;
+    }
+  };
+
   const onSubmit = () => {
     const cartItem = { item, quantity, size };
     const quantityOfItemInCart = getQuantityOfItemInCart(cartItem, cart);
     const availableQuantity = getAvailableQuantity(cartItem, cart);
 
     if (quantity <= availableQuantity) {
-      setError("");
       addItem(cartItem);
       announcer.addMessage(`${quantity} of ${name} added to cart`);
-    } else if (quantityOfItemInCart > 0) {
-      setError(
-        `Invalid quantity.  There are only ${item.stock} available and there are ${quantityOfItemInCart} already in cart`
-      );
-    } else {
-      setError(`Invalid quantity.  There are only ${item.stock} available`);
     }
+    setError(
+      getErrorMessage(quantity, quantityOfItemInCart, availableQuantity)
+    );
+  };
+
+  const errorCheck = () => {
+    const cartItem = { item, quantity, size };
+    const quantityOfItemInCart = getQuantityOfItemInCart(cartItem, cart);
+    const availableQuantity = getAvailableQuantity(cartItem, cart);
+
+    setError(
+      getErrorMessage(quantity, quantityOfItemInCart, availableQuantity)
+    );
   };
 
   return (
@@ -59,6 +82,7 @@ const ProductDetailsPage = () => {
           <SizeSelector size={size} onChange={setSize}></SizeSelector>
           <QuantityPicker
             error={error}
+            errorCheck={errorCheck}
             itemName={name}
             maxQuantity={stock}
             minQuantity={1}

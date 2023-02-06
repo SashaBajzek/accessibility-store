@@ -1,3 +1,4 @@
+import { useCallback, useEffect } from "react";
 import { Error } from "../../SVGs/Error";
 import { Minus } from "../../SVGs/Minus";
 import { Plus } from "../../SVGs/Plus";
@@ -5,6 +6,7 @@ import "./QuantityPicker.css";
 
 interface QuantityPickerProps {
   error: string;
+  errorCheck: () => void;
   itemName: string;
   maxQuantity: number;
   minQuantity: number;
@@ -14,19 +16,24 @@ interface QuantityPickerProps {
 
 const QuantityPicker = ({
   error,
+  errorCheck,
   itemName,
   maxQuantity,
   minQuantity,
   quantity,
   setQuantity,
 }: QuantityPickerProps) => {
-  const decrement = () => {
-    setQuantity(Math.max(minQuantity, quantity - 1));
-  };
+  useEffect(() => {
+    errorCheck();
+  }, [errorCheck, quantity]);
 
-  const increment = () => {
+  const decrement = useCallback(() => {
+    setQuantity(Math.max(minQuantity, quantity - 1));
+  }, [minQuantity, quantity, setQuantity]);
+
+  const increment = useCallback(() => {
     setQuantity(Math.min(maxQuantity, quantity + 1));
-  };
+  }, [maxQuantity, quantity, setQuantity]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(event.target.value, 10);
@@ -57,6 +64,7 @@ const QuantityPicker = ({
           max={maxQuantity}
           min={minQuantity}
           name="quantity"
+          onBlur={errorCheck}
           onChange={handleChange}
           type="number"
           value={quantity}

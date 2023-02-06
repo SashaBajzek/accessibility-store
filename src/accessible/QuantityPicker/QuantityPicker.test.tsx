@@ -9,6 +9,7 @@ describe("QuantityPicker", () => {
       return (
         <QuantityPicker
           error=""
+          errorCheck={() => {}}
           itemName="Item"
           maxQuantity={10}
           minQuantity={0}
