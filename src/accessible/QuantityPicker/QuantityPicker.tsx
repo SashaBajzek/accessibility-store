@@ -1,4 +1,5 @@
 import { useCallback, useEffect } from "react";
+import { useAriaLiveAnnouncer } from "../../hooks/AriaLiveAnnouncer";
 import { Error } from "../../SVGs/Error";
 import { Minus } from "../../SVGs/Minus";
 import { Plus } from "../../SVGs/Plus";
@@ -23,17 +24,22 @@ const QuantityPicker = ({
   quantity,
   setQuantity,
 }: QuantityPickerProps) => {
+  const announcer = useAriaLiveAnnouncer();
   useEffect(() => {
     errorCheck();
   }, [errorCheck, quantity]);
 
   const decrement = useCallback(() => {
-    setQuantity(Math.max(minQuantity, quantity - 1));
-  }, [minQuantity, quantity, setQuantity]);
+    const newQuantity = Math.max(minQuantity, quantity - 1);
+    setQuantity(newQuantity);
+    announcer.addMessage(`${newQuantity}`);
+  }, [announcer, minQuantity, quantity, setQuantity]);
 
   const increment = useCallback(() => {
-    setQuantity(Math.min(maxQuantity, quantity + 1));
-  }, [maxQuantity, quantity, setQuantity]);
+    const newQuantity = Math.min(maxQuantity, quantity + 1);
+    setQuantity(newQuantity);
+    announcer.addMessage(`${newQuantity}`);
+  }, [announcer, maxQuantity, quantity, setQuantity]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(event.target.value, 10);
