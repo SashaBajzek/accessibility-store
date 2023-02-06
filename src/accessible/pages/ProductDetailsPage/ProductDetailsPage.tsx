@@ -93,7 +93,7 @@ const ProductDetailsPage = () => {
           <SubmitButton
             onSubmit={onSubmit}
             text="Add to cart"
-            variant={ButtonVariant.Secondary}
+            variant={ButtonVariant.Primary}
           />
         </div>
       </div>

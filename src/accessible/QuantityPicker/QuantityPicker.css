@@ -50,8 +50,15 @@
   justify-content: center;
 }
 
-.QuantityPicker button:hover {
+.QuantityPicker button:hover,
+.QuantityPicker button:focus-visible {
+  background-color: var(--white-hover-focus);
   cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.QuantityPicker button:active {
+  background-color: var(--white-active);
 }
 
 .QuantityPicker button svg {

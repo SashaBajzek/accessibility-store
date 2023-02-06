@@ -22,7 +22,7 @@
 
 .header .brand:hover,
 .header .brand:hover {
-  color: var(--text-accent-active);
+  color: var(--text-accent-hover-focus);
 }
 
 .header .inline-end-links {

@@ -12,14 +12,20 @@
 
 .SubmitButton.primary {
   background: var(--text-accent);
-  border-color: transparent;
-  border-style: solid;
-  border-width: 2px;
+  border-width: 0;
   color: white;
 }
 
-.SubmitButton.primary:hover {
-  border-color: var(--text-accent);
+.SubmitButton.primary:hover,
+.SubmitButton.primary:focus-visible {
+  background: var(--text-accent-hover-focus);
+  transition: background-color 0.2s;
+}
+
+.SubmitButton.primary:active,
+.SubmitButton.primary:focus-visible {
+  background: var(--text-accent-active);
+  transition: background-color 0.2s;
 }
 
 .SubmitButton.secondary {
