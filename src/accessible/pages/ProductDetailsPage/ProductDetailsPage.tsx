@@ -20,6 +20,7 @@ const ProductDetailsPage = () => {
 
   const [quantity, setQuantity] = useState(1);
   const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const [size, setSize] = useState(Size.Medium);
   const { addItem, cart } = useContext(CartContext);
 
@@ -41,7 +42,7 @@ const ProductDetailsPage = () => {
       const numAvailable = item.stock - quantityOfItemInCart;
       return numAvailable > 0
         ? `Invalid quantity.  You've already added ${quantityOfItemInCart} items to your cart and there are only ${numAvailable} more available.`
-        : `Invalid quantity.  You've already added ${quantityOfItemInCart} items to your cart and there are no more available.`;
+        : "All available stock has already been added to the cart";
     } else {
       return `Invalid quantity.  There are only ${item.stock} available`;
     }
@@ -52,14 +53,24 @@ const ProductDetailsPage = () => {
     const quantityOfItemInCart = getQuantityOfItemInCart(cartItem, cart);
     const availableQuantity = getAvailableQuantity(cartItem, cart);
 
-    if (quantity <= availableQuantity) {
+    if (quantity === availableQuantity && quantity > 0) {
       addItem(cartItem);
       announcer.addMessage(`${quantity} of ${name} added to cart`);
+      setSuccessMessage(`Success ${quantity} added to cart`);
+      setQuantity(0);
+      setError("");
+    } else if (quantity <= availableQuantity && quantity > 0) {
+      addItem(cartItem);
+      announcer.addMessage(`${quantity} of ${name} added to cart`);
+      setSuccessMessage(`Success ${quantity} added to cart`);
       setQuantity(1);
+      setError("");
+    } else {
+      setError(
+        getErrorMessage(quantity, quantityOfItemInCart, availableQuantity)
+      );
+      setSuccessMessage("");
     }
-    setError(
-      getErrorMessage(quantity, quantityOfItemInCart, availableQuantity)
-    );
   };
 
   const errorCheck = () => {
@@ -86,7 +97,7 @@ const ProductDetailsPage = () => {
             errorCheck={errorCheck}
             itemName={name}
             maxQuantity={stock}
-            minQuantity={1}
+            minQuantity={0}
             quantity={quantity}
             setQuantity={setQuantity}
           />
@@ -95,6 +106,7 @@ const ProductDetailsPage = () => {
             text="Add to cart"
             variant={ButtonVariant.Primary}
           />
+          <div className="success">{successMessage}</div>
         </div>
       </div>
     </Page>

@@ -73,6 +73,7 @@
 .QuantityPicker .error {
   color: var(--error);
   display: flex;
+  margin-block-start: 10px;
 }
 
 .QuantityPicker .error svg {
