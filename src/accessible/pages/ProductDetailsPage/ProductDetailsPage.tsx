@@ -55,6 +55,7 @@ const ProductDetailsPage = () => {
     if (quantity <= availableQuantity) {
       addItem(cartItem);
       announcer.addMessage(`${quantity} of ${name} added to cart`);
+      setQuantity(1);
     }
     setError(
       getErrorMessage(quantity, quantityOfItemInCart, availableQuantity)
