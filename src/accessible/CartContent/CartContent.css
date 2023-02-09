@@ -19,7 +19,7 @@
   margin: 0;
 }
 
-.CartContent form {
+.CartContent .form {
   flex-grow: 1;
   flex-shrink: 1;
   overflow-x: hidden;

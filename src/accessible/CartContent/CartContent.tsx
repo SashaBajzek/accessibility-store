@@ -26,7 +26,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
           variant={IconButtonVariant.Large}
         />
       </div>
-      <form method="dialog">
+      <div className="form">
         <table role="table">
           <thead>
             <tr role="row">
@@ -79,7 +79,7 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
             ))}
           </tbody>
         </table>
-      </form>
+      </div>
       <div className="total-container">
         <div className="label">Total</div>
         <div className="number">${totalCost}</div>
