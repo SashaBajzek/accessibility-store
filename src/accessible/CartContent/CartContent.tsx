@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { Close } from "../../SVGs/Close";
 import CartRow from "../CartRow/CartRow";
 import { CartContext } from "../../context/CartContext";
@@ -14,10 +14,18 @@ interface CartContentProps {
 
 const CartContent = ({ checkout, closeCart }: CartContentProps) => {
   const { cart, totalCost } = useContext(CartContext);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    headingRef.current?.focus();
+  }, []);
+
   return (
     <div className="CartContent">
       <div className="heading">
-        <h2 id="cart-heading">Your cart</h2>
+        <h2 id="cart-heading" ref={headingRef} tabIndex={-1}>
+          Your cart
+        </h2>
         <IconButton
           ariaLabel="Close cart"
           className="close"

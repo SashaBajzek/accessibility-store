@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Close } from "../../SVGs/Close";
 import IconButton, { IconButtonVariant } from "../IconButton/IconButton";
@@ -8,8 +9,17 @@ interface EmptyCartContentProps {
 }
 
 const EmptyCartContent = ({ closeCart }: EmptyCartContentProps) => {
+  const headingRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    headingRef.current?.focus();
+  }, []);
+
   return (
     <div className="EmptyCartContent">
+      <h2 id="cart-heading" ref={headingRef} tabIndex={-1}>
+        Your cart is empty
+      </h2>
       <IconButton
         ariaLabel="Close cart"
         className="close"
@@ -17,7 +27,6 @@ const EmptyCartContent = ({ closeCart }: EmptyCartContentProps) => {
         onClick={closeCart}
         variant={IconButtonVariant.Large}
       />
-      <h2 id="cart-heading">Your cart is empty</h2>
       <Link to="/" className="continue-shopping" onClick={closeCart}>
         Continue Shopping
       </Link>
