@@ -18,14 +18,6 @@ import FavoritesPage from "./accessible/pages/FavoritesPage/FavoritesPage";
 import ConfirmationPage from "./accessible/pages/ConfirmationPage/ConfirmationPage";
 import { AriaLiveAnnouncerProvider } from "./hooks/AriaLiveAnnouncer";
 
-// const ButtonTester = () => {
-//   const announcer = useAriaLiveAnnouncer();
-//   const handleAriaTest = () => {
-//     announcer.addMessage("Sasha2");
-//   };
-//   return <button onClick={handleAriaTest}>here</button>;
-// };
-
 function App() {
   const {
     addItem,

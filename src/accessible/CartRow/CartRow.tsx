@@ -19,7 +19,6 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
   const announcer = useAriaLiveAnnouncer();
   const handleRemove = (cartItem: CartItem) => {
     removeItem(cartItem);
-    // I think this is failing because it's in a dialog component
     announcer.addMessage(
       `${cartItem.item.name} size ${cartItem.size} removed from cart`
     );

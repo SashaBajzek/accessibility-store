@@ -12,6 +12,7 @@ import { CartContext } from "../../context/CartContext";
 import { HideOverflowContext } from "../../context/HideOverflowContext";
 import EmptyCartContent from "../EmptyCartContent/EmptyCartContent";
 import "./Cart.css";
+import { AriaLiveAnnouncerProvider } from "../../hooks/AriaLiveAnnouncer";
 
 const Cart = forwardRef<HTMLDialogElement>(
   (props, ref: Ref<{ showModal: () => void }>) => {
@@ -58,13 +59,15 @@ const Cart = forwardRef<HTMLDialogElement>(
         onClick={onClick}
         ref={cartRef}
       >
-        <div className="no-dismiss">
-          {cart.length > 0 ? (
-            <CartContent checkout={checkout} closeCart={closeCart} />
-          ) : (
-            <EmptyCartContent closeCart={closeCart} />
-          )}
-        </div>
+        <AriaLiveAnnouncerProvider>
+          <div className="no-dismiss">
+            {cart.length > 0 ? (
+              <CartContent checkout={checkout} closeCart={closeCart} />
+            ) : (
+              <EmptyCartContent closeCart={closeCart} />
+            )}
+          </div>
+        </AriaLiveAnnouncerProvider>
       </dialog>
     );
   }
