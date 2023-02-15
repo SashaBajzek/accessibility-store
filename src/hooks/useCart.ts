@@ -18,12 +18,13 @@ export function useCart() {
   };
 
   const removeItem = useCallback(
-    (item: CartItem) => {
+    (item: CartItem): number => {
       const newCart = [...cart];
       const index = indexOfCartItem(item, cart);
-      if (index < 0) return;
+      if (index < 0) return -1;
       newCart.splice(index, 1);
       cartUpdate(newCart);
+      return index;
     },
     [cart]
   );

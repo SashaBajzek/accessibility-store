@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { Close } from "../../SVGs/Close";
 import CartRow from "../CartRow/CartRow";
 import { CartContext } from "../../context/CartContext";
@@ -15,13 +15,37 @@ interface CartContentProps {
 const CartContent = ({ checkout, closeCart }: CartContentProps) => {
   const { cart, totalCost } = useContext(CartContext);
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const cartRef = useRef<HTMLDivElement>(null);
+
+  const [focusId, setFocusId] = useState<number | null>(null);
+
+  const focusAfterRemove = useCallback(
+    (removedId: number) => {
+      // Make sure focus is in the cart
+      if (!cartRef?.current?.contains(document.activeElement)) {
+        return;
+      }
+
+      const cartSize = cart.length;
+      if (cartSize === 1) {
+        setFocusId(null);
+        return;
+      }
+      if (removedId === cartSize - 1) {
+        setFocusId(removedId - 1);
+      } else {
+        setFocusId(removedId);
+      }
+    },
+    [cart.length]
+  );
 
   useEffect(() => {
     headingRef.current?.focus();
   }, []);
 
   return (
-    <div className="CartContent">
+    <div className="CartContent" ref={cartRef}>
       <div className="heading">
         <h2 id="cart-heading" ref={headingRef} tabIndex={-1}>
           Your cart
@@ -78,10 +102,13 @@ const CartContent = ({ checkout, closeCart }: CartContentProps) => {
             </tr>
           </thead>
           <tbody>
-            {cart.map((cartItem) => (
+            {cart.map((cartItem, index) => (
               <CartRow
                 cartItem={cartItem}
+                clearFocus={() => setFocusId(null)}
                 closeCart={closeCart}
+                focus={focusId === index}
+                focusAfterRemove={focusAfterRemove}
                 key={cartItem.item.id + cartItem.size}
               />
             ))}

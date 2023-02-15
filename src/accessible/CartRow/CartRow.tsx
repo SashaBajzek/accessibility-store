@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { CartItem, getAvailableQuantity } from "../../cartUtils";
 import { Trash } from "../../SVGs/Trash";
@@ -10,19 +10,39 @@ import { useAriaLiveAnnouncer } from "../../hooks/AriaLiveAnnouncer";
 
 interface CartRowProps {
   cartItem: CartItem;
+  clearFocus: () => void;
   closeCart: () => void;
+  focus?: boolean;
+  focusAfterRemove: (removedId: number) => void;
 }
 
-const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
+const CartRow = ({
+  cartItem,
+  clearFocus,
+  closeCart,
+  focus,
+  focusAfterRemove,
+}: CartRowProps) => {
   const { cart, removeItem, updateItemQuantity } = useContext(CartContext);
   const availableQuantity = getAvailableQuantity(cartItem, cart);
   const announcer = useAriaLiveAnnouncer();
+
+  const removeRef = useRef<HTMLButtonElement>(null);
+
   const handleRemove = (cartItem: CartItem) => {
-    removeItem(cartItem);
+    const id = removeItem(cartItem);
     announcer.addMessage(
       `${cartItem.item.name} size ${cartItem.size} removed from cart`
     );
+    focusAfterRemove(id as unknown as number);
   };
+
+  useEffect(() => {
+    if (!focus) return;
+    removeRef?.current?.focus();
+    clearFocus();
+  }, [clearFocus, focus]);
+
   return (
     <tr className="CartRow" role="row">
       <td
@@ -42,7 +62,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
               aria-hidden={true}
               className="image"
               src={`${process.env.PUBLIC_URL}/assets/${cartItem.item.images[0].fileName}`}
-            ></img>
+            />
           ) : (
             <div>LoadingImage</div>
           )}
@@ -100,6 +120,7 @@ const CartRow = ({ cartItem, closeCart }: CartRowProps) => {
           className="remove-button"
           icon={<Trash />}
           onClick={() => handleRemove(cartItem)}
+          ref={removeRef}
           variant={IconButtonVariant.Large}
         />
       </td>
