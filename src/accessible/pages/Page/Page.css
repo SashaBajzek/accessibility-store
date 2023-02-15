@@ -17,3 +17,9 @@
     padding-inline: var(--regular-inline);
   }
 }
+
+.Page h1:focus-visible,
+.Page h1:focus {
+  /* the heading is focused on render only */
+  outline: none;
+}
