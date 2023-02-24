@@ -1,0 +1,47 @@
+.CartTable {
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.CartTable table {
+  border-collapse: collapse;
+  inline-size: 100%;
+}
+
+.CartTable thead {
+  background-color: white;
+  block-size: 52px;
+  display: inline-table;
+  inline-size: 100%;
+  inset-block-start: 0;
+  position: sticky;
+  z-index: 1;
+}
+
+.CartTable th {
+  background-color: white;
+  border-block-end: 1px solid black;
+  font-size: 15px;
+  padding-block: 14px;
+  text-transform: uppercase;
+}
+
+.CartTable th.visually-hidden {
+  inline-size: 0;
+}
+
+.CartTable .product-heading {
+  text-align: left;
+}
+
+.CartTable .total-heading {
+  inline-size: 50px;
+  text-align: right;
+}
+
+.CartTable tbody {
+  display: block;
+  inline-size: 100%;
+}

@@ -11,7 +11,7 @@ import { useAriaLiveAnnouncer } from "../../hooks/AriaLiveAnnouncer";
 interface CartRowProps {
   cartItem: CartItem;
   clearFocus: () => void;
-  closeCart: () => void;
+  closeCart?: () => void;
   focus?: boolean;
   focusAfterRemove: (removedId: number) => void;
 }

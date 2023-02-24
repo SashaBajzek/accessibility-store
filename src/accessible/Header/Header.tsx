@@ -35,11 +35,20 @@ const Header = () => {
             {shopName}
           </Link>
           <div className="inline-end-links">
-            <Link to="/favorites" aria-label="Favorites" className="favorites">
-              <HeartHollow />
-            </Link>
             {shouldShowCart && (
-              <CartButton cartQuantity={totalItemsInCart} openCart={openCart} />
+              <>
+                <Link
+                  to="/favorites"
+                  aria-label="Favorites"
+                  className="favorites"
+                >
+                  <HeartHollow />
+                </Link>
+                <CartButton
+                  cartQuantity={totalItemsInCart}
+                  openCart={openCart}
+                />
+              </>
             )}
           </div>
         </div>
