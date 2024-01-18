@@ -2,6 +2,20 @@
   display: flex;
   inline-size: 100%;
   justify-content: space-between;
+
+  form {
+    inline-size: 50%;
+    .inline-fields-3 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .inline-fields-2 {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
 }
 
 .cart-column {

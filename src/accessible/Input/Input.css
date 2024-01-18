@@ -1,0 +1,16 @@
+.Input {
+  padding-block: 0.625rem;
+
+  label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  input {
+    border: 1px solid var(--border-primary);
+    border-radius: 0;
+    font-size: 1rem;
+    inline-size: 100%;
+    padding: 1rem;
+  }
+}

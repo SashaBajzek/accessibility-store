@@ -1,6 +1,6 @@
 .QuantitySelect {
   block-size: 60px;
   border: 1px solid black;
-  font-size: 18px;
-  padding-inline: 20px;
+  font-size: 1.125rem;
+  padding-inline: 1.25rem;
 }

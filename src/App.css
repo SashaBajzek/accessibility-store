@@ -1,4 +1,5 @@
 :root {
+  --border-primary: rgb(50, 50, 50);
   --text-primary: rgb(50, 50, 50);
   --text-accent: rgb(97, 108, 64);
   --text-accent-hover-focus: rgb(77, 86, 51);

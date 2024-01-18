@@ -305,7 +305,8 @@ export const inventory: Bracelet[] = [
         fileName: "WhiteFlower1.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "The White Flower bracelet being held in the palm of a person's hand",
         fileName: "WhiteFlower2.jpg",
       },
       {

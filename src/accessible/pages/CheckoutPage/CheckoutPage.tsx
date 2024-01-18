@@ -3,6 +3,8 @@ import Page from "../Page/Page";
 import "./CheckoutPage.css";
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
+import Input, { AutoCompleteType, InputType } from "../../Input/Input";
+import SubmitButton, { ButtonVariant } from "../../SubmitButton/SubmitButton";
 
 export default function CheckoutPage() {
   const { totalCost } = useContext(CartContext);
@@ -10,48 +12,86 @@ export default function CheckoutPage() {
     <Page className="CheckoutPage" heading="Checkout" title="Checkout">
       <div className="container">
         <form>
-          <h2>Contact information</h2>
-          <label htmlFor="email">Email: </label>
-          <input type="email" name="email" id="email"></input>
-          <br />
-          <h2>Shipping Address</h2>
-          <label htmlFor="firstName">First name:</label>
-          <input type="text" name="firstName" id="firstName" /> <br />
-          <label htmlFor="lastName">Last name:</label>
-          <input type="text" name="lastName" id="lastName" /> <br />
-          <label>
-            Address
-            <input required></input>
-          </label>
-          <br />
-          <label htmlFor="apartment">Apartment, suite, etc (optional)</label>
-          <input type="text" name="apartment" id="apartment" /> <br />
-          <label htmlFor="city">City</label>
-          <input type="text" name="city" id="city" /> <br />
-          <label htmlFor="state">State</label>
-          <input type="text" name="state" id="state" /> <br />
-          <label htmlFor="zip">ZIP Code</label>
-          <input type="text" name="zip" id="zip" /> <br />
-          <label htmlFor="phone">Phone (optional)</label>
-          <input type="tel" name="phone" id="phone" /> <br />
-          <h3>Method</h3>
+          <h2>Contact</h2>
+          <Input label="Email" type={InputType.Email} />
+          <Input
+            autoComplete={AutoCompleteType.Tel}
+            label="Phone"
+            optional={true}
+            type={InputType.Tel}
+          />
+          <h2>Delivery</h2>
+          <Input
+            autoComplete={AutoCompleteType.Name}
+            label="Full name"
+            type={InputType.Text}
+          />
+          <Input
+            autoComplete={AutoCompleteType.StreetAddress}
+            label="Street Address"
+            type={InputType.Text}
+          />
+          <Input
+            autoComplete={AutoCompleteType.StreetAddress2}
+            label="Apartment, suite, etc"
+            optional={true}
+            type={InputType.Text}
+          />
+          <div className="inline-fields-3">
+            <Input
+              autoComplete={AutoCompleteType.City}
+              label="City"
+              type={InputType.Text}
+            />
+            <Input
+              autoComplete={AutoCompleteType.State}
+              label="State"
+              type={InputType.Text}
+            />
+            <Input
+              autoComplete={AutoCompleteType.PostalCode}
+              label="ZIP Code"
+              type={InputType.Number}
+            />
+          </div>
+          <h3>Shipping method</h3>
           Radio Group Same day expendiated
           <h2>Payment</h2>
-          <label htmlFor="cardNumber">Card number</label>
-          <input type="number" name="cardNumber" id="cardNumber" /> <br />
-          <label htmlFor="fullName">Cardholder Name</label>
-          <input type="text" name="fullName" id="fullName" /> <br />
-          <label htmlFor="expire">Expiration date (MM / YY)</label>
-          <input type="number" name="expire" id="expire" /> <br />
-          <label htmlFor="security">Security code</label>
-          <input type="number" name="security" id="security" /> <br />
+          <Input
+            autoComplete={AutoCompleteType.CCNumber}
+            label="Card Number"
+            type={InputType.Number}
+          />
+          <div className="inline-fields-2">
+            <Input
+              autoComplete={AutoCompleteType.CCExp}
+              label="Expiration date (MM / YY)"
+              type={InputType.Number}
+            />
+            <Input
+              autoComplete={AutoCompleteType.CCSecurity}
+              label="Security code"
+              type={InputType.Number}
+            />
+          </div>
+          <Input
+            autoComplete={AutoCompleteType.CCName}
+            label="Cardholder Name"
+            type={InputType.Text}
+          />
           <div>Billing address</div>
           Radio Group Same as shipping address or Use a different billing
           address
           <br />
-          <button>Pay now</button>
+          <SubmitButton
+            onSubmit={() => {}}
+            text="Pay now"
+            variant={ButtonVariant.Primary}
+          />
         </form>
+
         <div className="cart-column">
+          <h2>Order summary</h2>
           <CartTable />
           <div>Subtotal: ${totalCost}</div>Shipping: Total:
         </div>
