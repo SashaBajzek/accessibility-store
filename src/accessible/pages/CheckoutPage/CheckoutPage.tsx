@@ -28,7 +28,7 @@ export default function CheckoutPage() {
           />
           <Input
             autoComplete={AutoCompleteType.StreetAddress}
-            label="Street Address"
+            label="Street address"
             type={InputType.Text}
           />
           <Input
@@ -50,7 +50,7 @@ export default function CheckoutPage() {
             />
             <Input
               autoComplete={AutoCompleteType.PostalCode}
-              label="ZIP Code"
+              label="ZIP code"
               type={InputType.Number}
             />
           </div>
@@ -59,7 +59,7 @@ export default function CheckoutPage() {
           <h2>Payment</h2>
           <Input
             autoComplete={AutoCompleteType.CCNumber}
-            label="Card Number"
+            label="Card number"
             type={InputType.Number}
           />
           <div className="inline-fields-2">
@@ -76,7 +76,7 @@ export default function CheckoutPage() {
           </div>
           <Input
             autoComplete={AutoCompleteType.CCName}
-            label="Cardholder Name"
+            label="Cardholder name"
             type={InputType.Text}
           />
           <div>Billing address</div>
