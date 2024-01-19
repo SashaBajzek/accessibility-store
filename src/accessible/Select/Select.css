@@ -1,4 +1,4 @@
-.SizeSelector {
+.Select {
   label {
     display: block;
     font-size: 17px;
@@ -17,7 +17,7 @@
     line-height: 1.1;
     margin-block-start: 10px;
     max-inline-size: 12rem;
-    padding-inline: 20px;
+    /* padding-inline: 20px; */
     position: relative;
 
     select,
@@ -33,24 +33,26 @@
       content: "";
       inline-size: 0.8em;
       justify-self: end;
+      margin-inline-end: 20px;
     }
 
     &:focus-within {
-      box-shadow: 0px 0px 2px 2px var(--focus-color);
+      box-shadow: 0px 0px 2px 5px var(--focus-color);
     }
 
     select {
       /* A reset of styles, including removing the default dropdown arrow */
       appearance: none;
       background-color: transparent;
+      block-size: 100%;
       border: none;
       cursor: inherit;
       font-family: inherit;
       font-size: inherit;
+      inline-size: 100%;
       line-height: inherit;
-      padding: 0 1em 0 0;
+      padding-inline: 20px;
       margin: 0;
-      width: 100%;
 
       /* Stack above custom arrow */
       z-index: 1;

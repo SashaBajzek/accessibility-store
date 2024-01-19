@@ -1,5 +1,5 @@
 import { Size } from "../../inventory";
-import "./SizeSelector.css";
+import { Select } from "../Select/Select";
 
 interface SizeSelectorProps {
   onChange: (size: Size) => void;
@@ -15,9 +15,8 @@ const getEnumKeys = <T extends Object>(
 };
 
 export const SizeSelector = ({ onChange, size }: SizeSelectorProps) => {
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (valueString: string) => {
     let valueEnum: Size;
-    const valueString = event.target.value;
     if (valueString === Size.XSmall) {
       valueEnum = Size.XSmall;
     } else if (valueString === Size.Small) {
@@ -35,18 +34,11 @@ export const SizeSelector = ({ onChange, size }: SizeSelectorProps) => {
   };
 
   return (
-    <div className="SizeSelector">
-      <label htmlFor="size">Length</label>
-      <div className="select-styled">
-        <select value={size} onChange={handleChange}>
-          {getEnumKeys(Size).map((key, index) => (
-            <option id="size" key={index} value={Size[key]}>
-              {Size[key]}
-            </option>
-          ))}
-        </select>
-      </div>
-      <span className="focus"></span>
-    </div>
+    <Select
+      label="Length"
+      onChange={handleChange}
+      options={getEnumKeys(Size).map((key) => Size[key])}
+      value={size}
+    />
   );
 };
