@@ -8,8 +8,8 @@
   --deep-space-sparkle: #40616c;
   --raspberry: rgb(140, 0, 82);
   --white-default: rgb(255, 255, 255);
-  --white-hover-focus: rgb(245, 245, 245);
-  --white-active: rgb(240, 240, 240);
+  --white-hover-focus: rgb(235, 235, 235);
+  --white-active: rgb(230, 230, 230);
   --error: #a80014;
   --compact-inline: 20px;
   --regular-inline: 60px;
@@ -31,4 +31,18 @@
 .overflow-hidden {
   block-size: 100vh;
   overflow: hidden;
+}
+
+a,
+button,
+input {
+  /* Remove focus outline, replace with box-shadow */
+  /* Visible in Windows high-contrast themes */
+  outline-color: transparent;
+  outline-width: 2px;
+  outline-style: dotted;
+
+  &:focus-visible {
+    box-shadow: 0px 0px 3px 4px var(--focus-color);
+  }
 }

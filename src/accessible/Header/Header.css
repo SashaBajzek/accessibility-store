@@ -13,10 +13,12 @@
 }
 
 .header .brand {
+  border-radius: 5px;
   color: var(--text-accent);
   font-family: "Noto Sans Lao Looped", serif;
   font-size: 20px;
   font-weight: bold;
+  padding-inline-end: 10px;
   text-decoration: none;
 }
 
@@ -38,7 +40,7 @@
   display: flex;
   inline-size: 56px;
   justify-content: center;
-  margin-inline-end: 2px;
+  margin-inline-end: 6px;
 }
 
 .header .favorites:hover,

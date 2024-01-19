@@ -9,6 +9,9 @@
 
 .IconButton.hasBoxShadow {
   box-shadow: rgba(34, 34, 34, 0.25) 0px 4px 20px;
+  &:focus-visible {
+    box-shadow: 0px 0px 2px 5px var(--focus-color);
+  }
 }
 
 .IconButton:hover,
