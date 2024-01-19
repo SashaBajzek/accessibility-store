@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./QuantitySelect.css";
+import { Select } from "../Select/Select";
 
 interface QuantitySelectProps {
   itemName: string;
@@ -26,30 +26,21 @@ const QuantitySelect = ({
     setOptions(newOptions);
   }, [maxQuantity, minQuantity]);
 
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = parseInt(event.target.value, 10);
+  const handleChange = (valueString: string) => {
+    const value = parseInt(valueString, 10);
     onChange(value);
   };
 
   return (
     <>
       {options.length > 0 ? (
-        <>
-          <select
-            aria-label={`Quantity of ${itemName}`}
-            className="QuantitySelect"
-            id="quantity-select"
-            required
-            onChange={handleChange}
-            value={quantity}
-          >
-            {options.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </>
+        <Select
+          isLabelVisible={false}
+          label={`Quantity of ${itemName}`}
+          onChange={handleChange}
+          options={options}
+          value={quantity}
+        />
       ) : null}
     </>
   );

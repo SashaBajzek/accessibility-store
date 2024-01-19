@@ -59,31 +59,6 @@
   display: flex;
   grid-column: 2/3;
   grid-row: 3/4;
-  margin-inline-start: 0;
-}
-
-@media (min-width: 430px) {
-  .CartRow .remove-cell {
-    margin-inline-start: -10px;
-  }
-}
-
-@media (min-width: 450px) {
-  .CartRow .remove-cell {
-    margin-inline-start: -20px;
-  }
-}
-
-@media (min-width: 480px) {
-  .CartRow .remove-cell {
-    margin-inline-start: -30px;
-  }
-}
-
-@media (min-width: 550px) {
-  .CartRow .remove-cell {
-    margin-inline-start: -40px;
-  }
 }
 
 @media (min-width: 400px) {
