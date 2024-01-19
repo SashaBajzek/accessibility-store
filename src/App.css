@@ -35,7 +35,8 @@
 
 a,
 button,
-input {
+input,
+select {
   /* Remove focus outline, replace with box-shadow */
   /* Visible in Windows high-contrast themes */
   outline-color: transparent;
@@ -43,6 +44,6 @@ input {
   outline-style: dotted;
 
   &:focus-visible {
-    box-shadow: 0px 0px 2px 5px var(--focus-color);
+    box-shadow: 0px 0px 2px 4px var(--focus-color);
   }
 }
