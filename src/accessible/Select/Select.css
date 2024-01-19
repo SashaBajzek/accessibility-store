@@ -1,13 +1,14 @@
 .Select {
+  padding-block: 0.625rem;
+
   label {
     display: block;
-    font-size: 17px;
-    margin-block-start: 20px;
+    font-size: 1rem;
+    font-weight: bold;
   }
 
   .select-styled {
     align-items: center;
-    block-size: 60px;
     border: 1px solid var(--border-primary);
     border-radius: 0;
     cursor: pointer;
@@ -15,9 +16,10 @@
     font-size: 18px;
     grid-template-areas: "select";
     line-height: 1.1;
-    margin-block-start: 10px;
+    margin-block-start: 0.3rem;
     max-inline-size: 12rem;
     position: relative;
+    text-overflow: ellipsis;
 
     select,
     &::after {
@@ -46,8 +48,13 @@
       font-size: inherit;
       inline-size: 100%;
       line-height: inherit;
-      padding-inline: 20px;
+      padding-block: 1rem;
+      padding-inline-start: 20px;
+      padding-inline-end: 40px;
       margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
       /* Stack above custom arrow */
       z-index: 1;

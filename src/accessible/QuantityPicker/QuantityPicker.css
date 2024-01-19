@@ -1,88 +1,89 @@
-.QuantityPicker label {
-  display: block;
-  font-size: 17px;
-  margin-block-start: 20px;
-}
+.QuantityPicker {
+  --helper-text-spacing: 0.4rem;
+  padding-block: 0.625rem;
 
-.QuantityPicker .picker {
-  block-size: 60px;
-  border: 1px solid black;
-  display: flex;
-  inline-size: 142px;
-  margin-block-start: 10px;
-}
+  &.error .picker {
+    border: 3px solid var(--error);
+  }
 
-.QuantityPicker input {
-  appearance: none;
-  block-size: 100%;
-  border-width: 0;
-  font-size: 18px;
-  inline-size: 50px;
-  padding: 0;
-  text-align: center;
-}
+  label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+  }
 
-.QuantityPicker input[type="number"]::-webkit-inner-spin-button,
-.QuantityPicker input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+  .picker {
+    block-size: 52px;
+    border: 1px solid black;
+    display: flex;
+    inline-size: 142px;
+    margin-block-start: 10px;
+  }
 
-.QuantityPicker .helper {
-  color: var(--text-accent);
-  font-size: 16px;
-  margin-block-start: 4px;
-}
+  input {
+    appearance: none;
+    block-size: 100%;
+    border-width: 0;
+    font-size: 18px;
+    inline-size: 50px;
+    padding: 0;
+    text-align: center;
 
-.QuantityPicker .error {
-  font-size: 16px;
-  margin-block-start: 4px;
-}
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
 
-.QuantityPicker button {
-  align-items: center;
-  background: transparent;
-  block-size: 100%;
-  border-width: 0;
-  display: flex;
-  font-size: 24px;
-  inline-size: 45px;
-  justify-content: center;
-}
+  .helper {
+    color: var(--text-accent);
+    font-size: 16px;
+    margin-block-start: var(--helper-text-spacing);
+  }
 
-.QuantityPicker button:hover,
-.QuantityPicker button:focus-visible {
-  background-color: var(--white-hover-focus);
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
+  button {
+    align-items: center;
+    background: transparent;
+    block-size: 100%;
+    border-width: 0;
+    display: flex;
+    font-size: 24px;
+    inline-size: 45px;
+    justify-content: center;
 
-.QuantityPicker button:active {
-  background-color: var(--white-active);
-}
+    &:hover,
+    &:focus-visible {
+      background-color: var(--white-hover-focus);
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
 
-.QuantityPicker button svg {
-  block-size: 18px;
-  inline-size: 18px;
-}
+    &:active {
+      background-color: var(--white-active);
+    }
 
-.QuantityPicker.error .picker {
-  border: 3px solid var(--error);
-}
+    svg {
+      block-size: 18px;
+      inline-size: 18px;
+    }
+  }
 
-.QuantityPicker .error {
-  color: var(--error);
-  display: flex;
-  margin-block-start: 10px;
-}
+  .error {
+    color: var(--error);
+    display: flex;
+    font-size: 16px;
+    margin-block-start: var(--helper-text-spacing);
 
-.QuantityPicker .error svg {
-  block-size: 20px;
-  inline-size: 20px;
-  flex-shrink: 0;
-  margin-block-start: 2px;
-}
+    svg {
+      block-size: 20px;
+      inline-size: 20px;
+      flex-shrink: 0;
+      margin-block-start: 2px;
+    }
 
-.QuantityPicker .error .text {
-  padding-inline-start: 8px;
+    .text {
+      padding-inline-start: 8px;
+    }
+  }
 }

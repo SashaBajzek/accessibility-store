@@ -1,13 +1,16 @@
 import CartTable from "../../CartTable/CartTable";
 import Page from "../Page/Page";
 import "./CheckoutPage.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 import Input, { AutoCompleteType, InputType } from "../../Input/Input";
 import SubmitButton, { ButtonVariant } from "../../SubmitButton/SubmitButton";
+import { Select } from "../../Select/Select";
+import { statesList } from "./states";
 
 export default function CheckoutPage() {
   const { totalCost } = useContext(CartContext);
+  const [shippingState, setShippingState] = useState("");
   return (
     <Page className="CheckoutPage" heading="Checkout" title="Checkout">
       <div className="container">
@@ -43,10 +46,12 @@ export default function CheckoutPage() {
               label="City"
               type={InputType.Text}
             />
-            <Input
+            <Select
               autoComplete={AutoCompleteType.State}
               label="State"
-              type={InputType.Text}
+              onChange={setShippingState}
+              options={statesList}
+              value={shippingState}
             />
             <Input
               autoComplete={AutoCompleteType.PostalCode}
