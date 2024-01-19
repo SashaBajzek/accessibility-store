@@ -37,13 +37,16 @@ export const SizeSelector = ({ onChange, size }: SizeSelectorProps) => {
   return (
     <div className="SizeSelector">
       <label htmlFor="size">Length</label>
-      <select value={size} onChange={handleChange}>
-        {getEnumKeys(Size).map((key, index) => (
-          <option id="size" key={index} value={Size[key]}>
-            {Size[key]}
-          </option>
-        ))}
-      </select>
+      <div className="select-styled">
+        <select value={size} onChange={handleChange}>
+          {getEnumKeys(Size).map((key, index) => (
+            <option id="size" key={index} value={Size[key]}>
+              {Size[key]}
+            </option>
+          ))}
+        </select>
+      </div>
+      <span className="focus"></span>
     </div>
   );
 };

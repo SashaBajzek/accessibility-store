@@ -1,13 +1,65 @@
-.SizeSelector label {
-  display: block;
-  font-size: 17px;
-  margin-block-start: 20px;
-}
+.SizeSelector {
+  label {
+    display: block;
+    font-size: 17px;
+    margin-block-start: 20px;
+  }
 
-.SizeSelector select {
-  block-size: 60px;
-  border: 1px solid black;
-  font-size: 18px;
-  margin-block-start: 10px;
-  padding-inline: 20px;
+  .select-styled {
+    align-items: center;
+    block-size: 60px;
+    border: 1px solid var(--border-primary);
+    border-radius: 0;
+    cursor: pointer;
+    display: grid;
+    font-size: 18px;
+    grid-template-areas: "select";
+    line-height: 1.1;
+    margin-block-start: 10px;
+    max-inline-size: 12rem;
+    padding-inline: 20px;
+    position: relative;
+
+    select,
+    &::after {
+      grid-area: select;
+    }
+
+    /* Custom arrow */
+    &::after {
+      background-color: var(--border-primary);
+      block-size: 0.5em;
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+      content: "";
+      inline-size: 0.8em;
+      justify-self: end;
+    }
+
+    &:focus-within {
+      box-shadow: 0px 0px 2px 2px var(--focus-color);
+    }
+
+    select {
+      /* A reset of styles, including removing the default dropdown arrow */
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      cursor: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      padding: 0 1em 0 0;
+      margin: 0;
+      width: 100%;
+
+      /* Stack above custom arrow */
+      z-index: 1;
+
+      /* Remove focus outline, added on wrapper element */
+      /* Visible in Windows high-contrast themes */
+      outline-color: transparent;
+      outline-width: 2px;
+      outline-style: dotted;
+    }
+  }
 }
