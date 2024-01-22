@@ -91,7 +91,7 @@ export default function CheckoutPage() {
             name="fullName"
             onChange={handleChange}
             type={InputType.Text}
-            value={inputs.fullName}
+            value={inputs.fullName || ""}
           />
           <Input
             autoComplete={AutoCompleteType.StreetAddress}
@@ -99,7 +99,7 @@ export default function CheckoutPage() {
             name="shippingStreetAddress1"
             onChange={handleChange}
             type={InputType.Text}
-            value={inputs.shippingStreetAddress1}
+            value={inputs.shippingStreetAddress1 || ""}
           />
           <Input
             autoComplete={AutoCompleteType.StreetAddress2}
@@ -108,7 +108,7 @@ export default function CheckoutPage() {
             onChange={handleChange}
             optional={true}
             type={InputType.Text}
-            value={inputs.shippingStreetAddress2}
+            value={inputs.shippingStreetAddress2 || ""}
           />
           <div className="inline-fields-3">
             <Input
@@ -117,7 +117,7 @@ export default function CheckoutPage() {
               name="shippingCity"
               onChange={handleChange}
               type={InputType.Text}
-              value={inputs.shippingCity}
+              value={inputs.shippingCity || ""}
             />
             <Select
               autoComplete={AutoCompleteType.State}
@@ -125,7 +125,7 @@ export default function CheckoutPage() {
               name="shippingState"
               onChange={handleChange}
               options={statesList}
-              value={inputs.shippingState}
+              value={inputs.shippingState || ""}
             />
             <Input
               autoComplete={AutoCompleteType.PostalCode}
@@ -133,7 +133,7 @@ export default function CheckoutPage() {
               name="shippingZipcode"
               onChange={handleChange}
               type={InputType.Text}
-              value={inputs.shippingZipcode}
+              value={inputs.shippingZipcode || ""}
             />
           </div>
           <ShippingMethod
@@ -148,7 +148,7 @@ export default function CheckoutPage() {
             name="ccNumber"
             onChange={handleChange}
             type={InputType.Number}
-            value={inputs.ccNumber}
+            value={inputs.ccNumber || ""}
           />
           <div className="inline-fields-2">
             <Input
@@ -157,7 +157,7 @@ export default function CheckoutPage() {
               name="ccExp"
               onChange={handleChange}
               type={InputType.Number}
-              value={inputs.ccExp}
+              value={inputs.ccExp || ""}
             />
             <Input
               autoComplete={AutoCompleteType.CCSecurity}
@@ -165,7 +165,7 @@ export default function CheckoutPage() {
               name="ccSecurity"
               onChange={handleChange}
               type={InputType.Number}
-              value={inputs.ccSecurity}
+              value={inputs.ccSecurity || ""}
             />
           </div>
           <Input
@@ -174,7 +174,7 @@ export default function CheckoutPage() {
             name="ccName"
             onChange={handleChange}
             type={InputType.Text}
-            value={inputs.ccName}
+            value={inputs.ccName || ""}
           />
           <input
             checked={inputs.sameBillingAddress}
@@ -194,7 +194,7 @@ export default function CheckoutPage() {
                 name="billingStreetAddress1"
                 onChange={handleChange}
                 type={InputType.Text}
-                value={inputs.billingStreetAddress1}
+                value={inputs.billingStreetAddress1 || ""}
               />
               <Input
                 autoComplete={AutoCompleteType.StreetAddress2}
@@ -203,7 +203,7 @@ export default function CheckoutPage() {
                 onChange={handleChange}
                 optional={true}
                 type={InputType.Text}
-                value={inputs.billingStreetAddress2}
+                value={inputs.billingStreetAddress2 || ""}
               />
               <div className="inline-fields-3">
                 <Input
@@ -212,7 +212,7 @@ export default function CheckoutPage() {
                   name="billingCity"
                   onChange={handleChange}
                   type={InputType.Text}
-                  value={inputs.billingCity}
+                  value={inputs.billingCity || ""}
                 />
                 <Select
                   autoComplete={AutoCompleteType.State}
@@ -220,7 +220,7 @@ export default function CheckoutPage() {
                   name="billingState"
                   onChange={handleChange}
                   options={statesList}
-                  value={inputs.billingState}
+                  value={inputs.billingState || ""}
                 />
                 <Input
                   autoComplete={AutoCompleteType.PostalCode}
@@ -228,7 +228,7 @@ export default function CheckoutPage() {
                   name="billingZipcode"
                   onChange={handleChange}
                   type={InputType.Text}
-                  value={inputs.billingZipcode}
+                  value={inputs.billingZipcode || ""}
                 />
               </div>
             </>
