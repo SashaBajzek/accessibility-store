@@ -1,0 +1,50 @@
+.ShippingMethod {
+  border: none;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  padding-inline: 0;
+
+  legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-block-start: 2rem;
+  }
+
+  .items p {
+    border-block-end: 1px solid var(--border-primary);
+    border-inline: 1px solid var(--border-primary);
+    &:first-child {
+      border-block-start: 1px solid var(--border-primary);
+    }
+  }
+
+  p {
+    margin: 0;
+    position: relative;
+
+    input {
+      inset-block-start: 1.1rem;
+      inset-inline-start: 1rem;
+      position: absolute;
+
+      &:checked + label {
+        background-color: var(--white-active);
+      }
+    }
+
+    label {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+      padding-block: 1rem;
+      padding-inline-start: 3rem;
+      padding-inline-end: 2rem;
+
+      .title,
+      .price {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

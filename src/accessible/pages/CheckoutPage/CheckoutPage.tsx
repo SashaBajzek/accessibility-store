@@ -7,10 +7,13 @@ import Input, { AutoCompleteType, InputType } from "../../Input/Input";
 import SubmitButton, { ButtonVariant } from "../../SubmitButton/SubmitButton";
 import { Select } from "../../Select/Select";
 import { statesList } from "./states";
+import ShippingMethod from "../../ShippingMethod/ShippingMethod";
 
 export default function CheckoutPage() {
   const { totalCost } = useContext(CartContext);
   const [shippingState, setShippingState] = useState("");
+  const [shippingCost, setShippingCost] = useState(0);
+
   return (
     <Page className="CheckoutPage" heading="Checkout" title="Checkout">
       <div className="container">
@@ -56,11 +59,11 @@ export default function CheckoutPage() {
             <Input
               autoComplete={AutoCompleteType.PostalCode}
               label="ZIP code"
-              type={InputType.Number}
+              pattern="[0-9]{5}"
+              type={InputType.Text}
             />
           </div>
-          <h3>Shipping method</h3>
-          Radio Group Same day expendiated
+          <ShippingMethod onChange={setShippingCost} />
           <h2>Payment</h2>
           <Input
             autoComplete={AutoCompleteType.CCNumber}
@@ -98,7 +101,9 @@ export default function CheckoutPage() {
         <div className="cart-column">
           <h2>Order summary</h2>
           <CartTable />
-          <div>Subtotal: ${totalCost}</div>Shipping: Total:
+          <div>Subtotal: ${totalCost}</div>
+          <div>Shipping: ${shippingCost}</div>
+          <div>Total: ${totalCost + shippingCost}</div>
         </div>
       </div>
     </Page>
