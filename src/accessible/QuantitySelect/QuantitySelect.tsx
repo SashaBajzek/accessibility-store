@@ -37,6 +37,7 @@ const QuantitySelect = ({
         <Select
           isLabelVisible={false}
           label={`Quantity of ${itemName}`}
+          name={`${itemName}-quantity`}
           onChange={handleChange}
           options={options}
           value={quantity}

@@ -5,6 +5,7 @@ interface SelectProps<T> {
   autoComplete?: AutoCompleteType;
   label: string;
   isLabelVisible?: boolean;
+  name: string;
   onChange: (valueString: T) => void;
   options: any[];
   value: T;
@@ -14,6 +15,7 @@ export const Select = ({
   autoComplete,
   label,
   isLabelVisible = true,
+  name,
   onChange,
   options,
   value,
@@ -32,6 +34,7 @@ export const Select = ({
           aria-label={isLabelVisible ? "" : label}
           autoComplete={autoComplete}
           id={id}
+          name={name}
           onChange={handleChange}
           value={value}
         >

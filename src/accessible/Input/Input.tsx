@@ -27,17 +27,21 @@ export enum AutoCompleteType {
 interface InputProps {
   autoComplete?: AutoCompleteType;
   label: string;
-  onClick?: () => void;
+  name: string;
+  onChange: (event: any) => void;
   optional?: boolean;
   type?: InputType;
+  value: any;
 }
 
 const Input = ({
   autoComplete,
   label,
-  onClick,
+  name,
+  onChange,
   optional = false,
   type = InputType.Text,
+  value,
 }: InputProps) => {
   return (
     <div className="Input">
@@ -48,9 +52,11 @@ const Input = ({
       <input
         autoComplete={autoComplete}
         id={label}
-        name={label}
+        name={name}
+        onChange={onChange}
         type={type}
-      ></input>
+        value={value}
+      />
     </div>
   );
 };

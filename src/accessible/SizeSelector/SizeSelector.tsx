@@ -36,6 +36,7 @@ export const SizeSelector = ({ onChange, size }: SizeSelectorProps) => {
   return (
     <Select
       label="Length"
+      name="size"
       onChange={handleChange}
       options={getEnumKeys(Size).map((key) => Size[key])}
       value={size}

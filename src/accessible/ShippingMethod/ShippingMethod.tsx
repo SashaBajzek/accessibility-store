@@ -15,6 +15,11 @@ const monthNames = [
   "Dec",
 ];
 
+export enum ShippingMethodTypes {
+  Express = 25,
+  Priority = 0,
+}
+
 const addDays = (date: Date, days: number): Date => {
   const result = new Date(date);
   result.setDate(result.getDate() + days);
@@ -25,11 +30,12 @@ const getFormattedDate = (date: Date) =>
   `${monthNames[date.getMonth()]} ${date.getDate()}`;
 
 interface ShippingMethodProps {
-  onChange: (value: number) => void;
+  name: string;
+  onChange: (event: any) => void;
+  value?: ShippingMethodTypes;
 }
 
-const ShippingMethod = ({ onChange }: ShippingMethodProps) => {
-  const radioGroupName = "shipping-method";
+const ShippingMethod = ({ name, onChange, value }: ShippingMethodProps) => {
   const now = new Date();
 
   const priorityRange = `${getFormattedDate(
@@ -46,10 +52,12 @@ const ShippingMethod = ({ onChange }: ShippingMethodProps) => {
       <div className="items">
         <p>
           <input
+            checked={value == ShippingMethodTypes.Priority}
             id="priority"
-            name={radioGroupName}
-            onChange={() => onChange(0)}
+            name={name}
+            onChange={onChange}
             type="radio"
+            value={ShippingMethodTypes.Priority}
           />
           <label htmlFor="priority">
             <span>
@@ -61,10 +69,12 @@ const ShippingMethod = ({ onChange }: ShippingMethodProps) => {
         </p>
         <p>
           <input
+            checked={value == ShippingMethodTypes.Express}
             id="express"
-            name={radioGroupName}
-            onChange={() => onChange(25)}
+            name={name}
+            onChange={onChange}
             type="radio"
+            value={ShippingMethodTypes.Express}
           />
           <label htmlFor="express">
             <span>

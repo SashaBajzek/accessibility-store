@@ -7,85 +7,157 @@ import Input, { AutoCompleteType, InputType } from "../../Input/Input";
 import SubmitButton, { ButtonVariant } from "../../SubmitButton/SubmitButton";
 import { Select } from "../../Select/Select";
 import { statesList } from "./states";
-import ShippingMethod from "../../ShippingMethod/ShippingMethod";
+import ShippingMethod, {
+  ShippingMethodTypes,
+} from "../../ShippingMethod/ShippingMethod";
+
+interface Inputs {
+  ccExp?: number;
+  ccName?: string;
+  ccNumber?: number;
+  ccSecurity?: number;
+  email?: string;
+  fullName?: string;
+  phone?: number;
+  shippingCity?: string;
+  shippingMethod: ShippingMethodTypes;
+  shippingState?: string;
+  shippingStreetAddress1?: string;
+  shippingStreetAddress2?: string;
+  shippingZipcode?: string;
+}
 
 export default function CheckoutPage() {
   const { totalCost } = useContext(CartContext);
-  const [shippingState, setShippingState] = useState("");
-  const [shippingCost, setShippingCost] = useState(0);
+
+  const [inputs, setInputs] = useState<Inputs>({
+    shippingMethod: ShippingMethodTypes.Priority,
+  });
+
+  const handleChange = (event: any) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    console.log("handleChange name", name, "value", value);
+    setInputs((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    console.log(inputs);
+  };
 
   return (
     <Page className="CheckoutPage" heading="Checkout" title="Checkout">
       <div className="container">
-        <form>
+        <form onSubmit={handleSubmit}>
           <h2>Contact</h2>
-          <Input label="Email" type={InputType.Email} />
+          <Input
+            label="Email"
+            name="email"
+            onChange={handleChange}
+            type={InputType.Email}
+            value={inputs.email || ""}
+          />
           <Input
             autoComplete={AutoCompleteType.Tel}
             label="Phone"
+            name="phone"
+            onChange={handleChange}
             optional={true}
             type={InputType.Tel}
+            value={inputs.phone || ""}
           />
           <h2>Delivery</h2>
           <Input
             autoComplete={AutoCompleteType.Name}
             label="Full name"
+            name="fullName"
+            onChange={handleChange}
             type={InputType.Text}
+            value={inputs.fullName}
           />
           <Input
             autoComplete={AutoCompleteType.StreetAddress}
             label="Street address"
+            name="shippingStreetAddress1"
+            onChange={handleChange}
             type={InputType.Text}
+            value={inputs.shippingStreetAddress1}
           />
           <Input
             autoComplete={AutoCompleteType.StreetAddress2}
             label="Apartment, suite, etc"
+            name="shippingStreetAddress2"
+            onChange={handleChange}
             optional={true}
             type={InputType.Text}
+            value={inputs.shippingStreetAddress2}
           />
           <div className="inline-fields-3">
             <Input
               autoComplete={AutoCompleteType.City}
               label="City"
+              name="shippingCity"
+              onChange={handleChange}
               type={InputType.Text}
+              value={inputs.shippingCity}
             />
             <Select
               autoComplete={AutoCompleteType.State}
               label="State"
-              onChange={setShippingState}
+              name="shippingState"
+              onChange={handleChange}
               options={statesList}
-              value={shippingState}
+              value={inputs.shippingState}
             />
             <Input
               autoComplete={AutoCompleteType.PostalCode}
               label="ZIP code"
-              pattern="[0-9]{5}"
+              name="shippingZipcode"
+              onChange={handleChange}
               type={InputType.Text}
+              value={inputs.shippingZipcode}
             />
           </div>
-          <ShippingMethod onChange={setShippingCost} />
+          <ShippingMethod
+            name="shippingMethod"
+            onChange={handleChange}
+            value={inputs.shippingMethod}
+          />
           <h2>Payment</h2>
           <Input
             autoComplete={AutoCompleteType.CCNumber}
             label="Card number"
+            name="ccNumber"
+            onChange={handleChange}
             type={InputType.Number}
+            value={inputs.ccNumber}
           />
           <div className="inline-fields-2">
             <Input
               autoComplete={AutoCompleteType.CCExp}
               label="Expiration date (MM / YY)"
+              name="ccExp"
+              onChange={handleChange}
               type={InputType.Number}
+              value={inputs.ccExp}
             />
             <Input
               autoComplete={AutoCompleteType.CCSecurity}
               label="Security code"
+              name="ccSecurity"
+              onChange={handleChange}
               type={InputType.Number}
+              value={inputs.ccSecurity}
             />
           </div>
           <Input
             autoComplete={AutoCompleteType.CCName}
             label="Cardholder name"
+            name="ccName"
+            onChange={handleChange}
             type={InputType.Text}
+            value={inputs.ccName}
           />
           <div>Billing address</div>
           Radio Group Same as shipping address or Use a different billing
@@ -107,11 +179,11 @@ export default function CheckoutPage() {
           </div>
           <div className="total-row">
             <span>Shipping:</span>
-            <span>${shippingCost}</span>
+            <span>${Number(inputs.shippingMethod)}</span>
           </div>
           <div className="total-row final-total">
             <span>Total:</span>
-            <span>${totalCost + shippingCost}</span>
+            <span>${totalCost + Number(inputs.shippingMethod)}</span>
           </div>
         </div>
       </div>
