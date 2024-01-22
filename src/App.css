@@ -1,5 +1,6 @@
 :root {
   --border-primary: rgb(50, 50, 50);
+  --border-secondary: rgb(220, 220, 220);
   --focus-color: var(--deep-space-sparkle);
   --text-primary: rgb(50, 50, 50);
   --text-accent: rgb(97, 108, 64);
