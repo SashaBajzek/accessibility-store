@@ -16,9 +16,22 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-}
 
-.cart-column {
-  flex-shrink: 0;
-  inline-size: 500px;
+  .cart-column {
+    flex-shrink: 0;
+    inline-size: 500px;
+
+    .total-row {
+      align-items: center;
+      display: flex;
+      font-family: "Noto Sans Lao Looped", serif;
+      font-size: 1.2rem;
+      justify-content: space-between;
+      padding-block: 0.2rem;
+
+      &.final-total {
+        font-weight: bold;
+      }
+    }
+  }
 }

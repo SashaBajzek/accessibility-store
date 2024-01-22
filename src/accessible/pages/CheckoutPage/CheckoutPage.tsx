@@ -101,9 +101,18 @@ export default function CheckoutPage() {
         <div className="cart-column">
           <h2>Order summary</h2>
           <CartTable />
-          <div>Subtotal: ${totalCost}</div>
-          <div>Shipping: ${shippingCost}</div>
-          <div>Total: ${totalCost + shippingCost}</div>
+          <div className="total-row">
+            <span>Subtotal:</span>
+            <span>${totalCost}</span>
+          </div>
+          <div className="total-row">
+            <span>Shipping:</span>
+            <span>${shippingCost}</span>
+          </div>
+          <div className="total-row final-total">
+            <span>Total:</span>
+            <span>${totalCost + shippingCost}</span>
+          </div>
         </div>
       </div>
     </Page>

@@ -4,38 +4,33 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-}
 
-.CartContent .heading {
-  align-items: center;
-  display: flex;
-  inline-size: 100%;
-  justify-content: space-between;
-}
+  .heading {
+    align-items: center;
+    display: flex;
+    inline-size: 100%;
+    justify-content: space-between;
+  }
 
-.CartContent h2 {
-  font-family: "Noto Sans Lao Looped", serif;
-  font-size: 32px;
-  margin: 0;
-}
+  h2 {
+    font-family: "Noto Sans Lao Looped", serif;
+    font-size: 32px;
+    margin: 0;
+  }
 
-.CartContent .total-container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding-block: 20px;
-}
+  .total-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 20px;
 
-.CartContent .total-container .label {
-  font-family: "Noto Sans Lao Looped", serif;
-  font-size: 20px;
-}
+    .label {
+      font-family: "Noto Sans Lao Looped", serif;
+      font-size: 20px;
+    }
 
-.CartContent .total-container .number {
-  font-size: 24px;
-}
-
-.CartContent . .CartContent .submit {
-  block-size: 60px;
-  inline-size: 100%;
+    .number {
+      font-size: 24px;
+    }
+  }
 }
