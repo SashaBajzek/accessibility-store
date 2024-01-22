@@ -68,6 +68,7 @@
 
       .title,
       .price {
+        display: block;
         font-size: 1rem;
         font-weight: bold;
       }
