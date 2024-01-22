@@ -20,10 +20,6 @@ export const Select = ({
   options,
   value,
 }: SelectProps<any>) => {
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    onChange(event.target.value);
-  };
-
   const id = `select-${label}`;
 
   return (
@@ -35,7 +31,7 @@ export const Select = ({
           autoComplete={autoComplete}
           id={id}
           name={name}
-          onChange={handleChange}
+          onChange={onChange}
           value={value}
         >
           {options.map((option) => (

@@ -17,6 +17,10 @@
     }
   }
 
+  .SubmitButton {
+    margin-block-start: 2rem;
+  }
+
   .cart-column {
     flex-shrink: 0;
     inline-size: 500px;

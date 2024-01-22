@@ -12,6 +12,11 @@ import ShippingMethod, {
 } from "../../ShippingMethod/ShippingMethod";
 
 interface Inputs {
+  billingCity?: string;
+  billingState?: string;
+  billingStreetAddress1?: string;
+  billingStreetAddress2?: string;
+  billingZipcode?: string;
   ccExp?: number;
   ccName?: string;
   ccNumber?: number;
@@ -19,6 +24,7 @@ interface Inputs {
   email?: string;
   fullName?: string;
   phone?: number;
+  sameBillingAddress: boolean;
   shippingCity?: string;
   shippingMethod: ShippingMethodTypes;
   shippingState?: string;
@@ -31,14 +37,25 @@ export default function CheckoutPage() {
   const { totalCost } = useContext(CartContext);
 
   const [inputs, setInputs] = useState<Inputs>({
+    sameBillingAddress: true,
     shippingMethod: ShippingMethodTypes.Priority,
   });
 
-  const handleChange = (event: any) => {
+  const handleChange = (
+    event:
+      | React.ChangeEvent<HTMLSelectElement>
+      | React.ChangeEvent<HTMLInputElement>
+  ) => {
     const name = event.target.name;
     const value = event.target.value;
-    console.log("handleChange name", name, "value", value);
     setInputs((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const handleBillingAddressChange = () => {
+    setInputs((prevState) => ({
+      ...prevState,
+      sameBillingAddress: !inputs.sameBillingAddress,
+    }));
   };
 
   const handleSubmit = (event: any) => {
@@ -159,17 +176,69 @@ export default function CheckoutPage() {
             type={InputType.Text}
             value={inputs.ccName}
           />
-          <div>Billing address</div>
-          Radio Group Same as shipping address or Use a different billing
-          address
-          <br />
+          <input
+            checked={inputs.sameBillingAddress}
+            onChange={handleBillingAddressChange}
+            id="sameBillingAddress"
+            name="sameBillingAddress"
+            type="checkbox"
+          />
+          <label htmlFor="sameBillingAddress">
+            Billing address same as shipping
+          </label>
+          {!inputs.sameBillingAddress && (
+            <>
+              <Input
+                autoComplete={AutoCompleteType.StreetAddress}
+                label="Street address"
+                name="billingStreetAddress1"
+                onChange={handleChange}
+                type={InputType.Text}
+                value={inputs.billingStreetAddress1}
+              />
+              <Input
+                autoComplete={AutoCompleteType.StreetAddress2}
+                label="Apartment, suite, etc"
+                name="billingStreetAddress2"
+                onChange={handleChange}
+                optional={true}
+                type={InputType.Text}
+                value={inputs.billingStreetAddress2}
+              />
+              <div className="inline-fields-3">
+                <Input
+                  autoComplete={AutoCompleteType.City}
+                  label="City"
+                  name="billingCity"
+                  onChange={handleChange}
+                  type={InputType.Text}
+                  value={inputs.billingCity}
+                />
+                <Select
+                  autoComplete={AutoCompleteType.State}
+                  label="State"
+                  name="billingState"
+                  onChange={handleChange}
+                  options={statesList}
+                  value={inputs.billingState}
+                />
+                <Input
+                  autoComplete={AutoCompleteType.PostalCode}
+                  label="ZIP code"
+                  name="billingZipcode"
+                  onChange={handleChange}
+                  type={InputType.Text}
+                  value={inputs.billingZipcode}
+                />
+              </div>
+            </>
+          )}
           <SubmitButton
             onSubmit={() => {}}
             text="Pay now"
             variant={ButtonVariant.Primary}
           />
         </form>
-
         <div className="cart-column">
           <h2>Order summary</h2>
           <CartTable />

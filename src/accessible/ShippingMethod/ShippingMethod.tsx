@@ -61,8 +61,10 @@ const ShippingMethod = ({ name, onChange, value }: ShippingMethodProps) => {
           />
           <label htmlFor="priority">
             <span>
-              <div className="title">USPS Priority Mail Estimated Delivery</div>
-              <div>Estimated Delivery: {priorityRange}</div>
+              <span className="title">
+                USPS Priority Mail Estimated Delivery
+              </span>
+              <span>Estimated Delivery: {priorityRange}</span>
             </span>
             <span className="price">FREE</span>
           </label>
@@ -78,8 +80,8 @@ const ShippingMethod = ({ name, onChange, value }: ShippingMethodProps) => {
           />
           <label htmlFor="express">
             <span>
-              <div className="title">USPS Priority Mail Express</div>
-              <div>Estimated Delivery: {expressRange}</div>
+              <span className="title">USPS Priority Mail Express</span>
+              <span>Estimated Delivery: {expressRange}</span>
             </span>
             <span className="price">$25.00</span>
           </label>
