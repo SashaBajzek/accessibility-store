@@ -156,7 +156,7 @@ export default function CheckoutPage() {
               label="Expiration date (MM / YY)"
               name="ccExp"
               onChange={handleChange}
-              type={InputType.Number}
+              type={InputType.Text}
               value={inputs.ccExp || ""}
             />
             <Input
