@@ -297,7 +297,7 @@ export const inventory: Bracelet[] = [
   {
     category: Category.Art,
     description:
-      "Jimson Weed/White Flower No. 1, 1932 by Georgia O’Keeffe. A blue sapphire sky, lush green grandidierite and sapphire leaves, and a delicate tsavorite and morganite bloom",
+      "This bracelet is inspired by the Jimson Weed/ White Flower No. 1, 1932 painting by Georgia O’Keeffe. The blue cloudy sky is represented by a gradient of light and dark blue sapphires, lush green leaves are represented by deep teal grandidierite and green sapphires, and the delicate bloom with white morganites and pale green tsavorites.",
     id: "georgia1",
     images: [
       {
@@ -310,15 +310,18 @@ export const inventory: Bracelet[] = [
         fileName: "WhiteFlower2.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "The White Flower bracelet being worn with the blue and green side showing",
         fileName: "WhiteFlower3.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "The White Flower bracelet being worn with the white and pale green side showing",
         fileName: "WhiteFlower4.jpg",
       },
       {
-        description: "TODO write bracelet image description",
+        description:
+          "The White Flower bracelet being worn with the blue and green side showing",
         fileName: "WhiteFlower5.jpg",
       },
     ],
